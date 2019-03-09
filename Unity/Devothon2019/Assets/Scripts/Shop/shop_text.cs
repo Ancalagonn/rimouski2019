@@ -20,7 +20,6 @@ public class shop_text : MonoBehaviour
     private void Start() {
         upgradeCoque.text = "Améliorer la coque (" + price.UpgradeCoque + "$)";
         repairCoque.text = "Réparer la coque (" + price.RepairCoque + "$)";
-        addCrewMember.text = "Ajouter un membre à l'équipage\n("+PlayerInstance.playerStats.crewMembers+" présentement) ("+price.AddCrew+"$)";
         upgradeCanon.text = "Améliorer le canon (" + price.UpgradeCanon + "$)";
     }
 
@@ -46,6 +45,7 @@ public class shop_text : MonoBehaviour
 
         changeType.text = "Changer type (" + cost + "$)";
 
+        addCrewMember.text = "Ajouter un membre à l'équipage\n("+PlayerInstance.playerStats.crewMembers+" présentement) ("+price.AddCrew+"$)";
         money.text = "Banque : " + PlayerInstance.playerCash + "$";
     }
 
