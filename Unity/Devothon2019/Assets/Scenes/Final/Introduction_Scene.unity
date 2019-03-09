@@ -147,7 +147,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -50, y: -50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &71541138
 MonoBehaviour:
@@ -217,7 +217,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408952768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -1086}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 71541137}
@@ -479,7 +479,7 @@ MonoBehaviour:
   obj_Text: {fileID: 71541138}
   messageBox: {fileID: 408952768}
   sonTexte: {fileID: 642758412}
-  textSpeed: 3
+  textSpeed: 5
 --- !u!114 &642758414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -599,7 +599,7 @@ PrefabInstance:
     - target: {fileID: 6546894130462959223, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 88.76
       objectReference: {fileID: 0}
     - target: {fileID: 6546894130462959223, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
         type: 3}
@@ -679,7 +679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4191529027447358, guid: b6318d6bbc419864d89dc6662db97c6c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -15
+      value: 71.2
       objectReference: {fileID: 0}
     - target: {fileID: 4191529027447358, guid: b6318d6bbc419864d89dc6662db97c6c, type: 3}
       propertyPath: m_LocalRotation.x
