@@ -36,6 +36,7 @@ public class My_Camera : MonoBehaviour
 
         if(leftSide != null && rightSide != null)
             camPos.x = Mathf.Clamp(camPos.x, leftSide.transform.position.x + cameraOffsetSize, rightSide.transform.position.x - cameraOffsetSize);
+
         if (topSide != null && bottomSide != null)
             camPos.y = Mathf.Clamp(camPos.y, topSide.transform.position.y - cameraOffsetSize, bottomSide.transform.position.y + cameraOffsetSize);
 

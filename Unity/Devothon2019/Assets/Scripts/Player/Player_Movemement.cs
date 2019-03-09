@@ -17,6 +17,11 @@ public class Player_Movemement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        if(rb == null)
+        {
+            rb = gameObject.AddComponent<Rigidbody2D>();
+            rb.isKinematic = true;
+        }
     }
 
 
