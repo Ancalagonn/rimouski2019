@@ -9,11 +9,13 @@ public class Ouragan : MonoBehaviour
     float offsetY;
     float offsetX;
     bool DoOffsetX = true;
+    bool CanbeDamaged = true;
+    float invulnerabilityFrame = 0.4f;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
         StartPos = this.transform.position;
         offsetY = Random.Range(-10, 10);
         offsetX = Random.Range(-10, 10);
@@ -23,13 +25,25 @@ public class Ouragan : MonoBehaviour
         Quaternion temp = this.transform.rotation;
         temp.z = Random.Range(-90, 90);
         this.transform.rotation = temp;
-        this.transform.position = new Vector2(transform.position.x + offsetX, transform.position.y);
+        this.transform.position = new Vector2(transform.position.x + offsetX, transform.position.y + StartPos.y + offsetY);
+        this.gameObject.GetComponent<SpriteRenderer>().enabled = true;
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
+
+        if(!CanbeDamaged)
+        {
+            invulnerabilityFrame -= Time.deltaTime;
+
+            if(invulnerabilityFrame < 0)
+            {
+                CanbeDamaged = true;
+                invulnerabilityFrame = 0.4f;
+            }
+        }
     }
 
     private void Move()
@@ -58,11 +72,21 @@ public class Ouragan : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerInstance.playerStats.TakeDamage(5);
+        if(CanbeDamaged)
+        {
+            PlayerInstance.playerStats.TakeDamage(5);
+            CanbeDamaged = false;
+        }
+
+            
     }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        PlayerInstance.playerStats.TakeDamage(5);
+        if (CanbeDamaged)
+        {
+            PlayerInstance.playerStats.TakeDamage(5);
+            CanbeDamaged = false;
+        }
     }
 }

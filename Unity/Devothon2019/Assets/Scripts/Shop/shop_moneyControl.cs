@@ -26,7 +26,7 @@ public class shop_moneyControl : MonoBehaviour
         instance.moneyDisplay.text = "Argent : " + money.ToString() + " écu ";
     }
 
-    public static bool Transaction(float p_money)
+    public static bool Transaction(int p_money)
     {
         
         if (PlayerInstance.playerCash + p_money < 0)

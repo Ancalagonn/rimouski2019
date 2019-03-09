@@ -25,7 +25,7 @@ public class shop_UpgradeCanon : MonoBehaviour
     public void ChangerType()
     {
         CanonType newType = (CanonType)m_dllType.value;
-        float cost = 0;
+        int cost = 0;
 
         switch(newType)
         {
