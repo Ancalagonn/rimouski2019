@@ -185,5 +185,11 @@ public class CrewAffectation : MonoBehaviour
         total -= int.Parse(text_Reparation.text);
 
         text_NbTotal.text = "Marins restants : " + total;
+
+        if (total < 1) {
+            GameObject.Find("Button_Confirmer").GetComponent<Button>().interactable = true;
+        } else {
+            GameObject.Find("Button_Confirmer").GetComponent<Button>().interactable = false;
+        }
     }
 }
