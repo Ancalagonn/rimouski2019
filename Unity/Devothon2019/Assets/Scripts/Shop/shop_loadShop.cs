@@ -28,12 +28,14 @@ public class shop_loadShop : MonoBehaviour
     {
         boat = Instantiate(boatPrefab, boatLocation.transform);
         boat.transform.localScale *= 100;
+        //boat.transform.Rotate(new Vector3(0, 180, 0));
         boat.GetComponent<Player_Movemement>().enabled = false;
+        boat.GetComponent<Animator>().enabled = false;
 
         for (int i = 0; i < boat.GetComponent<Player_Stat>().CanonsSpots.Count; i++)
         {
             GameObject btn = Instantiate(btnPrefab, boat.GetComponent<Player_Stat>().CanonsSpots[i].transform);
-            btn.transform.localScale = new Vector3(0.007f, 0.002f, 0.01f);
+            btn.transform.localScale = new Vector3(0.014f, 0.004f, 0.02f);
             btn.transform.localPosition = new Vector3(0,0,-1);
             btn.transform.Rotate(Vector3.forward, 90);
             btn.GetComponent<shop_btnClick>().id = i;
