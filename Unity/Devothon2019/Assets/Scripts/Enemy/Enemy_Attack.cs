@@ -6,10 +6,12 @@ public class Enemy_Attack : MonoBehaviour
 {
     private string CollidingTag = "Player";
     private Enemy_Stat enemyStat;
+    private Enemy_Movement enemyMovement;
 
     private void Awake()
     {
         enemyStat = GetComponent<Enemy_Stat>();
+        enemyMovement = GetComponent<Enemy_Movement>();
     }
 
     // Start is called before the first frame update
@@ -22,7 +24,9 @@ public class Enemy_Attack : MonoBehaviour
     void Update()
     {
         CanonsCooldown();
-        FireCanons();
+
+        if(enemyMovement.distance <= 2.5f)
+            FireCanons();
     }
 
     void FireCanons()
