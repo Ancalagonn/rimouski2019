@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Canon_Controller : MonoBehaviour
+public class Flame_Controller : MonoBehaviour
 {
-    public Canon canonInfo;
+    public Canon canonInfo;    
 }

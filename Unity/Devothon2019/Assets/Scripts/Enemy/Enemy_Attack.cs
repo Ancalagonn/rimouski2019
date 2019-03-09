@@ -7,6 +7,11 @@ public class Enemy_Attack : MonoBehaviour
     private string CollidingTag = "Player";
     private Enemy_Stat enemyStat;
 
+    private void Awake()
+    {
+        enemyStat = GetComponent<Enemy_Stat>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,13 +29,14 @@ public class Enemy_Attack : MonoBehaviour
     {
         foreach (Canon canon in enemyStat.enemyStats.canons)
         {
-            if (canon == null)
+            if (canon == null || canon.shootPoint == null)
                 continue;
 
             if (canon.canFire())
             {
+                Debug.Log(canon);
                 StartCoroutine(Fire(canon));
-                canon.ResetCooldown();
+                canon.ResetCooldown(-Random.Range(0.15f, 0.35f));
             }
         }
     }
@@ -43,7 +49,6 @@ public class Enemy_Attack : MonoBehaviour
     IEnumerator Fire(Canon canon)
     {
         yield return new WaitForSeconds(Random.Range(0.0f, 0.5f));
-        //Debug.Log("Fired with canon : " + canon);
 
         if (canon.canonball == null)
         {
@@ -54,6 +59,8 @@ public class Enemy_Attack : MonoBehaviour
         Canonball canonball;
         float lifetime;
 
+        string soundName = "FireCanon";
+
         switch (canon.canonType)
         {
             default:
@@ -61,9 +68,10 @@ public class Enemy_Attack : MonoBehaviour
                 canonballObj = Instantiate(canon.canonball, null);
                 canonball = canonballObj.GetComponent<Canonball>();
                 lifetime = Random.Range(0.75f, 1.10f);
-
+                    
                 canonball.InitCanonball(canon.shootPoint.up, canon.GetDamage(), CollidingTag, lifetime);
                 canonball.transform.position = canon.shootPoint.position;
+                soundName = "FireCanon";
                 break;
 
             case CanonType.TripleShot:
@@ -94,19 +102,36 @@ public class Enemy_Attack : MonoBehaviour
                     Destroy(temp);
                 }
 
+                soundName = "FireCanon";
                 break;
+
             case CanonType.FlameThrower:
+                canonballObj = Instantiate(canon.canonball, null);
+                Flames flames = canonballObj.GetComponent<Flames>();
+                lifetime = canon.baseCooldown * 0.75f;
+
+                GameObject t = new GameObject();
+                t.transform.SetParent(canon.shootPoint);
+                t.transform.position = canon.shootPoint.position + canon.shootPoint.up;
+                t.transform.rotation = canon.shootPoint.rotation;
+
+                flames.InitFlame(t.transform, t.transform.up, canon.GetDamage(), CollidingTag, lifetime);
+
+                Destroy(t, lifetime);
+
+
+                soundName = "FlameThrower";
                 break;
         }
 
-        SoundManager.Play("FireCanon", canon.shootPoint.position);
+        SoundManager.Play(soundName, canon.shootPoint.position);
 
         yield return null;
     }
 
     void CanonsCooldown()
     {
-        foreach (Canon canon in PlayerInstance.playerStats.canons)
+        foreach (Canon canon in enemyStat.enemyStats.canons)
         {
             if (canon == null)
                 continue;

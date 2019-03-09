@@ -13,6 +13,8 @@ public class Canon
     public int level;
 
     private float canonballLifetime = 1f;
+    [HideInInspector]
+    //public Animator animator;
 
     public Canon(CanonType p_type, float p_damage, float p_baseCooldown, GameObject p_canonball, int p_level, float p_canonballLifetime)
     {
@@ -45,6 +47,7 @@ public class Canon
 
     public void ResetCooldown(float modifier = 0)
     {
+
         currentCooldownTime = baseCooldown - modifier;
     }
 
