@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_Attack : MonoBehaviour
 {
     private Boat_Stats playerStats;
+    public KeyCode fireKey = KeyCode.Space;
 
     private void Awake()
     {
@@ -21,5 +22,23 @@ public class Player_Attack : MonoBehaviour
     void Update()
     {
         
+    }
+
+    IEnumerator FireCanons()
+    {
+        foreach (Canon canon in playerStats.canons)
+        {
+            if(canon.canFire())
+            {
+                canon.ResetCooldown();
+            }
+        }
+
+        yield return null;
+    }
+
+    void CanonsCooldown()
+    {
+
     }
 }
