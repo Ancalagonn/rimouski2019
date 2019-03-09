@@ -4,7 +4,8 @@
 public class Canon
 {
     public CanonType canonType;
-    private float damage;
+    [HideInInspector]
+    public float damage;
     public float baseCooldown;
     public float currentCooldownTime = 0;
     public GameObject canonball;
@@ -22,8 +23,8 @@ public class Canon
 
     public Canon()
     {
-        canonType = CanonType.TripleShot;
-        damage = 3;
+        canonType = CanonType.Normal;
+        damage = 10;
         baseCooldown = 2;
         level = 1;
     }
