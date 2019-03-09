@@ -51,9 +51,10 @@ public class Canonball : MonoBehaviour
         if(currentLifetime >= maxLifetime * 0.90f && !hasDropBelowWater && !hasCollided)
         {
             hasDropBelowWater = true;
-            //Instantiate Sploush in water
             SoundManager.Play("Sploush", transform.position);
-
+            
+            var waterSpashParticules = Instantiate(Static_Resources.WaterSplashParticule, this.transform.position, Quaternion.identity);
+            Destroy(waterSpashParticules, 1);
         }
 
         transform.localScale = Vector3.one * sizeCurve.Evaluate(currentLifetime);
