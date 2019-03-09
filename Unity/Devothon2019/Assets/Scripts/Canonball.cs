@@ -36,24 +36,26 @@ public class Canonball : MonoBehaviour
             new Keyframe(p_lifeTime * 0.25f, initialSize * 1.35f),
             new Keyframe(p_lifeTime * 0.50f, initialSize * 1.5f),
             new Keyframe(p_lifeTime * 0.75f, initialSize * 1.35f),
-            new Keyframe(p_lifeTime * 0.90f, initialSize * 0.95f) };
+            new Keyframe(p_lifeTime * 0.90f, initialSize * 0.95f),
+            new Keyframe(p_lifeTime * 0.95f, initialSize * 0.25f) };
 
         sizeCurve = new AnimationCurve(keys);
         Destroy(gameObject, p_lifeTime);
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() 
     {
         transform.position += direction * speed * Time.deltaTime;
         currentLifetime += Time.deltaTime;
 
-        if(currentLifetime >= maxLifetime * 0.90f && !hasDropBelowWater && !hasCollided)
+        if(currentLifetime >= maxLifetime * 0.95f && !hasDropBelowWater && !hasCollided)
         {
             hasDropBelowWater = true;
-            //Instantiate Sploush in water
             SoundManager.Play("Sploush", transform.position);
-
+            
+            var waterSpashParticules = Instantiate(Static_Resources.WaterSplashParticule, this.transform.position, Quaternion.identity);
+            Destroy(waterSpashParticules, 1);
         }
 
         transform.localScale = Vector3.one * sizeCurve.Evaluate(currentLifetime);
@@ -84,7 +86,4 @@ public class Canonball : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-
-
 }
