@@ -81,14 +81,11 @@ public static class SoundManager {
 
             obj.Init(s.clip.length + 0.3f);
 
-
             src.clip = s.clip;
             src.volume = s.volume;
             src.loop = s.loop;
             
             src.Play();
-
-            
         }
     }
 

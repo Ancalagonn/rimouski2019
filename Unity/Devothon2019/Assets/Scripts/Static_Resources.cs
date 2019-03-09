@@ -15,6 +15,8 @@ public static class Static_Resources
     public static int SmallBoatValue = 100;
     public static int BigBoatValue = 200;
 
+    public static GameObject WaterSplashParticule;
+
     /*private static Boat_Stats smallEnemyStats;
     private static Boat_Stats bigEnemyStats;*/
 
@@ -26,6 +28,7 @@ public static class Static_Resources
         defaultCanon = Resources.Load<GameObject>("DefaultCanon");
         tripleCanon = Resources.Load<GameObject>("TripleCanon");
         flameThrower = Resources.Load<GameObject>("Flamethrower");
+        WaterSplashParticule = Resources.Load<GameObject>("WaterSplash");
     }
 
     public static Boat_Stats GenerateBoatStats(EnemySize size, EnemyType type)
