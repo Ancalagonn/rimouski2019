@@ -185,7 +185,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 311
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -347,6 +347,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6546894130462959223, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546894130462959223, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546894130462959223, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 5914728500770240826, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
         type: 3}
       propertyPath: boatSpeedCurve.m_Curve.Array.data[0].inSlope
@@ -377,6 +392,18 @@ PrefabInstance:
       propertyPath: boatSpeedCurve.m_Curve.Array.data[1].tangentMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 39222353, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 39222353, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 39222353, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e, type: 3}
 --- !u!1001 &6798052901284208218
@@ -394,12 +421,12 @@ PrefabInstance:
     - target: {fileID: 7888709328428395152, guid: 08fc0fd7412f2bf49bdcccf970833cf9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.27
+      value: -32.4
       objectReference: {fileID: 0}
     - target: {fileID: 7888709328428395152, guid: 08fc0fd7412f2bf49bdcccf970833cf9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.36
+      value: 14.3
       objectReference: {fileID: 0}
     - target: {fileID: 7888709328428395152, guid: 08fc0fd7412f2bf49bdcccf970833cf9,
         type: 3}
@@ -449,7 +476,7 @@ PrefabInstance:
     - target: {fileID: 5807517388490410372, guid: 08fc0fd7412f2bf49bdcccf970833cf9,
         type: 3}
       propertyPath: rangeAggro
-      value: 20
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08fc0fd7412f2bf49bdcccf970833cf9, type: 3}
