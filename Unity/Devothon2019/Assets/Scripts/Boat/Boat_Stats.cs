@@ -16,7 +16,7 @@ public class Boat_Stats
 
     public List<Canon> canons;
 
-    public int crewMembers = 18;
+    public int crewMembers = 4;
     public int maxCanons = 6;
 
     public float GetHp()
