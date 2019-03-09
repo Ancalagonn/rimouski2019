@@ -7,16 +7,21 @@ public class Player_Stat : MonoBehaviour
     [SerializeField]
     public Boat_Stats playerStats;
 
+    public Transform CanonsSpotsParent;
+    [HideInInspector]
+    public List<Transform> CanonsSpots;
+
     private void Awake()
     {
-
+        //playerStats = PlayerInstance.playerStats;
+        Debug.Log(playerStats);
+        LoadCanonsSpots();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        playerStats = PlayerInstance.playerStats;
-        Debug.Log(playerStats);
+
         playerStats.currentHp = playerStats.maxHp;
     }
 
@@ -24,5 +29,13 @@ public class Player_Stat : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void LoadCanonsSpots()
+    {
+        foreach(Transform child in CanonsSpotsParent)
+        {
+            CanonsSpots.Add(child);
+        }
     }
 }
