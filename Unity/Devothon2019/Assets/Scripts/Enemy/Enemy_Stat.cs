@@ -77,7 +77,7 @@ public class Enemy_Stat : MonoBehaviour
                     break;
                 case CanonType.FlameThrower:
                     canonObj = Instantiate(Static_Resources.flameThrower);
-                    canonObj.name = "Canon" + i;
+                    canonObj.name = "CanonFlame" + i;
                     canonObj.transform.SetParent(CanonsSpots[i]);
                     canonObj.transform.position = new Vector3(0, 0, -1);
                     canonObj.transform.localPosition = new Vector3(0, 0, -1);
@@ -89,9 +89,6 @@ public class Enemy_Stat : MonoBehaviour
 
                     break;
             }
-
-            
-
             
         }
     }

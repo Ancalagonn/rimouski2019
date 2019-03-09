@@ -60,6 +60,7 @@ public class Player_Attack : MonoBehaviour
         GameObject canonballObj;
         Canonball canonball;
         float lifetime;
+        string soundName;
 
         switch (canon.canonType)
         {
@@ -71,6 +72,7 @@ public class Player_Attack : MonoBehaviour
 
                 canonball.InitCanonball(canon.shootPoint.up, canon.GetDamage(), CollidingTag, lifetime);
                 canonball.transform.position = canon.shootPoint.position;
+                soundName = "FireCanon";
                 break;
 
             case CanonType.TripleShot:
@@ -100,13 +102,28 @@ public class Player_Attack : MonoBehaviour
 
                     Destroy(temp);
                 }
+                soundName = "FireCanon";
 
                 break;
             case CanonType.FlameThrower:
+                canonballObj = Instantiate(canon.canonball, null);
+                Flames flames = canonballObj.GetComponent<Flames>();
+                lifetime = canon.baseCooldown * 0.75f;
+
+                GameObject t = new GameObject();
+                t.transform.SetParent(canon.shootPoint);
+                t.transform.position = canon.shootPoint.position + canon.shootPoint.up;
+                t.transform.rotation = canon.shootPoint.rotation;
+
+                flames.InitFlame(t.transform, t.transform.up, canon.GetDamage(), CollidingTag, lifetime);
+
+                Destroy(t, lifetime);
+
+                soundName = "FlameThrower";
                 break;
         }
 
-        SoundManager.Play("FireCanon", canon.shootPoint.position);
+        SoundManager.Play(soundName, canon.shootPoint.position);
 
         yield return null;
     }

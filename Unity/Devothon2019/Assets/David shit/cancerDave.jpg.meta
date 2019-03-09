@@ -3,6 +3,7 @@ guid: f2db327d6478ee843b46aad23d464bb2
 TextureImporter:
   fileIDToRecycleName:
     21300000: cancerDave_0
+    21300002: cancerDave_1
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -93,13 +94,33 @@ TextureImporter:
         width: 35
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 9eb5b0e090eab134596a0a29213ba95b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cancerDave_1
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 278
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e37c48d6e9258914eb9762c036906802
       vertices: []
       indices: 
       edges: []

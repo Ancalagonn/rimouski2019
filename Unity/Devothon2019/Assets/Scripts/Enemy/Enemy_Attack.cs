@@ -49,7 +49,6 @@ public class Enemy_Attack : MonoBehaviour
     IEnumerator Fire(Canon canon)
     {
         yield return new WaitForSeconds(Random.Range(0.0f, 0.5f));
-        //Debug.Log("Fired with canon : " + canon);
 
         if (canon.canonball == null)
         {
@@ -105,19 +104,27 @@ public class Enemy_Attack : MonoBehaviour
 
                 soundName = "FireCanon";
                 break;
+
             case CanonType.FlameThrower:
                 canonballObj = Instantiate(canon.canonball, null);
                 Flames flames = canonballObj.GetComponent<Flames>();
-                lifetime = canon.baseCooldown;
+                lifetime = canon.baseCooldown * 0.75f;
 
-                flames.InitFlame(canon.shootPoint,canon.shootPoint.up, canon.GetDamage(), CollidingTag, lifetime);
-                flames.transform.position = canon.shootPoint.position + (canon.shootPoint.up * 5);
+                GameObject t = new GameObject();
+                t.transform.SetParent(canon.shootPoint);
+                t.transform.position = canon.shootPoint.position + canon.shootPoint.up;
+                t.transform.rotation = canon.shootPoint.rotation;
 
-                soundName = "FireCanon";
+                flames.InitFlame(t.transform, t.transform.up, canon.GetDamage(), CollidingTag, lifetime);
+
+                Destroy(t, lifetime);
+
+
+                soundName = "FlameThrower";
                 break;
         }
 
-        SoundManager.Play("FireCanon", canon.shootPoint.position);
+        SoundManager.Play(soundName, canon.shootPoint.position);
 
         yield return null;
     }

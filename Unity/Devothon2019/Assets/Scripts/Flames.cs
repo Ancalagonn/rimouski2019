@@ -16,6 +16,8 @@ public class Flames : MonoBehaviour
 
     AnimationCurve sizeCurve;
 
+    Animator anim;
+
     public void InitFlame(Transform p_parent, Vector3 p_dir, float p_damage, string p_collidingTag, float p_lifeTime)
     {
         direction = p_dir;
@@ -36,14 +38,38 @@ public class Flames : MonoBehaviour
         sizeCurve = new AnimationCurve(keys);
 
         Destroy(gameObject, p_lifeTime);
+
+        transform.GetChild(0).gameObject.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = parent.position + (direction);
+        if(parent == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        transform.localPosition = parent.position;
         transform.rotation = parent.rotation;
 
         currentLifetime += Time.deltaTime;
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if(col.CompareTag(collidingTag))
+        {
+            col.SendMessage("TakeDamage", damage / 2f);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if (col.CompareTag(collidingTag))
+        {
+            col.SendMessage("TakeDamage", damage * Time.deltaTime);
+        }
     }
 }

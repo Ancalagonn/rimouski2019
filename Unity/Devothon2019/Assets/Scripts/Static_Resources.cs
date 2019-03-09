@@ -83,7 +83,7 @@ public static class Static_Resources
                 case EnemyType.Triple:
                     canonType = CanonType.TripleShot;
                     damage = 7;
-                    baseCooldown = 3.5f;
+                    baseCooldown = 3.5f * 1.8f;
                     canonball = defaultCanonball;
 
                     //Reduce power
