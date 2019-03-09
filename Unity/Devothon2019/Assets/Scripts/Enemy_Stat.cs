@@ -24,7 +24,7 @@ public class Enemy_Stat : MonoBehaviour
     public void TakeDamage(float p_damage)
     {
         enemyStats.TakeDamage(p_damage);
-        Debug.Log(gameObject.name + " : " + enemyStats.currentHp);
+        //Debug.Log(gameObject.name + " : " + enemyStats.currentHp);
     }
 
 
