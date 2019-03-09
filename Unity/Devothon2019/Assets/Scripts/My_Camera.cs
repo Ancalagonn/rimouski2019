@@ -18,7 +18,7 @@ public class My_Camera : MonoBehaviour
         camera = GetComponent<Camera>();
         target = FindObjectOfType<Player_Stat>().transform;
 
-        camera.orthographicSize = 20;
+        camera.orthographicSize = 15;
     }
 
     // Update is called once per frame
