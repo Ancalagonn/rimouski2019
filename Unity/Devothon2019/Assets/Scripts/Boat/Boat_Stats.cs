@@ -34,14 +34,28 @@ public class Boat_Stats
         return currentHp <= 0;
     }
 
+    public Boat_Stats()
+    {
 
+    }       
 }
 
 [System.Serializable]
 public class Stats
 {
-    public float value;
-    public int crewAssigned;
+    public float value = 0;
+    public int crewAssigned = 1;
+
+    public void AddCrewMember()
+    {
+        crewAssigned++;
+    }
+
+    public void RemoveCrewMember()
+    {
+        if (crewAssigned > 1)
+            crewAssigned--;
+    }
 }
 
 

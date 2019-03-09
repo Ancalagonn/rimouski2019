@@ -8,6 +8,7 @@ public class Canon
     public float baseCooldown;
     public GameObject canonball;
     public Transform shootPoint;
+    public int level;
 
     public Transform canonPosition;
 }
