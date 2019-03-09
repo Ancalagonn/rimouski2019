@@ -13,6 +13,8 @@ public class shop_loadShop : MonoBehaviour
     public GameObject btnPrefab;
     public Dropdown ddl_canonType;
 
+    public GameObject m_panelCanon;
+
     private GameObject boat;
 
     public static int btn_select;
@@ -26,6 +28,7 @@ public class shop_loadShop : MonoBehaviour
     {
         boat = Instantiate(boatPrefab, boatLocation.transform);
         boat.transform.localScale *= 100;
+        boat.GetComponent<Player_Movemement>().enabled = false;
 
         for (int i = 0; i < boat.GetComponent<Player_Stat>().CanonsSpots.Count; i++)
         {
@@ -39,6 +42,7 @@ public class shop_loadShop : MonoBehaviour
 
     public static void LoadPanel()
     {
+        intance.m_panelCanon.SetActive(true);
 
         if (PlayerInstance.playerStats.canons[btn_select] != null)
         {
