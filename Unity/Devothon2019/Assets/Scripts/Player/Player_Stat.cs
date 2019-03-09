@@ -9,14 +9,14 @@ public class Player_Stat : MonoBehaviour
 
     private void Awake()
     {
-
+        //playerStats = PlayerInstance.playerStats;
+        Debug.Log(playerStats);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        playerStats = PlayerInstance.playerStats;
-        Debug.Log(playerStats);
+
         playerStats.currentHp = playerStats.maxHp;
     }
 
