@@ -26,6 +26,7 @@ public class shop_loadShop : MonoBehaviour
     {
         boat = Instantiate(boatPrefab, boatLocation.transform);
         boat.transform.localScale *= 100;
+        boat.GetComponent<Player_Movemement>().enabled = false;
 
         for (int i = 0; i < boat.GetComponent<Player_Stat>().CanonsSpots.Count; i++)
         {
