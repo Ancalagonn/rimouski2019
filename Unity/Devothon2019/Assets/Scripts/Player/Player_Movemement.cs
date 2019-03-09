@@ -7,48 +7,84 @@ public class Player_Movemement : MonoBehaviour
     private Rigidbody2D rb;
 
     public AnimationCurve boatSpeedCurve;
+    public AnimationCurve boatRotationCurve;
 
-    private float lastTimePressed = 0;
+    private float lastTimeForwardPressed = 0;
+    private float lastTimeRotationPressed = 0;
     private float speed = 0;
+    private float rotationMomentum = 0;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
         float z = Input.GetAxisRaw("Vertical") * Time.deltaTime * PlayerInstance.playerStats.moveSpeed.value;
-        float x = Input.GetAxis("Horizontal") * Time.deltaTime * PlayerInstance.playerStats.rotationSpeed.value;
+        float x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * PlayerInstance.playerStats.rotationSpeed.value;
 
-        float timeSinceLastPressed = Time.time - lastTimePressed;
+        float timeSinceLastForward = Time.time - lastTimeForwardPressed;
+        float timeSinceLastRotation = Time.time - lastTimeRotationPressed;
 
-        if (timeSinceLastPressed >= 1)
-            timeSinceLastPressed = 1;
+        if (timeSinceLastForward >= 1)
+            timeSinceLastForward = 1;
 
         //Pressed
         if (z > 0)
         {
-            lastTimePressed += Time.deltaTime * 0.8f;
+            lastTimeForwardPressed += Time.deltaTime * 0.8f;
             //Speed curve
-            speed = z * boatSpeedCurve.Evaluate(timeSinceLastPressed);
+            speed = z * boatSpeedCurve.Evaluate(timeSinceLastForward);
         }
         else //Not pressed
         {
-            lastTimePressed = Time.time;
+            lastTimeForwardPressed = Time.time;
 
             //80% less speed each seconds
             speed -= (Time.deltaTime * speed * 0.80f);
         }
 
-        transform.Rotate(-transform.forward, x);
+        //Pressed
+        if (x != 0)
+        {
+            
+            if(x > 0)
+            {
+                //Rotation side changed
+                if (rotationMomentum < 0)
+                {
+                    rotationMomentum = 0;
+                    lastTimeRotationPressed = 0;
+                }
+            }
+
+            if (x < 0)
+            {
+                //Rotation side changed
+                if (rotationMomentum > 0)
+                {
+                    rotationMomentum = 0;
+                    lastTimeRotationPressed = 0;
+                }
+            }
+
+            lastTimeRotationPressed += Time.deltaTime * 0.6f;
+            //Speed curve
+            rotationMomentum = x * boatRotationCurve.Evaluate(lastTimeRotationPressed);
+        }
+        else //Not pressed
+        {
+            lastTimeRotationPressed = Time.time;
+
+            //40% less rotation speed each seconds
+            rotationMomentum -= (Time.deltaTime * rotationMomentum * 0.98f);
+        }
+
+
+        transform.Rotate(-transform.forward, rotationMomentum);
 
         rb.position += (Vector2)transform.up * speed;
     }
