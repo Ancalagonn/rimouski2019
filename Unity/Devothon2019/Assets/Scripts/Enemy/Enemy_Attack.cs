@@ -2,29 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Attack : MonoBehaviour
+public class Enemy_Attack : MonoBehaviour
 {
-    public KeyCode fireKey = KeyCode.Space;
+    private string CollidingTag = "Player";
+    private Enemy_Stat enemyStat;
 
-    private string CollidingTag = "Enemy";
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(fireKey))
-        {
-            FireCanons();
-        }
-
         CanonsCooldown();
+        FireCanons();
     }
 
-    /// <summary>
-    /// Fire with all available canons
-    /// </summary>
     void FireCanons()
     {
-        foreach (Canon canon in PlayerInstance.playerStats.canons)
+        foreach (Canon canon in enemyStat.enemyStats.canons)
         {
             if (canon == null)
                 continue;
@@ -32,12 +30,7 @@ public class Player_Attack : MonoBehaviour
             if (canon.canFire())
             {
                 StartCoroutine(Fire(canon));
-
-                float percentCooldown = (PlayerInstance.playerStats.shotCooldown.value / 100) * canon.baseCooldown;
-
-                float modifier = percentCooldown * PlayerInstance.playerStats.shotCooldown.crewAssigned;
-
-                canon.ResetCooldown(modifier);
+                canon.ResetCooldown();
             }
         }
     }
@@ -50,9 +43,9 @@ public class Player_Attack : MonoBehaviour
     IEnumerator Fire(Canon canon)
     {
         yield return new WaitForSeconds(Random.Range(0.0f, 0.5f));
-        Debug.Log("Fired with canon : " + canon);
+        //Debug.Log("Fired with canon : " + canon);
 
-        if(canon.canonball == null)
+        if (canon.canonball == null)
         {
             canon.canonball = Static_Resources.defaultCanonball;
         }
@@ -79,7 +72,7 @@ public class Player_Attack : MonoBehaviour
                 {
                     canonballObj = Instantiate(canon.canonball, null);
                     canonball = canonballObj.GetComponent<Canonball>();
-                    
+
                     GameObject temp = new GameObject();
                     temp.transform.SetParent(canon.shootPoint);
                     temp.transform.rotation = canon.shootPoint.rotation;

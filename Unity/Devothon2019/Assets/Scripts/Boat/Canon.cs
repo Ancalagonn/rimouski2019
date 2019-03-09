@@ -43,9 +43,9 @@ public class Canon
         return damage * ((damage * 10 / 100) * ((level <= 0)? 1 : level));
     }
 
-    public void ResetCooldown()
+    public void ResetCooldown(float modifier = 0)
     {
-        currentCooldownTime = baseCooldown;
+        currentCooldownTime = baseCooldown - modifier;
     }
 
     public override string ToString()
