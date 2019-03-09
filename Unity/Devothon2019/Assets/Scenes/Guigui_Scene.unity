@@ -1068,7 +1068,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boatLocation: {fileID: 2098529610}
-  boatPrefab: {fileID: 897605011831899259, guid: 6ab799df7e0a4854a9d48e89ba610138,
+  boatPrefab: {fileID: 6546894130462959210, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
     type: 3}
   btnPrefab: {fileID: 773431500509104969, guid: 74040bd18361e7a488960b7da71fdd1f,
     type: 3}
@@ -2363,7 +2363,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -830.2001, y: -32.3}
+  m_AnchoredPosition: {x: -830.2001, y: 60}
   m_SizeDelta: {x: 259.6, y: 230.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1709057744
@@ -2388,7 +2388,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 30
+    m_FontSize: 41
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
