@@ -11,8 +11,6 @@ public class Canon
     public Transform shootPoint;
     public int level;
 
-    public Transform canonPosition;
-
     public bool canFire()
     {
         return currentCooldownTime <= 0;

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Canonball : MonoBehaviour
 {
-    private float speed = 3;
+    private float speed = 15;
     private Vector3 direction;
 
     public void SetDirection(Vector3 p_dir)

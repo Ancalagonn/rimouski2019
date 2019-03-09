@@ -34,20 +34,26 @@ public class Player_Stat : MonoBehaviour
     private void LoadCanons()
     {
         LoadCanonsSpots();
-        PlayerInstance.playerStats.canons = new List<Canon>();
-        foreach (Transform canonSpot in CanonsSpotsParent)
+
+        for (int i = 0; i < PlayerInstance.playerStats.canons.Count; i++)
         {
-            if (canonSpot.childCount == 0)
+            Canon canon = PlayerInstance.playerStats.canons[i];
+
+            if (canon == null)
                 continue;
 
-            Canon_Controller canonCtrl = canonSpot.GetComponentInChildren<Canon_Controller>();
-
-            if (canonCtrl != null)
+            foreach (Transform child in CanonsSpots[i])
             {
-                canonCtrl.canonInfo.shootPoint = canonSpot;
-                canonCtrl.canonInfo.canonPosition = canonSpot;
-                PlayerInstance.playerStats.canons.Add(canonCtrl.canonInfo);
+                Destroy(child.gameObject);
             }
+
+            GameObject canonObj = new GameObject();
+            canonObj.transform.SetParent(CanonsSpots[i]);        
+
+            Canon_Controller canonCtrl = canonObj.AddComponent<Canon_Controller>();
+            canonCtrl.canonInfo = canon;
+            canonCtrl.canonInfo.shootPoint = CanonsSpots[i];
+            
         }
     }
 
