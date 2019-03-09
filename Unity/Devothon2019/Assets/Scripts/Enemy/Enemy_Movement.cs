@@ -51,17 +51,10 @@ public class Enemy_Movement : MonoBehaviour
 
         //Destination reached
         if (closestSide == Vector3.zero)
-            return;
-
-
-        Vector3 direction = closestSide - transform.position;
-        direction.Normalize();
-
-        distance = Vector3.Distance(closestSide, transform.position);
-
-       
-
-        if(distance > 2f)
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, Time.deltaTime);
+        }
+        else
         {
             // get the angle
             Vector3 norTar = (closestSide - transform.position).normalized;
@@ -71,11 +64,12 @@ public class Enemy_Movement : MonoBehaviour
             rotation.eulerAngles = new Vector3(0, 0, angle - 90);
             transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime);
         }
-        else
-        {
-            transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, Time.deltaTime);
-        }
+            
 
+        Vector3 direction = closestSide - transform.position;
+        direction.Normalize();
+    
+        distance = Vector3.Distance(closestSide, transform.position);
 
         rb.position += (Vector2)direction * enemyStat.enemyStats.moveSpeed.value * Time.deltaTime;
     }

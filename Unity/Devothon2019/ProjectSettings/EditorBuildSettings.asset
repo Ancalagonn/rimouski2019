@@ -24,18 +24,39 @@ EditorBuildSettings:
     path: Assets/Scenes/Ville/Montreal.unity
     guid: 0337b22b0fb118c4b89c486587cc3b60
   - enabled: 1
+    path: Assets/Scenes/Ville/TroisRivieres_Intro.unity
+    guid: 39e27d200d199874890d7e95239d52a9
+  - enabled: 1
     path: Assets/Scenes/Ville/TroisRivieres.unity
     guid: eda5d851eb0f5d64190c42ddf0a0c194
+  - enabled: 1
+    path: Assets/Scenes/Ville/Quebec_Intro.unity
+    guid: fbb399c8110a02c49afdc8af3bc96087
   - enabled: 1
     path: Assets/Scenes/Ville/Quebec.unity
     guid: 171573cb3263e634aa20feb280101630
   - enabled: 1
+    path: Assets/Scenes/Ville/Lapoc_Intro.unity
+    guid: 47d0efda3707c8443ba73ab387e02639
+  - enabled: 1
     path: Assets/Scenes/Ville/Lapoc.unity
     guid: e05e1e62d58ee2d46a67d78718b70257
+  - enabled: 1
+    path: Assets/Scenes/Ville/RDL_Intro.unity
+    guid: a396274debc64864eb4855eb75cb29a9
   - enabled: 1
     path: Assets/Scenes/Ville/RDL.unity
     guid: 9fcb0c837a7334c4da6e6c72942adad6
   - enabled: 1
+    path: Assets/Scenes/Ville/Rikiki_Intro.unity
+    guid: 2c1e33c17a5c2294f84ea5f71ae6cd80
+  - enabled: 1
     path: Assets/Scenes/Ville/Rikiki.unity
     guid: 5ef26d942d741c04c9e02d83fab34f0d
+  - enabled: 1
+    path: Assets/Scenes/Final/Kraken_Intro.unity
+    guid: 8f9debab9c886e74981e06d105552b6c
+  - enabled: 1
+    path: Assets/Scenes/Final/Kraken.unity
+    guid: 97bb4e9add7d3a5459031f07dd77834b
   m_configObjects: {}
