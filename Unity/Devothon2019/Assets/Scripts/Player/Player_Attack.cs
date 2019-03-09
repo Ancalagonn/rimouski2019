@@ -50,7 +50,6 @@ public class Player_Attack : MonoBehaviour
     IEnumerator Fire(Canon canon)
     {
         yield return new WaitForSeconds(Random.Range(0.0f, 0.5f));
-        Debug.Log("Fired with canon : " + canon);
 
         if(canon.canonball == null)
         {

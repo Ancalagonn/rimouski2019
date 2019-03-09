@@ -39,7 +39,6 @@ public class Flames : MonoBehaviour
 
         Destroy(gameObject, p_lifeTime);
 
-        transform.GetChild(0).gameObject.SetActive(true);
     }
 
     // Update is called once per frame
@@ -50,6 +49,7 @@ public class Flames : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+        transform.GetChild(0).gameObject.SetActive(true);
 
         transform.localPosition = parent.position;
         transform.rotation = parent.rotation;

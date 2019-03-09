@@ -6,6 +6,7 @@ public class Player_Stat : MonoBehaviour
 {
     [SerializeField]
     public Boat_Stats playerStats;
+    public Player_Movemement playerMovement;
 
     public Transform CanonsSpotsParent;
     [HideInInspector]
@@ -18,6 +19,7 @@ public class Player_Stat : MonoBehaviour
         playerStats = PlayerInstance.playerStats;
         LoadCanons();
         playerStats.mySelf = this.transform;
+        playerMovement = this.GetComponent<Player_Movemement>();
     }
 
     // Start is called before the first frame update
@@ -128,4 +130,5 @@ public class Player_Stat : MonoBehaviour
                 Destroy(c2.gameObject);
         
     }
+    
 }

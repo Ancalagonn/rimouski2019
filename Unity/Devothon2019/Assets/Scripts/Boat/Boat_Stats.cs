@@ -48,7 +48,6 @@ public class Boat_Stats
     private void SetBoatOnFire()
     {
         int currentHpStade = (int)(PercentHpLeft() / 20f);
-        Debug.Log(currentHpStade);
 
         if (hpStade != currentHpStade)
         {
@@ -89,8 +88,8 @@ public class Boat_Stats
         for (int i = 0; i < maxCanons; i++)
         {
             Canon c = new Canon();
-            c.canonType = CanonType.FlameThrower;
-            c.canonball = Static_Resources.flameEffect;
+           /* c.canonType = CanonType.FlameThrower;
+            c.canonball = Static_Resources.flameEffect;*/
 
             canons.Add(c);
         }

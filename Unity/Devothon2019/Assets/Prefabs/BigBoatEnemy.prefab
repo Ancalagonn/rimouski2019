@@ -51,6 +51,7 @@ GameObject:
   - component: {fileID: 7888709328428395156}
   - component: {fileID: 7017807773978940053}
   - component: {fileID: 5807517388490410372}
+  - component: {fileID: 1832380231}
   m_Layer: 0
   m_Name: BigBoatEnemy
   m_TagString: Enemy
@@ -152,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 185448d31c1fbdf4494de01ef5b4597c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyType: 0
+  enemyType: 1
   enemySize: 1
   enemyStats:
     maxHp: 40
@@ -324,6 +325,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda9f326cd677e44c9e90dab39de4a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rangeAggro: 10
+--- !u!50 &1832380231
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7888709328428395155}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &7888709329039399040
 GameObject:
   m_ObjectHideFlags: 0

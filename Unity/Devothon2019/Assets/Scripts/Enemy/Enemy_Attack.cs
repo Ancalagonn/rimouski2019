@@ -36,7 +36,7 @@ public class Enemy_Attack : MonoBehaviour
             {
                 Debug.Log(canon);
                 StartCoroutine(Fire(canon));
-                canon.ResetCooldown();
+                canon.ResetCooldown(-Random.Range(0.15f, 0.35f));
             }
         }
     }

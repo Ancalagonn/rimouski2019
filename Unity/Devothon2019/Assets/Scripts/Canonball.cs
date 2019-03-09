@@ -52,6 +52,8 @@ public class Canonball : MonoBehaviour
         {
             hasDropBelowWater = true;
             //Instantiate Sploush in water
+            SoundManager.Play("Sploush", transform.position);
+
         }
 
         transform.localScale = Vector3.one * sizeCurve.Evaluate(currentLifetime);
