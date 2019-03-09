@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Introduction : MonoBehaviour
 {
+    public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -12,6 +14,10 @@ public class Introduction : MonoBehaviour
         Narrator.SayTextStatic(false, "Notre capitaine François et ses trois acolytes Pierre, Jacques et Charles, longeront alors la rive du fabuleux Fleuve St-Laurent afin de libérer les grandes villes de la colonie.");
         Narrator.SayTextStatic(false, "Leur aventure ne se terminera pas avant une traversée complète de l'Atlantique afin d'anéantir totalement l'Angleterre.");
         StartCoroutine(ChangeScene());
+    }
+
+    private void Update() {
+        player.transform.position += player.transform.up * Time.deltaTime * 5;   
     }
 
     private IEnumerator ChangeScene() {
