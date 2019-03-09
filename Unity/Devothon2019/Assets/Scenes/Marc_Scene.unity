@@ -261,7 +261,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &984768863
 PrefabInstance:
@@ -313,7 +313,7 @@ PrefabInstance:
     - target: {fileID: 6546894130462959223, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6546894130462959223, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
         type: 3}
@@ -332,99 +332,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e, type: 3}
---- !u!1001 &997580704
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4804510450149376640, guid: 18e1570b6f4af4240b4d3b22311904b1,
-        type: 3}
-      propertyPath: m_Name
-      value: DefaultCanon
-      objectReference: {fileID: 0}
-    - target: {fileID: 4804510450149376645, guid: 18e1570b6f4af4240b4d3b22311904b1,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.26
-      objectReference: {fileID: 0}
-    - target: {fileID: 4804510450149376645, guid: 18e1570b6f4af4240b4d3b22311904b1,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.626
-      objectReference: {fileID: 0}
-    - target: {fileID: 4804510450149376645, guid: 18e1570b6f4af4240b4d3b22311904b1,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4804510450149376645, guid: 18e1570b6f4af4240b4d3b22311904b1,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4804510450149376645, guid: 18e1570b6f4af4240b4d3b22311904b1,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4804510450149376645, guid: 18e1570b6f4af4240b4d3b22311904b1,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4804510450149376645, guid: 18e1570b6f4af4240b4d3b22311904b1,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4804510450149376645, guid: 18e1570b6f4af4240b4d3b22311904b1,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4804510450149376645, guid: 18e1570b6f4af4240b4d3b22311904b1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4804510450149376645, guid: 18e1570b6f4af4240b4d3b22311904b1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4804510450149376645, guid: 18e1570b6f4af4240b4d3b22311904b1,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 18e1570b6f4af4240b4d3b22311904b1, type: 3}
---- !u!1 &1045071252 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6546894130462959210, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
-    type: 3}
-  m_PrefabInstance: {fileID: 984768863}
-  m_PrefabAsset: {fileID: 0}
---- !u!50 &1045071259
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1045071252}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
