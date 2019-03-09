@@ -42,6 +42,31 @@ public class Player_Stat : MonoBehaviour
     public void TakeDamage(float p_damage)
     {
         playerStats.TakeDamage(p_damage);
+        
+        if(playerStats.crewMembers > 4)
+        {
+            Debug.Log(playerStats.crewMembers);
+            if (Random.Range(0, 100) < 5)
+            {
+                playerStats.crewMembers--;
+                switch (Random.Range(1, 4))
+                {
+                    case 1:
+                        playerStats.moveSpeed.RemoveCrewMember();
+                        break;
+                    case 2:
+                        playerStats.rotationSpeed.RemoveCrewMember();
+                        break;
+                    case 3:
+                        playerStats.shotCooldown.RemoveCrewMember();
+                        break;
+                    case 4:
+                        playerStats.repairSpeed.RemoveCrewMember();
+                        break;
+
+                }
+            }
+        }
     }
 
     /// <summary>
