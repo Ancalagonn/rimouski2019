@@ -19,6 +19,11 @@ public class Boat_Stats
     public int crewMembers = 4;
     public int maxCanons = 6;
 
+    int hpStade = 5;
+
+    [HideInInspector]
+    public Transform mySelf;
+
     public float GetHp()
     {
         return currentHp;
@@ -27,15 +32,51 @@ public class Boat_Stats
     public void TakeDamage(float p_dmg)
     {
         currentHp -= p_dmg;
+        SetBoatOnFire();
     }
 
     public bool isDead()
     {
-        return currentHp <= 0;
+        return GetHp() <= 0;
     }
 
-    public Boat_Stats(Stats p_moveSpeed, Stats p_rotationSpeed, Stats p_shotCooldown, Stats p_repairSpeed)
+    public float PercentHpLeft()
     {
+        return currentHp * 100 / maxHp;
+    }
+
+    private void SetBoatOnFire()
+    {
+        int currentHpStade = (int)(PercentHpLeft() / 20f);
+        Debug.Log(currentHpStade);
+
+        if (hpStade != currentHpStade)
+        {
+            int hpStadeDiff = hpStade - currentHpStade;
+
+            for (int i = 0; i < hpStadeDiff; i++)
+            {
+                //float tileWidth = (float)tileSet[0].renderer.bounds.size.x;
+                SpriteRenderer renderer = mySelf.GetComponent<SpriteRenderer>();
+
+                float tileWidth = renderer.bounds.size.x / 2;
+                float tileheight = renderer.bounds.size.y / 2;
+
+                Vector3 pos = new Vector3(Random.Range(-tileWidth, tileWidth), Random.Range(-tileheight, tileheight), -1);
+                GameObject fire = GameObject.Instantiate(Static_Resources.fireEffect);
+                fire.transform.SetParent(mySelf);
+                fire.transform.localPosition = pos;
+            }
+
+            hpStade = currentHpStade;
+        }
+
+    }
+
+    public Boat_Stats(float p_maxHp, Stats p_moveSpeed, Stats p_rotationSpeed, Stats p_shotCooldown, Stats p_repairSpeed)
+    {
+        maxHp = p_maxHp;
+        currentHp = maxHp;
         moveSpeed = p_moveSpeed;
         rotationSpeed = p_rotationSpeed;
         shotCooldown = p_shotCooldown;
