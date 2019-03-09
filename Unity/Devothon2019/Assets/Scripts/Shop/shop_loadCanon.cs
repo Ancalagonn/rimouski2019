@@ -19,6 +19,7 @@ public class shop_loadCanon : MonoBehaviour
             newOption.text = System.Enum.GetNames(typeof(CanonType))[i].ToString();
             lst_options.Add(newOption);
         }
+
         if(m_ddlChoix != null)
         {
             m_ddlChoix.AddOptions(lst_options);

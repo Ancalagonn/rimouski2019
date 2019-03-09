@@ -10,24 +10,25 @@ public class shop_UpgradeCanon : MonoBehaviour
     void Start()
     {
         //PlayerInstance.playerStats.canons[0];
+        Canon newCanon = new Canon();
+        newCanon.level = 1;
+        newCanon.baseCooldown = 10;
+
+
+        //PlayerInstance.playerStats.canons.Add(newCanon);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    //Pour la sélection des canons
-    public void OnCanonClick(int id)
-    {
-
+        //Debug.Log(shop_loadShop.btn_select);
+        //Debug.Log(PlayerInstance.playerStats.canons[shop_loadShop.btn_select].level);
     }
 
     //Pour l'upgrade (changer les stats)
     public void UpgradeCanon()
     {
-        Canon newCanon = new Canon();
+        //PlayerInstance.playerStats.canons[shop_loadShop.btn_select].level++;
 
         //newCanon.
     }
