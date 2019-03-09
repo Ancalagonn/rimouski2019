@@ -15,7 +15,7 @@ public class shop_btnClick : MonoBehaviour
         gameObject.GetComponent<Image>().color = Color.red;
 
         shop_loadShop.btn_select = id;
-        shop_loadShop.LoadPanel();
+        shop_loadShop.LoadPanel(this.gameObject);
     }
 
     public void ResetColors()

@@ -82,14 +82,15 @@ public class Boat_Stats
         shotCooldown = p_shotCooldown;
         repairSpeed = p_repairSpeed;
 
-        //canons = new List<Canon>(maxCanons) { new Canon(), new Canon(), new Canon(), new Canon(), new Canon(), new Canon() };
-
         canons = new List<Canon>(maxCanons);
 
         for (int i = 0; i < maxCanons; i++)
         {
-            canons.Add(new Canon());
+            canons.Add(null);
         }
+
+        canons[maxCanons/4] = new Canon();
+        canons[maxCanons/4 + maxCanons/2] = new Canon();
     }       
 }
 
