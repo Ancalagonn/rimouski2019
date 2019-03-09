@@ -1,87 +1,87 @@
 fileFormatVersion: 2
-guid: cb185e6e59986ee45af71ff4864de113
+guid: b1dfa2a09722e814a9c3ac9c5bbbbe93
 TextureImporter:
   fileIDToRecycleName:
-    21300000: BigBoatPlayer-Idle-SS_0
-    21300002: BigBoatPlayer-Idle-SS_1
-    21300004: BigBoatPlayer-Idle-SS_2
-    21300006: BigBoatPlayer-Idle-SS_3
-    21300008: BigBoatPlayer-Idle-SS_4
-    21300010: BigBoatPlayer-Idle-SS_5
-    21300012: BigBoatPlayer-Idle-SS_6
-    21300014: BigBoatPlayer-Idle-SS_7
-    21300016: BigBoatPlayer-Idle-SS_8
-    21300018: BigBoatPlayer-Idle-SS_9
-    21300020: BigBoatPlayer-Idle-SS_10
-    21300022: BigBoatPlayer-Idle-SS_11
-    21300024: BigBoatPlayer-Idle-SS_12
-    21300026: BigBoatPlayer-Idle-SS_13
-    21300028: BigBoatPlayer-Idle-SS_14
-    21300030: BigBoatPlayer-Idle-SS_15
-    21300032: BigBoatPlayer-Idle-SS_16
-    21300034: BigBoatPlayer-Idle-SS_17
-    21300036: BigBoatPlayer-Idle-SS_18
-    21300038: BigBoatPlayer-Idle-SS_19
-    21300040: BigBoatPlayer-Idle-SS_20
-    21300042: BigBoatPlayer-Idle-SS_21
-    21300044: BigBoatPlayer-Idle-SS_22
-    21300046: BigBoatPlayer-Idle-SS_23
-    21300048: BigBoatPlayer-Idle-SS_24
-    21300050: BigBoatPlayer-Idle-SS_25
-    21300052: BigBoatPlayer-Idle-SS_26
-    21300054: BigBoatPlayer-Idle-SS_27
-    21300056: BigBoatPlayer-Idle-SS_28
-    21300058: BigBoatPlayer-Idle-SS_29
-    21300060: BigBoatPlayer-Idle-SS_30
-    21300062: BigBoatPlayer-Idle-SS_31
-    21300064: BigBoatPlayer-Idle-SS_32
-    21300066: BigBoatPlayer-Idle-SS_33
-    21300068: BigBoatPlayer-Idle-SS_34
-    21300070: BigBoatPlayer-Idle-SS_35
-    21300072: BigBoatPlayer-Idle-SS_36
-    21300074: BigBoatPlayer-Idle-SS_37
-    21300076: BigBoatPlayer-Idle-SS_38
-    21300078: BigBoatPlayer-Idle-SS_39
-    21300080: BigBoatPlayer-Idle-SS_40
-    21300082: BigBoatPlayer-Idle-SS_41
-    21300084: BigBoatPlayer-Idle-SS_42
-    21300086: BigBoatPlayer-Idle-SS_43
-    21300088: BigBoatPlayer-Idle-SS_44
-    21300090: BigBoatPlayer-Idle-SS_45
-    21300092: BigBoatPlayer-Idle-SS_46
-    21300094: BigBoatPlayer-Idle-SS_47
-    21300096: BigBoatPlayer-Idle-SS_48
-    21300098: BigBoatPlayer-Idle-SS_49
-    21300100: BigBoatPlayer-Idle-SS_50
-    21300102: BigBoatPlayer-Idle-SS_51
-    21300104: BigBoatPlayer-Idle-SS_52
-    21300106: BigBoatPlayer-Idle-SS_53
-    21300108: BigBoatPlayer-Idle-SS_54
-    21300110: BigBoatPlayer-Idle-SS_55
-    21300112: BigBoatPlayer-Idle-SS_56
-    21300114: BigBoatPlayer-Idle-SS_57
-    21300116: BigBoatPlayer-Idle-SS_58
-    21300118: BigBoatPlayer-Idle-SS_59
-    21300120: BigBoatPlayer-Idle-SS_60
-    21300122: BigBoatPlayer-Idle-SS_61
-    21300124: BigBoatPlayer-Idle-SS_62
-    21300126: BigBoatPlayer-Idle-SS_63
-    21300128: BigBoatPlayer-Idle-SS_64
-    21300130: BigBoatPlayer-Idle-SS_65
-    21300132: BigBoatPlayer-Idle-SS_66
-    21300134: BigBoatPlayer-Idle-SS_67
-    21300136: BigBoatPlayer-Idle-SS_68
-    21300138: BigBoatPlayer-Idle-SS_69
-    21300140: BigBoatPlayer-Idle-SS_70
-    21300142: BigBoatPlayer-Idle-SS_71
-    21300144: BigBoatPlayer-Idle-SS_72
-    21300146: BigBoatPlayer-Idle-SS_73
-    21300148: BigBoatPlayer-Idle-SS_74
-    21300150: BigBoatPlayer-Idle-SS_75
-    21300152: BigBoatPlayer-Idle-SS_76
-    21300154: BigBoatPlayer-Idle-SS_77
-    21300156: BigBoatPlayer-Idle-SS_78
-    21300158: BigBoatPlayer-Idle-SS_79
+    21300000: BigBoatEnemy-Idle-SS_0
+    21300002: BigBoatEnemy-Idle-SS_1
+    21300004: BigBoatEnemy-Idle-SS_2
+    21300006: BigBoatEnemy-Idle-SS_3
+    21300008: BigBoatEnemy-Idle-SS_4
+    21300010: BigBoatEnemy-Idle-SS_5
+    21300012: BigBoatEnemy-Idle-SS_6
+    21300014: BigBoatEnemy-Idle-SS_7
+    21300016: BigBoatEnemy-Idle-SS_8
+    21300018: BigBoatEnemy-Idle-SS_9
+    21300020: BigBoatEnemy-Idle-SS_10
+    21300022: BigBoatEnemy-Idle-SS_11
+    21300024: BigBoatEnemy-Idle-SS_12
+    21300026: BigBoatEnemy-Idle-SS_13
+    21300028: BigBoatEnemy-Idle-SS_14
+    21300030: BigBoatEnemy-Idle-SS_15
+    21300032: BigBoatEnemy-Idle-SS_16
+    21300034: BigBoatEnemy-Idle-SS_17
+    21300036: BigBoatEnemy-Idle-SS_18
+    21300038: BigBoatEnemy-Idle-SS_19
+    21300040: BigBoatEnemy-Idle-SS_20
+    21300042: BigBoatEnemy-Idle-SS_21
+    21300044: BigBoatEnemy-Idle-SS_22
+    21300046: BigBoatEnemy-Idle-SS_23
+    21300048: BigBoatEnemy-Idle-SS_24
+    21300050: BigBoatEnemy-Idle-SS_25
+    21300052: BigBoatEnemy-Idle-SS_26
+    21300054: BigBoatEnemy-Idle-SS_27
+    21300056: BigBoatEnemy-Idle-SS_28
+    21300058: BigBoatEnemy-Idle-SS_29
+    21300060: BigBoatEnemy-Idle-SS_30
+    21300062: BigBoatEnemy-Idle-SS_31
+    21300064: BigBoatEnemy-Idle-SS_32
+    21300066: BigBoatEnemy-Idle-SS_33
+    21300068: BigBoatEnemy-Idle-SS_34
+    21300070: BigBoatEnemy-Idle-SS_35
+    21300072: BigBoatEnemy-Idle-SS_36
+    21300074: BigBoatEnemy-Idle-SS_37
+    21300076: BigBoatEnemy-Idle-SS_38
+    21300078: BigBoatEnemy-Idle-SS_39
+    21300080: BigBoatEnemy-Idle-SS_40
+    21300082: BigBoatEnemy-Idle-SS_41
+    21300084: BigBoatEnemy-Idle-SS_42
+    21300086: BigBoatEnemy-Idle-SS_43
+    21300088: BigBoatEnemy-Idle-SS_44
+    21300090: BigBoatEnemy-Idle-SS_45
+    21300092: BigBoatEnemy-Idle-SS_46
+    21300094: BigBoatEnemy-Idle-SS_47
+    21300096: BigBoatEnemy-Idle-SS_48
+    21300098: BigBoatEnemy-Idle-SS_49
+    21300100: BigBoatEnemy-Idle-SS_50
+    21300102: BigBoatEnemy-Idle-SS_51
+    21300104: BigBoatEnemy-Idle-SS_52
+    21300106: BigBoatEnemy-Idle-SS_53
+    21300108: BigBoatEnemy-Idle-SS_54
+    21300110: BigBoatEnemy-Idle-SS_55
+    21300112: BigBoatEnemy-Idle-SS_56
+    21300114: BigBoatEnemy-Idle-SS_57
+    21300116: BigBoatEnemy-Idle-SS_58
+    21300118: BigBoatEnemy-Idle-SS_59
+    21300120: BigBoatEnemy-Idle-SS_60
+    21300122: BigBoatEnemy-Idle-SS_61
+    21300124: BigBoatEnemy-Idle-SS_62
+    21300126: BigBoatEnemy-Idle-SS_63
+    21300128: BigBoatEnemy-Idle-SS_64
+    21300130: BigBoatEnemy-Idle-SS_65
+    21300132: BigBoatEnemy-Idle-SS_66
+    21300134: BigBoatEnemy-Idle-SS_67
+    21300136: BigBoatEnemy-Idle-SS_68
+    21300138: BigBoatEnemy-Idle-SS_69
+    21300140: BigBoatEnemy-Idle-SS_70
+    21300142: BigBoatEnemy-Idle-SS_71
+    21300144: BigBoatEnemy-Idle-SS_72
+    21300146: BigBoatEnemy-Idle-SS_73
+    21300148: BigBoatEnemy-Idle-SS_74
+    21300150: BigBoatEnemy-Idle-SS_75
+    21300152: BigBoatEnemy-Idle-SS_76
+    21300154: BigBoatEnemy-Idle-SS_77
+    21300156: BigBoatEnemy-Idle-SS_78
+    21300158: BigBoatEnemy-Idle-SS_79
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -143,7 +143,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -154,7 +154,7 @@ TextureImporter:
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -164,7 +164,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_0
+      name: BigBoatEnemy-Idle-SS_0
       rect:
         serializedVersion: 2
         x: 0
@@ -178,13 +178,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c92ef7c9be470e64fa31fefa6d8a6c70
+      spriteID: 1fb63c477b072cd429ae4962438ff007
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_1
+      name: BigBoatEnemy-Idle-SS_1
       rect:
         serializedVersion: 2
         x: 720
@@ -198,13 +198,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71df053a05897504bb047f4132334c4a
+      spriteID: eaf85db3f27ea0647bcd8a365b5d8d85
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_2
+      name: BigBoatEnemy-Idle-SS_2
       rect:
         serializedVersion: 2
         x: 1440
@@ -218,13 +218,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a20873836eb35148ab5438723f34904
+      spriteID: 105d8a721c35f22438e4dca930ad1e4a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_3
+      name: BigBoatEnemy-Idle-SS_3
       rect:
         serializedVersion: 2
         x: 2160
@@ -238,13 +238,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7524718cac5200b458e28c459154439c
+      spriteID: 3afb49c2263451f42840fb4d0025c858
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_4
+      name: BigBoatEnemy-Idle-SS_4
       rect:
         serializedVersion: 2
         x: 2880
@@ -258,13 +258,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 121f1ddeaf556e345b1819ff5ec7921c
+      spriteID: a59d203492af3774baeb75fc0f9cbdb0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_5
+      name: BigBoatEnemy-Idle-SS_5
       rect:
         serializedVersion: 2
         x: 3600
@@ -278,13 +278,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28a4a7bdac7dce945b20a90499b7de64
+      spriteID: 641fc0857505f444e908b3a597f3c1e7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_6
+      name: BigBoatEnemy-Idle-SS_6
       rect:
         serializedVersion: 2
         x: 4320
@@ -298,13 +298,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2a473e1e4ad3bf6469a9621a17fb33e0
+      spriteID: 3652cbbd36f7f0a469d934766b311355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_7
+      name: BigBoatEnemy-Idle-SS_7
       rect:
         serializedVersion: 2
         x: 5040
@@ -318,13 +318,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1173ae386d084ab4f8d40161ea2dda17
+      spriteID: 1510c5b3be8bada4291a8054c4b0685d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_8
+      name: BigBoatEnemy-Idle-SS_8
       rect:
         serializedVersion: 2
         x: 5760
@@ -338,13 +338,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5644f1ebc49098a4f9003533eff80e62
+      spriteID: 3f6031bfec519264f93a99c85c53cb51
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_9
+      name: BigBoatEnemy-Idle-SS_9
       rect:
         serializedVersion: 2
         x: 6480
@@ -358,13 +358,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bc0d0f9f7883cb48aa12e6db1cd3633
+      spriteID: ecfb64a2cd2a8d742a82e871e5c212e5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_10
+      name: BigBoatEnemy-Idle-SS_10
       rect:
         serializedVersion: 2
         x: 0
@@ -378,13 +378,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94011557721efb0449da54243f59e1f9
+      spriteID: 1703726cd6a7fbc458ae9c0f680904c0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_11
+      name: BigBoatEnemy-Idle-SS_11
       rect:
         serializedVersion: 2
         x: 720
@@ -398,13 +398,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f455ca6dc729ba439808b5f37c27c48
+      spriteID: 7ac71f32d9ed78e4b834b158e6fc3bca
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_12
+      name: BigBoatEnemy-Idle-SS_12
       rect:
         serializedVersion: 2
         x: 1440
@@ -418,13 +418,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92b7cf3a2dbb8824a9663d36c3948472
+      spriteID: 5e3fdbaa3f6752242932c797ea88a8fb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_13
+      name: BigBoatEnemy-Idle-SS_13
       rect:
         serializedVersion: 2
         x: 2160
@@ -438,13 +438,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 66c5b4f178f843e43a8cdf0f17501110
+      spriteID: a76a7094930ab4947ba9c4fc54d6b4c2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_14
+      name: BigBoatEnemy-Idle-SS_14
       rect:
         serializedVersion: 2
         x: 2880
@@ -458,13 +458,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91af611fcd355da42a8e7e3c8e5363bc
+      spriteID: baeb547d5214b794aaca2ac43b5c911e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_15
+      name: BigBoatEnemy-Idle-SS_15
       rect:
         serializedVersion: 2
         x: 3600
@@ -478,13 +478,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d35880af14c466c4992e4d3d0f98b370
+      spriteID: 3e96b03104b3f874b8cc62a6c0d19e1a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_16
+      name: BigBoatEnemy-Idle-SS_16
       rect:
         serializedVersion: 2
         x: 4320
@@ -498,13 +498,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec15a4411d8abca488b215cfb8ebb12f
+      spriteID: e9320bc11def77b45aca106543fb3981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_17
+      name: BigBoatEnemy-Idle-SS_17
       rect:
         serializedVersion: 2
         x: 5040
@@ -518,13 +518,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f109d4d4c72ba944b60ed3003aa72d5
+      spriteID: e2b74559fbed26f4a9c647fbd0c8d70e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_18
+      name: BigBoatEnemy-Idle-SS_18
       rect:
         serializedVersion: 2
         x: 5760
@@ -538,13 +538,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a88d35cc99d4cca4b8acf1876407cbc3
+      spriteID: 35c9dcda595eac3448d2763ce4eff6bd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_19
+      name: BigBoatEnemy-Idle-SS_19
       rect:
         serializedVersion: 2
         x: 6480
@@ -558,13 +558,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50fa0edb41020784eaf4ad93affce8a0
+      spriteID: d21bbbde1968c734085392361c7eba9b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_20
+      name: BigBoatEnemy-Idle-SS_20
       rect:
         serializedVersion: 2
         x: 0
@@ -578,13 +578,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18d10c7f399249b42bb3c19080eb7aba
+      spriteID: d195faff41049dc4394c0342df93da6e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_21
+      name: BigBoatEnemy-Idle-SS_21
       rect:
         serializedVersion: 2
         x: 720
@@ -598,13 +598,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c670c17151221da428f902c76cc19e99
+      spriteID: 83861cb0c58792e438270813430a8233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_22
+      name: BigBoatEnemy-Idle-SS_22
       rect:
         serializedVersion: 2
         x: 1440
@@ -618,13 +618,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a85219fc410ad6d42b85078282d9139f
+      spriteID: 59eaeae7706b6544d9899ca0687d6be6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_23
+      name: BigBoatEnemy-Idle-SS_23
       rect:
         serializedVersion: 2
         x: 2160
@@ -638,13 +638,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cfa05dd8a686f94e9e8cf35d2ff2b78
+      spriteID: 400877ec38c04e84ab65be344bb0e9e3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_24
+      name: BigBoatEnemy-Idle-SS_24
       rect:
         serializedVersion: 2
         x: 2880
@@ -658,13 +658,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59aef9d732b5fa54d8f29bf54d1e1836
+      spriteID: 504cfdc0e7f2b444287fc720eb872ca8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_25
+      name: BigBoatEnemy-Idle-SS_25
       rect:
         serializedVersion: 2
         x: 3600
@@ -678,13 +678,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30ec061d1db15e5468738901cdf878ea
+      spriteID: 3d540a124db0cda4983662eb645d37e3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_26
+      name: BigBoatEnemy-Idle-SS_26
       rect:
         serializedVersion: 2
         x: 4320
@@ -698,13 +698,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c80ac7af5825b824ea211af595e606c4
+      spriteID: 747751019eca97f4597ce36f3ea3f572
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_27
+      name: BigBoatEnemy-Idle-SS_27
       rect:
         serializedVersion: 2
         x: 5040
@@ -718,13 +718,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad2dfc44cffdc1f4fa588c13fcfa001f
+      spriteID: 5deb4a2e8f9f234429047a3601933c17
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_28
+      name: BigBoatEnemy-Idle-SS_28
       rect:
         serializedVersion: 2
         x: 5760
@@ -738,13 +738,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 299c81815b92e5043ba4e888fdf1e7e4
+      spriteID: d97d2a79c074d534e8da94d062cdd8c7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_29
+      name: BigBoatEnemy-Idle-SS_29
       rect:
         serializedVersion: 2
         x: 6480
@@ -758,13 +758,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d18e4db962e6fdb41bf00c5f63dd1a65
+      spriteID: d2d1d91e32e2ba5459e09c6aa3366e14
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_30
+      name: BigBoatEnemy-Idle-SS_30
       rect:
         serializedVersion: 2
         x: 0
@@ -778,13 +778,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4dc7b875ec6f19b478793cb68854e081
+      spriteID: 1d294e87ea0441a4693d942a848de9c2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_31
+      name: BigBoatEnemy-Idle-SS_31
       rect:
         serializedVersion: 2
         x: 720
@@ -798,13 +798,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f37f80fa01f28e488a9b58afe2f1efa
+      spriteID: d94e278a91ee1da4d8953fe1391557d7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_32
+      name: BigBoatEnemy-Idle-SS_32
       rect:
         serializedVersion: 2
         x: 1440
@@ -818,13 +818,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2efb772ed00bd5945af12314273671d7
+      spriteID: 8dd286d67550e6040a5c3b26769565cb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_33
+      name: BigBoatEnemy-Idle-SS_33
       rect:
         serializedVersion: 2
         x: 2160
@@ -838,13 +838,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f972af8bf2acbc499565cac82e49e3f
+      spriteID: 5198f99ca8627b449aba2701ce651cd8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_34
+      name: BigBoatEnemy-Idle-SS_34
       rect:
         serializedVersion: 2
         x: 2880
@@ -858,13 +858,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b9b09d6c87f29e40ba211148772aaa0
+      spriteID: 13ca0c677a4e37148ba6fe6d8edaff50
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_35
+      name: BigBoatEnemy-Idle-SS_35
       rect:
         serializedVersion: 2
         x: 3600
@@ -878,13 +878,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 556194000f9bdc44e8fd950fc5dc69a4
+      spriteID: 9e95496463e10404c975b93f392605e8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_36
+      name: BigBoatEnemy-Idle-SS_36
       rect:
         serializedVersion: 2
         x: 4320
@@ -898,13 +898,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fc289c2373231d24489d3414c2b0dfb2
+      spriteID: 5e3d18fff38604f4b90014f3a888eee4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_37
+      name: BigBoatEnemy-Idle-SS_37
       rect:
         serializedVersion: 2
         x: 5040
@@ -918,13 +918,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf4aa14f97bb56b449a3f64174408414
+      spriteID: c36b1951aebd0a64e882bb73b5d32c22
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_38
+      name: BigBoatEnemy-Idle-SS_38
       rect:
         serializedVersion: 2
         x: 5760
@@ -938,13 +938,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fb95b9d4f9a25745ae9e920177efb5c
+      spriteID: 1e4704fc61d07324a8bb1fefde920530
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_39
+      name: BigBoatEnemy-Idle-SS_39
       rect:
         serializedVersion: 2
         x: 6480
@@ -958,13 +958,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 425ab8276fb2ed64fa287d854e1084f0
+      spriteID: c6caa796f9dac2e4982c3c1f26f525ce
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_40
+      name: BigBoatEnemy-Idle-SS_40
       rect:
         serializedVersion: 2
         x: 0
@@ -978,13 +978,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c77ef720d5e552c4e85e3143e4c1e009
+      spriteID: 22ee67595091a09498d73873bd7c16fc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_41
+      name: BigBoatEnemy-Idle-SS_41
       rect:
         serializedVersion: 2
         x: 720
@@ -998,13 +998,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8dcc4db5d42e102418c28f16cdcd56ea
+      spriteID: 436eb6c8c6abf9749afdd460be0e5a6a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_42
+      name: BigBoatEnemy-Idle-SS_42
       rect:
         serializedVersion: 2
         x: 1440
@@ -1018,13 +1018,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75717251c29c2974bb2afdfcbd918071
+      spriteID: 5330b3724b3595b4cb506af1548eea62
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_43
+      name: BigBoatEnemy-Idle-SS_43
       rect:
         serializedVersion: 2
         x: 2160
@@ -1038,13 +1038,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8c8c9008b38ee44b84ab8824d326280
+      spriteID: 7d1d20ff99dda084b8be6a9a56a4801b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_44
+      name: BigBoatEnemy-Idle-SS_44
       rect:
         serializedVersion: 2
         x: 2880
@@ -1058,13 +1058,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 967248bf1c912cd4c850724992578d77
+      spriteID: 953ec1d0ccc2d784399651664f48e2a2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_45
+      name: BigBoatEnemy-Idle-SS_45
       rect:
         serializedVersion: 2
         x: 3600
@@ -1078,13 +1078,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e1c7214b8ef0f6e4eb04df08b150b22d
+      spriteID: ab931201a850e0849a413c226ca69dc0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_46
+      name: BigBoatEnemy-Idle-SS_46
       rect:
         serializedVersion: 2
         x: 4320
@@ -1098,13 +1098,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb6668b81731ab24fb0f82e62edc2ff8
+      spriteID: 77bb7c75ea7ddfe47bc469356abaf619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_47
+      name: BigBoatEnemy-Idle-SS_47
       rect:
         serializedVersion: 2
         x: 5040
@@ -1118,13 +1118,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f05ed2a7668329949a99fe06e6b82be4
+      spriteID: 1a5747f87ca1dfb47863a98acc408577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_48
+      name: BigBoatEnemy-Idle-SS_48
       rect:
         serializedVersion: 2
         x: 5760
@@ -1138,13 +1138,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee5a0ab5d31ee394cbf521882d33e80e
+      spriteID: 1fffcc65b5c9e394598d60be766c3d4c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_49
+      name: BigBoatEnemy-Idle-SS_49
       rect:
         serializedVersion: 2
         x: 6480
@@ -1158,13 +1158,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: def65dce3347f474e8dc3d5a7ac9286c
+      spriteID: 8a2444dc0e45d034cb0cedca2e07a2ba
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_50
+      name: BigBoatEnemy-Idle-SS_50
       rect:
         serializedVersion: 2
         x: 0
@@ -1178,13 +1178,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48451ab537322834a9d0da0153e26be9
+      spriteID: 2e48161ecb27e8240931653b1ea642b8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_51
+      name: BigBoatEnemy-Idle-SS_51
       rect:
         serializedVersion: 2
         x: 720
@@ -1198,13 +1198,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcfab374487c74b48a62cbcaf273a324
+      spriteID: 37ed18a0701185742a9ecf69c35da2bf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_52
+      name: BigBoatEnemy-Idle-SS_52
       rect:
         serializedVersion: 2
         x: 1440
@@ -1218,13 +1218,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 716624bc27d7f7545a3fbf941c207782
+      spriteID: 0f31226b3f15e6a499ee2181eaf8738e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_53
+      name: BigBoatEnemy-Idle-SS_53
       rect:
         serializedVersion: 2
         x: 2160
@@ -1238,13 +1238,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d397f9a055252ab4495956b241eee3ef
+      spriteID: 819cef87e3cfbf2479f02e2ba6f1a0a6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_54
+      name: BigBoatEnemy-Idle-SS_54
       rect:
         serializedVersion: 2
         x: 2880
@@ -1258,13 +1258,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bf5dcc48e6d2bcf41994b77ee65616bb
+      spriteID: 35f1b81fd6eeed149980450c94111afb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_55
+      name: BigBoatEnemy-Idle-SS_55
       rect:
         serializedVersion: 2
         x: 3600
@@ -1278,13 +1278,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5f1c7521f015164d877107ca55d378c
+      spriteID: d93a2f5fd6f08a04a97df3b80e2415e6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_56
+      name: BigBoatEnemy-Idle-SS_56
       rect:
         serializedVersion: 2
         x: 4320
@@ -1298,13 +1298,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f8b8056d2ae599d44a268bccd841631f
+      spriteID: d4e4b1f802fbf624b9c96488c7dd30a6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_57
+      name: BigBoatEnemy-Idle-SS_57
       rect:
         serializedVersion: 2
         x: 5040
@@ -1318,13 +1318,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7422e8cefee000e4e8c17694570db27c
+      spriteID: 144a78455fb59de46863d05a9600c35c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_58
+      name: BigBoatEnemy-Idle-SS_58
       rect:
         serializedVersion: 2
         x: 5760
@@ -1338,13 +1338,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8b8fcfdbf356d3f488a89c3111ed7a78
+      spriteID: c59e933ef163142499e20b8892a715b1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_59
+      name: BigBoatEnemy-Idle-SS_59
       rect:
         serializedVersion: 2
         x: 6480
@@ -1358,13 +1358,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: caa25754a9a8f4e4789d32adcf9a96ac
+      spriteID: 05fd97cf8bb933447b6edab58c137eb9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_60
+      name: BigBoatEnemy-Idle-SS_60
       rect:
         serializedVersion: 2
         x: 0
@@ -1378,13 +1378,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 793e6508516bccf468b4a540c1d31b26
+      spriteID: 3eea31c88eb73324184768dc642caf41
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_61
+      name: BigBoatEnemy-Idle-SS_61
       rect:
         serializedVersion: 2
         x: 720
@@ -1398,13 +1398,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 802e642d2b7ea084d99b0abd2d81023d
+      spriteID: 5ecc753fe86b1d54da1929cbc0f0f104
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_62
+      name: BigBoatEnemy-Idle-SS_62
       rect:
         serializedVersion: 2
         x: 1440
@@ -1418,13 +1418,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a07597f2dfd46d40854df796851cd7d
+      spriteID: b9fcb7ed3a03c51489232e265562d977
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_63
+      name: BigBoatEnemy-Idle-SS_63
       rect:
         serializedVersion: 2
         x: 2160
@@ -1438,13 +1438,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20daab5c6d9923846a0bbc19ed540c97
+      spriteID: 81d8a008b5b212246bc8fbb698845494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_64
+      name: BigBoatEnemy-Idle-SS_64
       rect:
         serializedVersion: 2
         x: 2880
@@ -1458,13 +1458,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 95de6340480ffb04dadfc13316606a9b
+      spriteID: 9d7a92fbb2e5c42449ee9781e15e4562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_65
+      name: BigBoatEnemy-Idle-SS_65
       rect:
         serializedVersion: 2
         x: 3600
@@ -1478,13 +1478,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c88cfa8daa5cf5a4cbfa9e205dc60799
+      spriteID: ed9527a731eb517419e9b19a076b0717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_66
+      name: BigBoatEnemy-Idle-SS_66
       rect:
         serializedVersion: 2
         x: 4320
@@ -1498,13 +1498,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8b2fd3405103974d9ab935d76883b9d
+      spriteID: e2619b5b61858d64b8f7bd12b9030daa
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_67
+      name: BigBoatEnemy-Idle-SS_67
       rect:
         serializedVersion: 2
         x: 5040
@@ -1518,13 +1518,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a651673707f0cf044b0edd29fc50188a
+      spriteID: d3ecd40f7ac68144e9828f5e4b2f22bf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_68
+      name: BigBoatEnemy-Idle-SS_68
       rect:
         serializedVersion: 2
         x: 5760
@@ -1538,13 +1538,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fac6eae90c8e5434091b8987933f836f
+      spriteID: daf5b603b1d68a749b391e92ffd06830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_69
+      name: BigBoatEnemy-Idle-SS_69
       rect:
         serializedVersion: 2
         x: 6480
@@ -1558,13 +1558,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fe236c59c8d93b44182a7109736472fa
+      spriteID: 054005ae1dcc81e4db94bb923ecbb47d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_70
+      name: BigBoatEnemy-Idle-SS_70
       rect:
         serializedVersion: 2
         x: 0
@@ -1578,13 +1578,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e905e687ee8b7984f8d09e1b0d01e70d
+      spriteID: 946445d4ae945ac4192ddc9d8f6497ff
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_71
+      name: BigBoatEnemy-Idle-SS_71
       rect:
         serializedVersion: 2
         x: 720
@@ -1598,13 +1598,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47d1f657b239e3442bec4227c2e25268
+      spriteID: 045c19368c499b84ebe6017adbcde94c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_72
+      name: BigBoatEnemy-Idle-SS_72
       rect:
         serializedVersion: 2
         x: 1440
@@ -1618,13 +1618,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0f93bb550f6ef64faf4ab6cc1243e08
+      spriteID: 8ddc6c79755109c4791bccdef1b98101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_73
+      name: BigBoatEnemy-Idle-SS_73
       rect:
         serializedVersion: 2
         x: 2160
@@ -1638,13 +1638,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a624a40cbc9f49b439337237bad9e8ed
+      spriteID: e122fc5c66a8fc9408737c903cfd88e5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_74
+      name: BigBoatEnemy-Idle-SS_74
       rect:
         serializedVersion: 2
         x: 2880
@@ -1658,13 +1658,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 085597f00227b404e9d233c411845b8f
+      spriteID: 5a9ed73c59b17004bbc3fe6d2495f682
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_75
+      name: BigBoatEnemy-Idle-SS_75
       rect:
         serializedVersion: 2
         x: 3600
@@ -1678,13 +1678,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bb99abd58fee9047b4736efaf37b7fa
+      spriteID: bbfca27e007072c4089e588c5cd9d0df
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_76
+      name: BigBoatEnemy-Idle-SS_76
       rect:
         serializedVersion: 2
         x: 4320
@@ -1698,13 +1698,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2d043673cb713a2408d6d70f64d2157e
+      spriteID: 61064f548d7c69f43a30e6b53a79513b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_77
+      name: BigBoatEnemy-Idle-SS_77
       rect:
         serializedVersion: 2
         x: 5040
@@ -1718,13 +1718,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1dfc7735a3ddec47aafff8486808606
+      spriteID: e53485cd73cafde4a9c6c38472969a76
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_78
+      name: BigBoatEnemy-Idle-SS_78
       rect:
         serializedVersion: 2
         x: 5760
@@ -1738,13 +1738,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6c6fc356b61c94442b26dc8fa81b2ed0
+      spriteID: ab7dd1856c31c6941b66090da333fe73
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BigBoatPlayer-Idle-SS_79
+      name: BigBoatEnemy-Idle-SS_79
       rect:
         serializedVersion: 2
         x: 6480
@@ -1758,7 +1758,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7bb120948c9d8e44b35fa0e162e8d5a
+      spriteID: 7c808d11e3643a547b0367622ad50b3b
       vertices: []
       indices: 
       edges: []
@@ -1766,7 +1766,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: c75c5bad4d258eb4188f6b903a145319
+    spriteID: cd806755823754a4987951c058fec514
     vertices: []
     indices: 
     edges: []
