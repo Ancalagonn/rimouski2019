@@ -18,6 +18,7 @@ public class Player_Stat : MonoBehaviour
         playerStats = PlayerInstance.playerStats;
         Debug.Log(playerStats);
         LoadCanons();
+        playerStats.mySelf = this.transform;
     }
 
     // Start is called before the first frame update

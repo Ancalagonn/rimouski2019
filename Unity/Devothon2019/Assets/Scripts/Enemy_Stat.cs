@@ -9,7 +9,9 @@ public class Enemy_Stat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        enemyStats.currentHp = 1;
+        enemyStats.maxHp = 100;
+        enemyStats.currentHp = enemyStats.maxHp;
+        enemyStats.mySelf = this.transform;
     }
 
     // Update is called once per frame
@@ -22,7 +24,7 @@ public class Enemy_Stat : MonoBehaviour
     public void TakeDamage(float p_damage)
     {
         enemyStats.TakeDamage(p_damage);
-        Debug.Log(gameObject.name + " : " + enemyStats.currentHp);
+        //Debug.Log(gameObject.name + " : " + enemyStats.currentHp);
     }
 
 
