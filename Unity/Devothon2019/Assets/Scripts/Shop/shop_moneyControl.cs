@@ -34,7 +34,7 @@ public class shop_moneyControl : MonoBehaviour
         }
         else
         {
-            PlayerInstance.playerCash += p_money;
+            PlayerInstance.playerCash += (int)p_money;
 
             //On affiche le changement de prix
             AfficherArgent();
