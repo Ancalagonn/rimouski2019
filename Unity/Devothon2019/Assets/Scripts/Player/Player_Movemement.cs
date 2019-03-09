@@ -13,7 +13,7 @@ public class Player_Movemement : MonoBehaviour
     private float lastTimeForwardPressed = 0;
     private float lastTimeRotationPressed = 0;
     private float speed = 0;
-    private float rotationMomentum = 0;
+    public float rotationMomentum = 0;
 
     private Player_Abordage pa;
 
