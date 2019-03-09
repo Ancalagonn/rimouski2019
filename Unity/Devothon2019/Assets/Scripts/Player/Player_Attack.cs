@@ -34,7 +34,10 @@ public class Player_Attack : MonoBehaviour
     {
         foreach (Canon canon in PlayerInstance.playerStats.canons)
         {
-            if(canon.canFire())
+            if (canon == null)
+                continue;
+
+            if (canon.canFire())
             {
                 StartCoroutine(Fire(canon));
                 canon.ResetCooldown();
@@ -49,7 +52,7 @@ public class Player_Attack : MonoBehaviour
     /// <returns></returns>
     IEnumerator Fire(Canon canon)
     {
-        yield return new WaitForSeconds(Random.Range(0.10f, 0.25f));
+        yield return new WaitForSeconds(Random.Range(0.0f, 0.25f));
         Debug.Log("Fired with canon : " + canon);
         GameObject canonballObj = Instantiate(canon.canonball, null);
         Canonball canonball = canonballObj.GetComponent<Canonball>();
@@ -63,6 +66,9 @@ public class Player_Attack : MonoBehaviour
     {
         foreach (Canon canon in PlayerInstance.playerStats.canons)
         {
+            if (canon == null)
+                continue;
+
             if (!canon.canFire())
                 canon.currentCooldownTime -= Time.deltaTime;
         }
