@@ -23,7 +23,7 @@ public class Canon
 
     public Canon()
     {
-        canonType = CanonType.Normal;
+        canonType = CanonType.TripleShot;
         damage = 10;
         baseCooldown = 2;
         level = 1;
