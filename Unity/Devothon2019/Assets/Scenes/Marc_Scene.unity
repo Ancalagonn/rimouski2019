@@ -347,6 +347,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5914728500770240826, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: boatSpeedCurve.m_Curve.Array.data[0].inSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914728500770240826, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: boatSpeedCurve.m_Curve.Array.data[0].outSlope
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914728500770240826, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: boatSpeedCurve.m_Curve.Array.data[0].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914728500770240826, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: boatSpeedCurve.m_Curve.Array.data[1].inSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914728500770240826, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: boatSpeedCurve.m_Curve.Array.data[1].outSlope
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5914728500770240826, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: boatSpeedCurve.m_Curve.Array.data[1].tangentMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e, type: 3}
 --- !u!1001 &6798052901284208218
@@ -364,12 +394,12 @@ PrefabInstance:
     - target: {fileID: 7888709328428395152, guid: 08fc0fd7412f2bf49bdcccf970833cf9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -25.680717
+      value: -14.27
       objectReference: {fileID: 0}
     - target: {fileID: 7888709328428395152, guid: 08fc0fd7412f2bf49bdcccf970833cf9,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.727216
+      value: -0.36
       objectReference: {fileID: 0}
     - target: {fileID: 7888709328428395152, guid: 08fc0fd7412f2bf49bdcccf970833cf9,
         type: 3}
@@ -415,6 +445,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807517388490410372, guid: 08fc0fd7412f2bf49bdcccf970833cf9,
+        type: 3}
+      propertyPath: rangeAggro
+      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 08fc0fd7412f2bf49bdcccf970833cf9, type: 3}

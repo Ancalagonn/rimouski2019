@@ -88,26 +88,49 @@ public class Player_Stat : MonoBehaviour
 
             switch (canon.canonType)
             {
-                default:
-                case CanonType.Normal:
-                    canonObj = Instantiate(Static_Resources.defaultCanon);
-                    break;
                 case CanonType.TripleShot:
-                    canonObj = Instantiate(Static_Resources.defaultCanon);
+                case CanonType.Normal:
+                    if (canon.canonType == CanonType.Normal)
+                        canonObj = Instantiate(Static_Resources.defaultCanon);
+                    else
+                        canonObj = Instantiate(Static_Resources.tripleCanon);
+
+                    if (canon.canonball == null)
+                        canon.canonball = Static_Resources.defaultCanonball;
+
+                    canonObj.name = "Canon" + i;
+                    canonObj.transform.SetParent(CanonsSpots[i]);
+                    canonObj.transform.position = new Vector3(0, 0, -1);
+                    canonObj.transform.localPosition = new Vector3(0, 0, -1);
+                    canonObj.transform.rotation = CanonsSpots[i].rotation;
+
+                    Canon_Controller canonCtrl = canonObj.AddComponent<Canon_Controller>();
+                    canonCtrl.canonInfo = canon;
+                    canonCtrl.canonInfo.shootPoint = CanonsSpots[i];
+
                     break;
                 case CanonType.FlameThrower:
+                    canonObj = Instantiate(Static_Resources.flameThrower);
+                    canonObj.name = "CanonFlame" + i;
+                    canonObj.transform.SetParent(CanonsSpots[i]);
+                    canonObj.transform.position = new Vector3(0, 0, -1);
+                    canonObj.transform.localPosition = new Vector3(0, 0, -1);
+                    canonObj.transform.rotation = CanonsSpots[i].rotation;
+
+
+                    if (canon.canonball == null)
+                        canon.canonball = Static_Resources.flameEffect;
+
+                    canon.baseCooldown = 5f;
+
+                    Flame_Controller flameCtrl = canonObj.AddComponent<Flame_Controller>();
+                    flameCtrl.canonInfo = canon;
+                    flameCtrl.canonInfo.shootPoint = CanonsSpots[i];
+
                     break;
             }
             
-            canonObj.name = "Canon" + i;
-            canonObj.transform.SetParent(CanonsSpots[i]);
-            canonObj.transform.position = new Vector3(0, 0, -1);
-            canonObj.transform.localPosition = new Vector3(0, 0, -1);
-            canonObj.transform.rotation = CanonsSpots[i].rotation;
-
-            Canon_Controller canonCtrl = canonObj.AddComponent<Canon_Controller>();
-            canonCtrl.canonInfo = canon;
-            canonCtrl.canonInfo.shootPoint = CanonsSpots[i];         
+      
         }
     }
 
@@ -117,14 +140,20 @@ public class Player_Stat : MonoBehaviour
     void LoadCanonsSpots()
     {
         CanonsSpots = new List<Transform>();
+        DestroyCanons();
         foreach (Transform child in CanonsSpotsParent)
         {
             CanonsSpots.Add(child);
-            foreach (Transform c2 in child)
-            {
-                Destroy(c2.gameObject);
-            }
+
         }
+    }
+
+    public void DestroyCanons()
+    {
+        foreach (Transform child in CanonsSpotsParent)
+            foreach (Transform c2 in child)
+                Destroy(c2.gameObject);
+        
     }
     
 }

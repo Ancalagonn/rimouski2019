@@ -38,6 +38,7 @@ public class Player_Movemement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //On vérifie si le bateau est en cours d'abordage
         if(!pa.isBoarding)
         {
@@ -66,11 +67,13 @@ public class Player_Movemement : MonoBehaviour
             }
 
 
+        float sensibility = 0.15f;
+
         //Pressed
-        if (x != 0)
+        if (Mathf.Abs(x) >= sensibility)
         {
             
-            if(x > 0)
+            if(x > sensibility)
             {
                 //Rotation side changed
                 if (rotationMomentum < 0)
@@ -80,7 +83,7 @@ public class Player_Movemement : MonoBehaviour
                 }
             }
 
-            if (x < 0)
+            if (x < -sensibility)
             {
                 //Rotation side changed
                 if (rotationMomentum > 0)
