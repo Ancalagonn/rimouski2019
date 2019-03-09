@@ -42,7 +42,13 @@ public class Boat_Stats
         repairSpeed = p_repairSpeed;
 
         //canons = new List<Canon>(maxCanons) { new Canon(), new Canon(), new Canon(), new Canon(), new Canon(), new Canon() };
-        canons = new List<Canon>(maxCanons) { null, new Canon(), null, null, new Canon(), null };
+
+        canons = new List<Canon>(maxCanons);
+
+        for (int i = 0; i < maxCanons; i++)
+        {
+            canons.Add(new Canon());
+        }
     }       
 }
 
