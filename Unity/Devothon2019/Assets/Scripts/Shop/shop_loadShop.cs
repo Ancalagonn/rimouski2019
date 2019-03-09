@@ -47,7 +47,7 @@ public class shop_loadShop : MonoBehaviour
                 GameObject btn = Instantiate(addCanonPrefab, boat.GetComponent<Player_Stat>().CanonsSpots[i].transform);
                 btn.transform.localScale = new Vector3(0.01f, 0.01f, 0.02f);
                 btn.transform.localPosition = new Vector3(0,0,-1);
-                btn.GetComponentInChildren<Text>().text = price.CoutCanonBase + "$";
+                btn.GetComponentInChildren<Text>().text = price.COUT_CANON_BASE + "$";
                 btn.GetComponent<shop_btnClick>().id = i;
             } else {
                 GameObject btn = Instantiate(btnPrefab, boat.GetComponent<Player_Stat>().CanonsSpots[i].transform);
@@ -71,7 +71,7 @@ public class shop_loadShop : MonoBehaviour
         else
         {
             //Lors de l'achat d'un canon
-            if(shop_moneyControl.Transaction(-price.CoutCanonBase))
+            if(shop_moneyControl.Transaction(-price.COUT_CANON_BASE))
             {
                 //Créé un canon de base
                 PlayerInstance.playerStats.canons[btn_select] = new Canon();

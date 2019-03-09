@@ -15,7 +15,7 @@ public class shop_UpgradeCanon : MonoBehaviour
     //Pour l'upgrade (changer les stats)
     public void UpgradeCanon()
     {
-        if(shop_moneyControl.Transaction(-price.UpgradeCanon))
+        if(shop_moneyControl.Transaction(-price.UPGRADE_CANON))
         {
             PlayerInstance.playerStats.canons[shop_loadShop.btn_select].level++;
         }
@@ -25,18 +25,23 @@ public class shop_UpgradeCanon : MonoBehaviour
     public void ChangerType()
     {
         CanonType newType = (CanonType)m_dllType.value;
+
+        if (newType == PlayerInstance.playerStats.canons[shop_loadShop.btn_select].canonType) {
+            return;
+        }
+
         int cost = 0;
 
         switch(newType)
         {
             case CanonType.FlameThrower:
-                cost = price.Canon_Flame;
+                cost = price.CANON_FLAME;
                 break;
             case CanonType.Normal:
-                cost = price.Canon_Normal;
+                cost = price.CANON_NORMAL;
                 break;
             case CanonType.TripleShot:
-                cost = price.Canon_Triple;
+                cost = price.CANON_TRIPLE;
                 break;
         }
 
