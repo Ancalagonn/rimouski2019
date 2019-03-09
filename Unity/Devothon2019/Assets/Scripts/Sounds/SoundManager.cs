@@ -75,13 +75,13 @@ public static class SoundManager {
 
             AudioSource src = soundObj.AddComponent<AudioSource>();
             SoundObject obj = soundObj.GetComponent<SoundObject>();
-
+            obj.Init(s.clip.length + 0.3f);
 
 
             src.clip = s.clip;
             src.volume = s.volume;
             src.loop = s.loop;
-            obj.Init(s.clip.length + 0.3f);
+            
             src.Play();
 
             
