@@ -6,11 +6,10 @@ public class Player_Attack : MonoBehaviour
 {
     public KeyCode fireKey = KeyCode.Space;
 
-    private GameObject defaultCanonball;
+    private string CollidingTag = "Enemy";
 
     private void Awake()
     {
-        defaultCanonball = Resources.Load<GameObject>("Canonball");
     }
 
     // Start is called before the first frame update
@@ -60,7 +59,7 @@ public class Player_Attack : MonoBehaviour
 
         if(canon.canonball == null)
         {
-            canon.canonball = defaultCanonball;
+            canon.canonball = Static_Resources.defaultCanonball;
         }
 
         GameObject canonballObj;
@@ -72,17 +71,16 @@ public class Player_Attack : MonoBehaviour
             case CanonType.Normal:
                 canonballObj = Instantiate(canon.canonball, null);
                 canonball = canonballObj.GetComponent<Canonball>();
-                canonball.InitCanonball(canon.shootPoint.up, canon.GetDamage());
+                canonball.InitCanonball(canon.shootPoint.up, canon.GetDamage(), CollidingTag);
                 canonball.transform.position = canon.shootPoint.position;
-                SoundManager.Play("FireCanon", canon.shootPoint.position);
                 break;
 
             case CanonType.TripleShot:
+
                 for (int i = 0; i < 3; i++)
                 {
                     canonballObj = Instantiate(canon.canonball, null);
                     canonball = canonballObj.GetComponent<Canonball>();
-
                     
                     GameObject temp = new GameObject();
                     temp.transform.SetParent(canon.shootPoint);
@@ -97,16 +95,18 @@ public class Player_Attack : MonoBehaviour
                         temp.transform.Rotate(temp.transform.forward, 12);
                     }
                    
-                    canonball.InitCanonball(temp.transform.up, canon.GetDamage());
+                    canonball.InitCanonball(temp.transform.up, canon.GetDamage(), CollidingTag);
                     canonball.transform.position = canon.shootPoint.position;
-                    SoundManager.Play("FireCanon", canon.shootPoint.position);
-                    //yield return new WaitForSeconds(0.1f);
+
+                    Destroy(temp);
                 }
+
                 break;
             case CanonType.FlameThrower:
                 break;
         }
 
+        SoundManager.Play("FireCanon", canon.shootPoint.position);
 
         yield return null;
     }

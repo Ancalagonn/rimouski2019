@@ -13,8 +13,9 @@ public class Player_Stat : MonoBehaviour
 
     private void Awake()
     {
+        Static_Resources.LoadResources();
         SoundManager.LoadSound();
-        //playerStats = PlayerInstance.playerStats;
+        playerStats = PlayerInstance.playerStats;
         Debug.Log(playerStats);
         LoadCanons();
     }
@@ -32,6 +33,18 @@ public class Player_Stat : MonoBehaviour
         playerStats = PlayerInstance.playerStats;
     }
 
+    /// <summary>
+    /// Take damage (Use with SendMessage)
+    /// </summary>
+    /// <param name="p_damage"></param>
+    public void TakeDamage(float p_damage)
+    {
+        playerStats.TakeDamage(p_damage);
+    }
+
+    /// <summary>
+    /// Load canons from playerinstance
+    /// </summary>
     private void LoadCanons()
     {
         LoadCanonsSpots();
@@ -54,6 +67,9 @@ public class Player_Stat : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Load every canon spot on the current boat
+    /// </summary>
     void LoadCanonsSpots()
     {
         CanonsSpots = new List<Transform>();

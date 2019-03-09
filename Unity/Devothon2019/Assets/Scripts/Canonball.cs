@@ -8,9 +8,15 @@ public class Canonball : MonoBehaviour
     private Vector3 direction;
     private float damage;
 
-    public void InitCanonball(Vector3 p_dir, float p_damage)
+    private string collidingTag;
+
+    private bool hasCollided = false;
+
+    public void InitCanonball(Vector3 p_dir, float p_damage, string p_collidingTag)
     {
         direction = p_dir;
+        damage = p_damage;
+        collidingTag = p_collidingTag;
         Destroy(gameObject, 5f);
     }
 
@@ -18,6 +24,32 @@ public class Canonball : MonoBehaviour
     void Update()
     {
         transform.position += direction * speed * Time.deltaTime;
+    }
+
+    private void OnTriggerEnter2D(Collider2D col)
+    {
+        if (hasCollided)
+            return;
+
+        if(col.CompareTag(collidingTag))
+        {
+            hasCollided = true;
+            col.SendMessage("TakeDamage", this.damage);
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D col)
+    {
+        if (hasCollided)
+            return;
+
+        if (col.CompareTag(collidingTag))
+        {
+            hasCollided = true;
+            col.SendMessage("TakeDamage", this.damage);
+            Destroy(gameObject);
+        }
     }
 
 
