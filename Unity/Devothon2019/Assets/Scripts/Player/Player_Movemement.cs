@@ -10,6 +10,7 @@ public class Player_Movemement : MonoBehaviour
     public AnimationCurve boatSpeedCurve;
 
     private float lastTimePressed = 0;
+    private float speed = 0;
 
     private void Awake()
     {
@@ -26,28 +27,30 @@ public class Player_Movemement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float z = Input.GetAxis("Vertical") * Time.deltaTime * playerStats.moveSpeed.value;
+        float z = Input.GetAxisRaw("Vertical") * Time.deltaTime * playerStats.moveSpeed.value;
         float x = Input.GetAxis("Horizontal") * Time.deltaTime * playerStats.rotationSpeed.value;
-
-
-        if(z > 0)
-        {
-            lastTimePressed += Time.deltaTime * 0.75f;
-        }
-        else
-        {
-            lastTimePressed = Time.time;
-        }
 
         float timeSinceLastPressed = Time.time - lastTimePressed;
 
         if (timeSinceLastPressed >= 1)
             timeSinceLastPressed = 1;
 
-        float speed = z * boatSpeedCurve.Evaluate(timeSinceLastPressed);
+        //Pressed
+        if (z > 0)
+        {
+            lastTimePressed += Time.deltaTime * 0.8f;
+            //Speed curve
+            speed = z * boatSpeedCurve.Evaluate(timeSinceLastPressed);
+        }
+        else //Not pressed
+        {
+            lastTimePressed = Time.time;
+
+            //80% less speed each seconds
+            speed -= (Time.deltaTime * speed * 0.80f);
+        }
 
         transform.Rotate(-transform.forward, x);
-
 
         rb.position += (Vector2)transform.up * speed;
     }
