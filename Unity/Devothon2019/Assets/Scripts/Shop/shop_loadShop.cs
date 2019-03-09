@@ -6,18 +6,27 @@ using UnityEngine.UI;
 
 public class shop_loadShop : MonoBehaviour
 {
+    public static shop_loadShop intance;
+
     public GameObject boatLocation;
     public GameObject boatPrefab;
     public GameObject btnPrefab;
+    public Dropdown ddl_canonType;
 
     private GameObject boat;
 
     public static int btn_select;
 
+    public void Awake()
+    {
+        intance = this;
+    }
+
     void Start()
     {
         boat = Instantiate(boatPrefab, boatLocation.transform);
         boat.transform.localScale *= 100;
+        boat.GetComponent<Player_Movemement>().enabled = false;
 
         for (int i = 0; i < boat.GetComponent<Player_Stat>().CanonsSpots.Count; i++)
         {
@@ -35,9 +44,15 @@ public class shop_loadShop : MonoBehaviour
         if (PlayerInstance.playerStats.canons[btn_select] != null)
         {
             Debug.Log("C'est cancer sur un temps");
+            Canon selectedCanon = PlayerInstance.playerStats.canons[btn_select];
+            intance.ddl_canonType.value = (int)selectedCanon.canonType;
         }
         else
         {
+            //Lors de l'achat d'un canon
+            shop_moneyControl.Transaction(34);
+
+            //Créé un canon de base
             PlayerInstance.playerStats.canons[btn_select] = new Canon();
             Debug.Log("Canon créé");
         }
