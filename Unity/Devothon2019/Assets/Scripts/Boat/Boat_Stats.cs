@@ -8,11 +8,11 @@ public class Boat_Stats
     [HideInInspector]
     public float currentHp;
 
-    public Stats moveSpeed;
-    public Stats rotationSpeed;
+    public Stats moveSpeed = new Stats();
+    public Stats rotationSpeed = new Stats();
 
-    public Stats shotCooldown;
-    public Stats repairSpeed;
+    public Stats shotCooldown = new Stats();
+    public Stats repairSpeed = new Stats();
 
     public List<Canon> canons;
 
@@ -45,6 +45,11 @@ public class Stats
 {
     public float value = 0;
     public int crewAssigned = 1;
+
+    public Stats()
+    {
+        crewAssigned = 1;
+    }
 
     public void AddCrewMember()
     {
