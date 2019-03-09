@@ -271,7 +271,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 83201874}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 165205282}
+        m_MethodName: CrewAddOrRemove
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 83201871}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &83201874
@@ -540,6 +551,49 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &165205281
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 165205283}
+  - component: {fileID: 165205282}
+  m_Layer: 0
+  m_Name: CrewAffectationController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &165205282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165205281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe5dd6df55d650c479ee3c4b6841972c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &165205283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165205281}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 301.15485, y: 85.11088, z: -3.4647899}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &172634639
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,8 +628,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 110.3, y: -6.2}
-  m_SizeDelta: {x: 49.32, y: 30}
+  m_AnchoredPosition: {x: 92.57, y: -6.2}
+  m_SizeDelta: {x: 48.73, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &172634641
 MonoBehaviour:
@@ -604,7 +658,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -773,8 +827,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 110.3, y: -6.2}
-  m_SizeDelta: {x: 49.32, y: 30}
+  m_AnchoredPosition: {x: 90.83, y: -6.2}
+  m_SizeDelta: {x: 41.77, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &405423552
 MonoBehaviour:
@@ -803,7 +857,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -1138,7 +1192,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 704405218}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 165205282}
+        m_MethodName: CrewAddOrRemove
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 704405215}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &704405218
@@ -1337,7 +1402,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 783079290}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 165205282}
+        m_MethodName: CrewAddOrRemove
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 783079287}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &783079290
@@ -1611,7 +1687,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 980399315}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 165205282}
+        m_MethodName: CrewAddOrRemove
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 980399312}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &980399315
@@ -1764,8 +1851,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 110.3, y: -6.2}
-  m_SizeDelta: {x: 49.32, y: 30}
+  m_AnchoredPosition: {x: 92.9, y: -6.2}
+  m_SizeDelta: {x: 43.5, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1159952202
 MonoBehaviour:
@@ -1794,7 +1881,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -2125,7 +2212,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1360513037}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 165205282}
+        m_MethodName: CrewAddOrRemove
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1360513034}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1360513037
@@ -2639,7 +2737,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1743443336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 165205282}
+        m_MethodName: CrewAddOrRemove
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1743443333}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1743443336
@@ -2757,7 +2866,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1756527445}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 165205282}
+        m_MethodName: CrewAddOrRemove
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1756527442}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1756527445
@@ -3110,7 +3230,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2075829139}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 165205282}
+        m_MethodName: CrewAddOrRemove
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2075829136}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &2075829139
@@ -3184,8 +3315,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 110.3, y: -6.2}
-  m_SizeDelta: {x: 49.32, y: 30}
+  m_AnchoredPosition: {x: 92.28, y: -6.2}
+  m_SizeDelta: {x: 45.83, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2085853664
 MonoBehaviour:
@@ -3214,7 +3345,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
