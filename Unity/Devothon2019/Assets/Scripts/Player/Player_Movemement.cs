@@ -19,11 +19,6 @@ public class Player_Movemement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -55,6 +50,27 @@ public class Player_Movemement : MonoBehaviour
         //Pressed
         if (x != 0)
         {
+            
+            if(x > 0)
+            {
+                //Rotation side changed
+                if (rotationMomentum < 0)
+                {
+                    rotationMomentum = 0;
+                    lastTimeRotationPressed = 0;
+                }
+            }
+
+            if (x < 0)
+            {
+                //Rotation side changed
+                if (rotationMomentum > 0)
+                {
+                    rotationMomentum = 0;
+                    lastTimeRotationPressed = 0;
+                }
+            }
+
             lastTimeRotationPressed += Time.deltaTime * 0.6f;
             //Speed curve
             rotationMomentum = x * boatRotationCurve.Evaluate(lastTimeRotationPressed);
@@ -63,9 +79,10 @@ public class Player_Movemement : MonoBehaviour
         {
             lastTimeRotationPressed = Time.time;
 
-            //80% less rotation speed each seconds
-            rotationMomentum -= (Time.deltaTime * rotationMomentum * 0.95f);
+            //40% less rotation speed each seconds
+            rotationMomentum -= (Time.deltaTime * rotationMomentum * 0.98f);
         }
+
 
         transform.Rotate(-transform.forward, rotationMomentum);
 
