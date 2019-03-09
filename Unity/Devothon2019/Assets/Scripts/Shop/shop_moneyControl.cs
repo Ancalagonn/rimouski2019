@@ -21,9 +21,7 @@ public class shop_moneyControl : MonoBehaviour
 
     public static void AfficherArgent()
     {
-        float money = PlayerInstance.playerCash;
-        money = Mathf.Round(money * 100f) / 100f;
-        instance.moneyDisplay.text = "Argent : " + money.ToString() + " écu ";
+        instance.moneyDisplay.text = "Argent : " + PlayerInstance.playerCash.ToString() + " écu ";
     }
 
     public static bool Transaction(int p_money)
@@ -36,7 +34,7 @@ public class shop_moneyControl : MonoBehaviour
         }
         else
         {
-            PlayerInstance.playerCash += p_money;
+            PlayerInstance.playerCash += (int)p_money;
 
             //On affiche le changement de prix
             AfficherArgent();

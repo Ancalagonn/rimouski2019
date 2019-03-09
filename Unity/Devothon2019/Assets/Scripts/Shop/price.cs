@@ -4,11 +4,21 @@ using UnityEngine;
 
 public class price : MonoBehaviour
 {
-    public static int Canon_Normal = 40;
-    public static int Canon_Triple = 40;
-    public static int Canon_Flame = 40;
+    public price instance;
 
-    public static int UpgradeCoque = 100;
-    public static int RepaireCoque = 100;
-    public static int AddCrew = 100;
+    public const int Canon_Normal = 40;
+    public const int Canon_Triple = 40;
+    public const int Canon_Flame = 40;
+
+    public const int UpgradeCanon = 40;
+    public const int CoutCanonBase = 30;
+
+    public const int UpgradeCoque = 100;
+    public const int RepairCoque = 100;
+    public const int AddCrew = 100;
+
+    public void Awake()
+    {
+        instance = this;
+    }
 }
