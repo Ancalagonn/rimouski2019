@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Introduction : MonoBehaviour
 {
+    public GameObject player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,9 +16,14 @@ public class Introduction : MonoBehaviour
         StartCoroutine(ChangeScene());
     }
 
+    private void Update() {
+        player.transform.position += player.transform.up * Time.deltaTime * 5;   
+    }
+
     private IEnumerator ChangeScene() {
         yield return new WaitForSeconds(1f);
         yield return new WaitUntil(() => !Narrator.isTalking);
-        Debug.Log("Changement de scène");
+        
+        ManageScene.instance.LoadSceneBlack("Montreal_Intro");
     }
 }

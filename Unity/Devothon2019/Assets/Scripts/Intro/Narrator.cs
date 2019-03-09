@@ -15,7 +15,7 @@ public class Narrator : MonoBehaviour {
     public static bool isTalking = false;
 	private DialogText currentText;
 	private bool isKeyDown = false;
-	private int playSound = 2;
+	private int playSound = 1;
 
 	// Use this for initialization
 	void Start () {
@@ -71,7 +71,7 @@ public class Narrator : MonoBehaviour {
 						if(playSound == 0)
 						{
 							sonTexte.Play();
-							playSound = 2;
+							playSound = 1;
 						}
 						else
 						{
