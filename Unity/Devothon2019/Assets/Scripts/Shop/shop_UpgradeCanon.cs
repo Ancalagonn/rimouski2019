@@ -9,34 +9,40 @@ public class shop_UpgradeCanon : MonoBehaviour
     public Dropdown m_dllType;
     void Start()
     {
-        //PlayerInstance.playerStats.canons[0];
-        Canon newCanon = new Canon();
-        newCanon.level = 1;
-        newCanon.baseCooldown = 10;
 
-
-        //PlayerInstance.playerStats.canons.Add(newCanon);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //Debug.Log(shop_loadShop.btn_select);
-        //Debug.Log(PlayerInstance.playerStats.canons[shop_loadShop.btn_select].level);
     }
 
     //Pour l'upgrade (changer les stats)
     public void UpgradeCanon()
     {
-        //PlayerInstance.playerStats.canons[shop_loadShop.btn_select].level++;
-
-        //newCanon.
+        if(shop_moneyControl.Transaction(-50))
+        {
+            PlayerInstance.playerStats.canons[shop_loadShop.btn_select].level++;
+        }
     }
 
     //Changer le type de canon
     public void ChangerType()
     {
-        Canon newCanon = new Canon();
-        newCanon.canonType = (CanonType)m_dllType.value;
+        CanonType newType = (CanonType)m_dllType.value;
+        float cost = 0;
+
+        switch(newType)
+        {
+            case CanonType.FlameThrower:
+                cost = 40;
+                break;
+            case CanonType.Normal:
+                cost = 40;
+                break;
+            case CanonType.TripleShot:
+                cost = 40;
+                break;
+        }
+
+        if (shop_moneyControl.Transaction(-cost))
+        {
+            PlayerInstance.playerStats.canons[shop_loadShop.btn_select].canonType = (CanonType)m_dllType.value;
+        }
     }
 }
