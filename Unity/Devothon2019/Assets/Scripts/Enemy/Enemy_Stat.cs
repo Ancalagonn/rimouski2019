@@ -57,26 +57,42 @@ public class Enemy_Stat : MonoBehaviour
 
             switch (canon.canonType)
             {
-                default:
-                case CanonType.Normal:
-                    canonObj = Instantiate(Static_Resources.defaultCanon);
-                    break;
                 case CanonType.TripleShot:
-                    canonObj = Instantiate(Static_Resources.tripleCanon);
+                case CanonType.Normal:
+                    if (canon.canonType == CanonType.Normal)
+                        canonObj = Instantiate(Static_Resources.defaultCanon);
+                    else
+                        canonObj = Instantiate(Static_Resources.tripleCanon);
+
+                    canonObj.name = "Canon" + i;
+                    canonObj.transform.SetParent(CanonsSpots[i]);
+                    canonObj.transform.position = new Vector3(0, 0, -1);
+                    canonObj.transform.localPosition = new Vector3(0, 0, -1);
+                    canonObj.transform.rotation = CanonsSpots[i].rotation;
+
+                    Canon_Controller canonCtrl = canonObj.AddComponent<Canon_Controller>();
+                    canonCtrl.canonInfo = canon;
+                    canonCtrl.canonInfo.shootPoint = CanonsSpots[i];
+
                     break;
                 case CanonType.FlameThrower:
+                    canonObj = Instantiate(Static_Resources.flameThrower);
+                    canonObj.name = "Canon" + i;
+                    canonObj.transform.SetParent(CanonsSpots[i]);
+                    canonObj.transform.position = new Vector3(0, 0, -1);
+                    canonObj.transform.localPosition = new Vector3(0, 0, -1);
+                    canonObj.transform.rotation = CanonsSpots[i].rotation;
+
+                    Flame_Controller flameCtrl = canonObj.AddComponent<Flame_Controller>();
+                    flameCtrl.canonInfo = canon;
+                    flameCtrl.canonInfo.shootPoint = CanonsSpots[i];
+
                     break;
             }
 
-            canonObj.name = "Canon" + i;
-            canonObj.transform.SetParent(CanonsSpots[i]);
-            canonObj.transform.position = new Vector3(0, 0, -1);
-            canonObj.transform.localPosition = new Vector3(0, 0, -1);
-            canonObj.transform.rotation = CanonsSpots[i].rotation;
+            
 
-            Canon_Controller canonCtrl = canonObj.AddComponent<Canon_Controller>();
-            canonCtrl.canonInfo = canon;
-            canonCtrl.canonInfo.shootPoint = CanonsSpots[i];
+            
         }
     }
 

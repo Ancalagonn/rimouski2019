@@ -9,6 +9,8 @@ public static class Static_Resources
     public static GameObject fireEffect;
     public static GameObject defaultCanon;
     public static GameObject tripleCanon;
+    public static GameObject flameThrower;
+    public static GameObject flameEffect;
 
     public static int SmallBoatValue = 100;
     public static int BigBoatValue = 200;
@@ -19,9 +21,11 @@ public static class Static_Resources
     public static void LoadResources()
     {
         defaultCanonball = Resources.Load<GameObject>("Canonball");
+        flameEffect = Resources.Load<GameObject>("Flame");
         fireEffect = Resources.Load<GameObject>("FireEffect");
         defaultCanon = Resources.Load<GameObject>("DefaultCanon");
         tripleCanon = Resources.Load<GameObject>("TripleCanon");
+        flameThrower = Resources.Load<GameObject>("Flamethrower");
     }
 
     public static Boat_Stats GenerateBoatStats(EnemySize size, EnemyType type)
@@ -72,6 +76,9 @@ public static class Static_Resources
                     break;
                 case EnemyType.Fire:
                     canonType = CanonType.FlameThrower;
+                    damage = 10;
+                    baseCooldown = 5;
+                    canonball = flameEffect;
                     break;
                 case EnemyType.Triple:
                     canonType = CanonType.TripleShot;
@@ -102,7 +109,7 @@ public static class Static_Resources
                     break;
             }
 
-            canons.Add(new Canon(canonType, damage, baseCooldown, defaultCanonball, 1, 1.15f));
+            canons.Add(new Canon(canonType, damage, baseCooldown, canonball, 1, 1.15f));
         }   
 
         return canons;

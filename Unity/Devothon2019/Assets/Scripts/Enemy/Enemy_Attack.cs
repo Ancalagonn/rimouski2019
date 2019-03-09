@@ -60,6 +60,8 @@ public class Enemy_Attack : MonoBehaviour
         Canonball canonball;
         float lifetime;
 
+        string soundName = "FireCanon";
+
         switch (canon.canonType)
         {
             default:
@@ -70,6 +72,7 @@ public class Enemy_Attack : MonoBehaviour
                     
                 canonball.InitCanonball(canon.shootPoint.up, canon.GetDamage(), CollidingTag, lifetime);
                 canonball.transform.position = canon.shootPoint.position;
+                soundName = "FireCanon";
                 break;
 
             case CanonType.TripleShot:
@@ -100,8 +103,17 @@ public class Enemy_Attack : MonoBehaviour
                     Destroy(temp);
                 }
 
+                soundName = "FireCanon";
                 break;
             case CanonType.FlameThrower:
+                canonballObj = Instantiate(canon.canonball, null);
+                Flames flames = canonballObj.GetComponent<Flames>();
+                lifetime = canon.baseCooldown;
+
+                flames.InitFlame(canon.shootPoint,canon.shootPoint.up, canon.GetDamage(), CollidingTag, lifetime);
+                flames.transform.position = canon.shootPoint.position + (canon.shootPoint.up * 5);
+
+                soundName = "FireCanon";
                 break;
         }
 

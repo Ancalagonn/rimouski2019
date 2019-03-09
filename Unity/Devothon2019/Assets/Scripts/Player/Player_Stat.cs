@@ -16,7 +16,6 @@ public class Player_Stat : MonoBehaviour
         Static_Resources.LoadResources();
         SoundManager.LoadSound();
         playerStats = PlayerInstance.playerStats;
-        Debug.Log(playerStats);
         LoadCanons();
         playerStats.mySelf = this.transform;
     }
