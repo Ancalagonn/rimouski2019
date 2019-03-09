@@ -1,0 +1,1779 @@
+fileFormatVersion: 2
+guid: b1dfa2a09722e814a9c3ac9c5bbbbe93
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BigBoatEnemy-Idle-SS_0
+    21300002: BigBoatEnemy-Idle-SS_1
+    21300004: BigBoatEnemy-Idle-SS_2
+    21300006: BigBoatEnemy-Idle-SS_3
+    21300008: BigBoatEnemy-Idle-SS_4
+    21300010: BigBoatEnemy-Idle-SS_5
+    21300012: BigBoatEnemy-Idle-SS_6
+    21300014: BigBoatEnemy-Idle-SS_7
+    21300016: BigBoatEnemy-Idle-SS_8
+    21300018: BigBoatEnemy-Idle-SS_9
+    21300020: BigBoatEnemy-Idle-SS_10
+    21300022: BigBoatEnemy-Idle-SS_11
+    21300024: BigBoatEnemy-Idle-SS_12
+    21300026: BigBoatEnemy-Idle-SS_13
+    21300028: BigBoatEnemy-Idle-SS_14
+    21300030: BigBoatEnemy-Idle-SS_15
+    21300032: BigBoatEnemy-Idle-SS_16
+    21300034: BigBoatEnemy-Idle-SS_17
+    21300036: BigBoatEnemy-Idle-SS_18
+    21300038: BigBoatEnemy-Idle-SS_19
+    21300040: BigBoatEnemy-Idle-SS_20
+    21300042: BigBoatEnemy-Idle-SS_21
+    21300044: BigBoatEnemy-Idle-SS_22
+    21300046: BigBoatEnemy-Idle-SS_23
+    21300048: BigBoatEnemy-Idle-SS_24
+    21300050: BigBoatEnemy-Idle-SS_25
+    21300052: BigBoatEnemy-Idle-SS_26
+    21300054: BigBoatEnemy-Idle-SS_27
+    21300056: BigBoatEnemy-Idle-SS_28
+    21300058: BigBoatEnemy-Idle-SS_29
+    21300060: BigBoatEnemy-Idle-SS_30
+    21300062: BigBoatEnemy-Idle-SS_31
+    21300064: BigBoatEnemy-Idle-SS_32
+    21300066: BigBoatEnemy-Idle-SS_33
+    21300068: BigBoatEnemy-Idle-SS_34
+    21300070: BigBoatEnemy-Idle-SS_35
+    21300072: BigBoatEnemy-Idle-SS_36
+    21300074: BigBoatEnemy-Idle-SS_37
+    21300076: BigBoatEnemy-Idle-SS_38
+    21300078: BigBoatEnemy-Idle-SS_39
+    21300080: BigBoatEnemy-Idle-SS_40
+    21300082: BigBoatEnemy-Idle-SS_41
+    21300084: BigBoatEnemy-Idle-SS_42
+    21300086: BigBoatEnemy-Idle-SS_43
+    21300088: BigBoatEnemy-Idle-SS_44
+    21300090: BigBoatEnemy-Idle-SS_45
+    21300092: BigBoatEnemy-Idle-SS_46
+    21300094: BigBoatEnemy-Idle-SS_47
+    21300096: BigBoatEnemy-Idle-SS_48
+    21300098: BigBoatEnemy-Idle-SS_49
+    21300100: BigBoatEnemy-Idle-SS_50
+    21300102: BigBoatEnemy-Idle-SS_51
+    21300104: BigBoatEnemy-Idle-SS_52
+    21300106: BigBoatEnemy-Idle-SS_53
+    21300108: BigBoatEnemy-Idle-SS_54
+    21300110: BigBoatEnemy-Idle-SS_55
+    21300112: BigBoatEnemy-Idle-SS_56
+    21300114: BigBoatEnemy-Idle-SS_57
+    21300116: BigBoatEnemy-Idle-SS_58
+    21300118: BigBoatEnemy-Idle-SS_59
+    21300120: BigBoatEnemy-Idle-SS_60
+    21300122: BigBoatEnemy-Idle-SS_61
+    21300124: BigBoatEnemy-Idle-SS_62
+    21300126: BigBoatEnemy-Idle-SS_63
+    21300128: BigBoatEnemy-Idle-SS_64
+    21300130: BigBoatEnemy-Idle-SS_65
+    21300132: BigBoatEnemy-Idle-SS_66
+    21300134: BigBoatEnemy-Idle-SS_67
+    21300136: BigBoatEnemy-Idle-SS_68
+    21300138: BigBoatEnemy-Idle-SS_69
+    21300140: BigBoatEnemy-Idle-SS_70
+    21300142: BigBoatEnemy-Idle-SS_71
+    21300144: BigBoatEnemy-Idle-SS_72
+    21300146: BigBoatEnemy-Idle-SS_73
+    21300148: BigBoatEnemy-Idle-SS_74
+    21300150: BigBoatEnemy-Idle-SS_75
+    21300152: BigBoatEnemy-Idle-SS_76
+    21300154: BigBoatEnemy-Idle-SS_77
+    21300156: BigBoatEnemy-Idle-SS_78
+    21300158: BigBoatEnemy-Idle-SS_79
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12222
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fb63c477b072cd429ae4962438ff007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_1
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 12222
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaf85db3f27ea0647bcd8a365b5d8d85
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_2
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 12222
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105d8a721c35f22438e4dca930ad1e4a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_3
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 12222
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3afb49c2263451f42840fb4d0025c858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_4
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 12222
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59d203492af3774baeb75fc0f9cbdb0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_5
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 12222
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641fc0857505f444e908b3a597f3c1e7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_6
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 12222
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3652cbbd36f7f0a469d934766b311355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_7
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 12222
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1510c5b3be8bada4291a8054c4b0685d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_8
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 12222
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6031bfec519264f93a99c85c53cb51
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_9
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 12222
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfb64a2cd2a8d742a82e871e5c212e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10476
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1703726cd6a7fbc458ae9c0f680904c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_11
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 10476
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac71f32d9ed78e4b834b158e6fc3bca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_12
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 10476
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3fdbaa3f6752242932c797ea88a8fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_13
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 10476
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76a7094930ab4947ba9c4fc54d6b4c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_14
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 10476
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baeb547d5214b794aaca2ac43b5c911e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_15
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 10476
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e96b03104b3f874b8cc62a6c0d19e1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_16
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 10476
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9320bc11def77b45aca106543fb3981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_17
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 10476
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2b74559fbed26f4a9c647fbd0c8d70e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_18
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 10476
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c9dcda595eac3448d2763ce4eff6bd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_19
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 10476
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21bbbde1968c734085392361c7eba9b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8730
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d195faff41049dc4394c0342df93da6e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_21
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 8730
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83861cb0c58792e438270813430a8233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_22
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 8730
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59eaeae7706b6544d9899ca0687d6be6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_23
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 8730
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 400877ec38c04e84ab65be344bb0e9e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_24
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 8730
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504cfdc0e7f2b444287fc720eb872ca8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_25
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 8730
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d540a124db0cda4983662eb645d37e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_26
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 8730
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747751019eca97f4597ce36f3ea3f572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_27
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 8730
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5deb4a2e8f9f234429047a3601933c17
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_28
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 8730
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97d2a79c074d534e8da94d062cdd8c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_29
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 8730
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d1d91e32e2ba5459e09c6aa3366e14
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6984
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d294e87ea0441a4693d942a848de9c2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_31
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 6984
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94e278a91ee1da4d8953fe1391557d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_32
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 6984
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dd286d67550e6040a5c3b26769565cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_33
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 6984
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5198f99ca8627b449aba2701ce651cd8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_34
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 6984
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ca0c677a4e37148ba6fe6d8edaff50
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_35
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 6984
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e95496463e10404c975b93f392605e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_36
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 6984
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e3d18fff38604f4b90014f3a888eee4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_37
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 6984
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c36b1951aebd0a64e882bb73b5d32c22
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_38
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 6984
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4704fc61d07324a8bb1fefde920530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_39
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 6984
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6caa796f9dac2e4982c3c1f26f525ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5238
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ee67595091a09498d73873bd7c16fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_41
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 5238
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436eb6c8c6abf9749afdd460be0e5a6a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_42
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 5238
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5330b3724b3595b4cb506af1548eea62
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_43
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 5238
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d1d20ff99dda084b8be6a9a56a4801b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_44
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 5238
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953ec1d0ccc2d784399651664f48e2a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_45
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 5238
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab931201a850e0849a413c226ca69dc0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_46
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 5238
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77bb7c75ea7ddfe47bc469356abaf619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_47
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 5238
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a5747f87ca1dfb47863a98acc408577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_48
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 5238
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fffcc65b5c9e394598d60be766c3d4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_49
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 5238
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2444dc0e45d034cb0cedca2e07a2ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3492
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e48161ecb27e8240931653b1ea642b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_51
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 3492
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ed18a0701185742a9ecf69c35da2bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_52
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 3492
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f31226b3f15e6a499ee2181eaf8738e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_53
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 3492
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 819cef87e3cfbf2479f02e2ba6f1a0a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_54
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 3492
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f1b81fd6eeed149980450c94111afb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_55
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 3492
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93a2f5fd6f08a04a97df3b80e2415e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_56
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 3492
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e4b1f802fbf624b9c96488c7dd30a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_57
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 3492
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 144a78455fb59de46863d05a9600c35c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_58
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 3492
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59e933ef163142499e20b8892a715b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_59
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 3492
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fd97cf8bb933447b6edab58c137eb9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1746
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eea31c88eb73324184768dc642caf41
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_61
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 1746
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecc753fe86b1d54da1929cbc0f0f104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_62
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1746
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fcb7ed3a03c51489232e265562d977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_63
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1746
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d8a008b5b212246bc8fbb698845494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_64
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 1746
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d7a92fbb2e5c42449ee9781e15e4562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_65
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 1746
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed9527a731eb517419e9b19a076b0717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_66
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 1746
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2619b5b61858d64b8f7bd12b9030daa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_67
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 1746
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ecd40f7ac68144e9828f5e4b2f22bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_68
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1746
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daf5b603b1d68a749b391e92ffd06830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_69
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 1746
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054005ae1dcc81e4db94bb923ecbb47d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 946445d4ae945ac4192ddc9d8f6497ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_71
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 045c19368c499b84ebe6017adbcde94c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_72
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ddc6c79755109c4791bccdef1b98101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_73
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 0
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e122fc5c66a8fc9408737c903cfd88e5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_74
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 0
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a9ed73c59b17004bbc3fe6d2495f682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_75
+      rect:
+        serializedVersion: 2
+        x: 3600
+        y: 0
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbfca27e007072c4089e588c5cd9d0df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_76
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 0
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61064f548d7c69f43a30e6b53a79513b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_77
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 0
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53485cd73cafde4a9c6c38472969a76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_78
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 0
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7dd1856c31c6941b66090da333fe73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoatEnemy-Idle-SS_79
+      rect:
+        serializedVersion: 2
+        x: 6480
+        y: 0
+        width: 720
+        height: 1746
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c808d11e3643a547b0367622ad50b3b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: cd806755823754a4987951c058fec514
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

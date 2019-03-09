@@ -12,19 +12,19 @@ public class Player_Abordage : MonoBehaviour
     //Temps d'abodage
     float boardingTime = 5;
     //Le bateau qui se fait aborder
-    Collider2D[] boardedShip = new Collider2D[1];
+    Collider2D[] boardedShip;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         //Si le joueur appui sur F
-        if (Input.GetKey(boardingKey))
+        if (Input.GetKeyDown(boardingKey))
         {
             //On tente d'aborder
             Boarding();
@@ -40,9 +40,20 @@ public class Player_Abordage : MonoBehaviour
             //On désactive l'abordage et on reset le temps d'abordage
             if(boardingTime < 0)
             {
-                Destroy(boardedShip[0].transform.gameObject);
+                
                 isBoarding = false;
                 boardingTime = 5;
+                Debug.Log(boardedShip);
+                GameObject go = boardedShip[1].transform.gameObject;
+                Debug.Log(go);
+                Enemy_Stat es = go.GetComponent<Enemy_Stat>();
+                Debug.Log(es);
+                //On attribue l'argent en fonction du type de bateau ennemie
+                if (es.enemySize == EnemySize.Small)
+                    PlayerInstance.playerCash += Static_Resources.SmallBoatValue * 2;
+                else if (es.enemySize == EnemySize.Big)
+                    PlayerInstance.playerCash += Static_Resources.BigBoatValue * 2;
+                Destroy(boardedShip[1].transform.gameObject);
             }
         }
     }
@@ -50,25 +61,29 @@ public class Player_Abordage : MonoBehaviour
     //Methode qui obtient le bateau qui se stue dans le radius du bateau pour l'aborder
     void Boarding()
     {
+        boardedShip = new Collider2D[2];
         //On définit le mask des ennemies
         ContactFilter2D cf = new ContactFilter2D();
         cf.layerMask = LayerMask.NameToLayer("Ennemy");
-        
+        //cf.useLayerMask = true;
+       
+
         //On obtient le nombre d'ennemies et leur collider dans une liste
         float nbEnnemy = Physics2D.OverlapCircle(this.transform.position, BoardingRadius, cf , boardedShip);
+        Debug.Log(nbEnnemy);
 
         //Si un bateau est présent dans le radius
-        if(boardedShip[0] != null)
+        if(boardedShip.Length != 0)
         {
             //On aborder le bateau et on commence sa desctruction
             BoardShip();
         }
     }
 
+    
     void BoardShip()
     {
-        if(Enemy_Stat.EnnemySize)
-        PlayerInstance.playerCash += Static_Resources.
+        
         //On active le mode d'abordage pour le bateau
         isBoarding = true;
     }

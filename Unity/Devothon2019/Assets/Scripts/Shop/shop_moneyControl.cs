@@ -15,33 +15,27 @@ public class shop_moneyControl : MonoBehaviour
     }
     void Start()
     {
-        AfficherArgent();
+       SoundManager.Play("MusiqueBoutique", Vector3.zero);
     }
 
 
-    public static void AfficherArgent()
-    {
-        instance.moneyDisplay.text = "Argent : " + PlayerInstance.playerCash.ToString() + " écu ";
-    }
 
     public static bool Transaction(int p_money)
     {
         
+        
         if (PlayerInstance.playerCash + p_money < 0)
         {
             //il n'y a rien qui se fait puisqu'on serait en négatif
+            SoundManager.Play("ClickBtn", Vector3.zero);
             return false;
         }
         else
         {
-            PlayerInstance.playerCash += (int)p_money;
-            if(PlayerInstance.playerCash < 0)
-            {
-                //met son ici
-            }
+            PlayerInstance.playerCash += p_money;
+            SoundManager.Play("Achat", Vector3.zero);
 
             //On affiche le changement de prix
-            AfficherArgent();
             return true;
         }
     }

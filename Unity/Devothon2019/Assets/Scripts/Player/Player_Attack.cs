@@ -8,16 +8,6 @@ public class Player_Attack : MonoBehaviour
 
     private string CollidingTag = "Enemy";
 
-    private void Awake()
-    {
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -42,7 +32,12 @@ public class Player_Attack : MonoBehaviour
             if (canon.canFire())
             {
                 StartCoroutine(Fire(canon));
-                canon.ResetCooldown();
+
+                float percentCooldown = (PlayerInstance.playerStats.shotCooldown.value / 100) * canon.baseCooldown;
+
+                float modifier = percentCooldown * PlayerInstance.playerStats.shotCooldown.crewAssigned;
+
+                canon.ResetCooldown(modifier);
             }
         }
     }
@@ -64,6 +59,7 @@ public class Player_Attack : MonoBehaviour
 
         GameObject canonballObj;
         Canonball canonball;
+        float lifetime;
 
         switch (canon.canonType)
         {
@@ -71,7 +67,9 @@ public class Player_Attack : MonoBehaviour
             case CanonType.Normal:
                 canonballObj = Instantiate(canon.canonball, null);
                 canonball = canonballObj.GetComponent<Canonball>();
-                canonball.InitCanonball(canon.shootPoint.up, canon.GetDamage(), CollidingTag);
+                lifetime = Random.Range(0.75f, 1.10f);
+
+                canonball.InitCanonball(canon.shootPoint.up, canon.GetDamage(), CollidingTag, lifetime);
                 canonball.transform.position = canon.shootPoint.position;
                 break;
 
@@ -94,8 +92,10 @@ public class Player_Attack : MonoBehaviour
                     {
                         temp.transform.Rotate(temp.transform.forward, 12);
                     }
-                   
-                    canonball.InitCanonball(temp.transform.up, canon.GetDamage(), CollidingTag);
+
+                    lifetime = Random.Range(0.75f, 1.10f);
+
+                    canonball.InitCanonball(temp.transform.up, canon.GetDamage(), CollidingTag, lifetime);
                     canonball.transform.position = canon.shootPoint.position;
 
                     Destroy(temp);

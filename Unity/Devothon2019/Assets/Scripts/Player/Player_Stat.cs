@@ -58,9 +58,26 @@ public class Player_Stat : MonoBehaviour
                 continue;
 
             //Instantiate canon prefab
-            GameObject canonObj = new GameObject();
+            GameObject canonObj = null;
+
+            switch (canon.canonType)
+            {
+                default:
+                case CanonType.Normal:
+                    canonObj = Instantiate(Static_Resources.defaultCanon);
+                    break;
+                case CanonType.TripleShot:
+                    canonObj = Instantiate(Static_Resources.defaultCanon);
+                    break;
+                case CanonType.FlameThrower:
+                    break;
+            }
+            
             canonObj.name = "Canon" + i;
-            canonObj.transform.SetParent(CanonsSpots[i]);        
+            canonObj.transform.SetParent(CanonsSpots[i]);
+            canonObj.transform.position = new Vector3(0, 0, -1);
+            canonObj.transform.localPosition = new Vector3(0, 0, -1);
+            canonObj.transform.rotation = CanonsSpots[i].rotation;
 
             Canon_Controller canonCtrl = canonObj.AddComponent<Canon_Controller>();
             canonCtrl.canonInfo = canon;
