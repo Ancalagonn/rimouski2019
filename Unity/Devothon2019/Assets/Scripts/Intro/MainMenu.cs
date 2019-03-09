@@ -5,6 +5,6 @@ using UnityEngine;
 public class MainMenu : MonoBehaviour
 {
     public void StartGame() {
-        Debug.Log("Scene management");
+        ManageScene.instance.LoadSceneBlack("Introduction_Scene");
     }
 }

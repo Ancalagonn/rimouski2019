@@ -6,6 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Final/Main_Scene.unity
+    guid: 318c865f86b48594b974eb181861f5c2
+  - enabled: 1
+    path: Assets/Scenes/Final/Introduction_Scene.unity
+    guid: 9548555b898e89748b25f34425868933
+  - enabled: 1
+    path: Assets/Scenes/Final/Boutique_Scene.unity
+    guid: 90190043b01276249955a5b7202e56a0
+  - enabled: 1
+    path: Assets/Scenes/Final/CrewAffectation_Scene.unity
+    guid: c979202e258150a42ac5a77bc9e5af7b
+  - enabled: 1
+    path: Assets/Scenes/Ville/Montreal_Intro.unity
+    guid: 381d55d8977472a43af43e8cd3f9d971
+  - enabled: 1
+    path: Assets/Scenes/Ville/Montreal.unity
+    guid: 0337b22b0fb118c4b89c486587cc3b60
+  - enabled: 1
+    path: Assets/Scenes/Ville/TroisRivieres.unity
+    guid: eda5d851eb0f5d64190c42ddf0a0c194
+  - enabled: 1
+    path: Assets/Scenes/Ville/Quebec.unity
+    guid: 171573cb3263e634aa20feb280101630
+  - enabled: 1
+    path: Assets/Scenes/Ville/Lapoc.unity
+    guid: e05e1e62d58ee2d46a67d78718b70257
+  - enabled: 1
+    path: Assets/Scenes/Ville/RDL.unity
+    guid: 9fcb0c837a7334c4da6e6c72942adad6
+  - enabled: 1
+    path: Assets/Scenes/Ville/Rikiki.unity
+    guid: 5ef26d942d741c04c9e02d83fab34f0d
   m_configObjects: {}
