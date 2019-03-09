@@ -37,6 +37,10 @@ public class Boat_Stats
     public Boat_Stats()
     {
         canons = new List<Canon>(maxCanons);
+        for (int i = 0; i < maxCanons; i++)
+        {
+            canons.Add(null);
+        }
     }       
 }
 
