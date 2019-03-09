@@ -6,15 +6,11 @@ public class Canonball : MonoBehaviour
 {
     private float speed = 15;
     private Vector3 direction;
+    private float damage;
 
-    public void SetDirection(Vector3 p_dir)
+    public void InitCanonball(Vector3 p_dir, float p_damage)
     {
         direction = p_dir;
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
         Destroy(gameObject, 5f);
     }
 

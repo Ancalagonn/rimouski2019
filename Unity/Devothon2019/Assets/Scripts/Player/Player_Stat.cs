@@ -13,6 +13,7 @@ public class Player_Stat : MonoBehaviour
 
     private void Awake()
     {
+        SoundManager.LoadSound();
         //playerStats = PlayerInstance.playerStats;
         Debug.Log(playerStats);
         LoadCanons();
