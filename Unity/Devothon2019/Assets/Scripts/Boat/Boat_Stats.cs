@@ -56,7 +56,13 @@ public class Boat_Stats
 
             for (int i = 0; i < hpStadeDiff; i++)
             {
-                Vector3 pos = new Vector3(Random.Range(-mySelf.localScale.x, mySelf.localScale.x), Random.Range(-mySelf.localScale.y, mySelf.localScale.y), -1);
+                //float tileWidth = (float)tileSet[0].renderer.bounds.size.x;
+                SpriteRenderer renderer = mySelf.GetComponent<SpriteRenderer>();
+
+                float tileWidth = renderer.bounds.size.x / 2;
+                float tileheight = renderer.bounds.size.y / 2;
+
+                Vector3 pos = new Vector3(Random.Range(-tileWidth, tileWidth), Random.Range(-tileheight, tileheight), -1);
                 GameObject fire = GameObject.Instantiate(Static_Resources.fireEffect);
                 fire.transform.SetParent(mySelf);
                 fire.transform.localPosition = pos;
