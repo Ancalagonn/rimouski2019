@@ -11,8 +11,6 @@ public class Canon
     public Transform shootPoint;
     public int level;
 
-    public Transform canonPosition;
-
     public bool canFire()
     {
         return currentCooldownTime <= 0;
@@ -21,5 +19,10 @@ public class Canon
     public void ResetCooldown()
     {
         currentCooldownTime = baseCooldown;
+    }
+
+    public override string ToString()
+    {
+        return canonType.ToString() + " Lv : " + level + " Dmg : " + damage;
     }
 }

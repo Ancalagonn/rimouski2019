@@ -15,7 +15,7 @@ public class Player_Stat : MonoBehaviour
     {
         //playerStats = PlayerInstance.playerStats;
         Debug.Log(playerStats);
-        LoadCanonsSpots();
+        LoadCanons();
     }
 
     // Start is called before the first frame update
@@ -27,14 +27,42 @@ public class Player_Stat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //for debug purpose
+        playerStats = PlayerInstance.playerStats;
+    }
+
+    private void LoadCanons()
+    {
+        LoadCanonsSpots();
+
+        for (int i = 0; i < PlayerInstance.playerStats.canons.Count; i++)
+        {
+            Canon canon = PlayerInstance.playerStats.canons[i];
+
+            if (canon == null)
+                continue;
+
+            //Instantiate canon prefab
+            GameObject canonObj = new GameObject();
+            canonObj.name = "Canon" + i;
+            canonObj.transform.SetParent(CanonsSpots[i]);        
+
+            Canon_Controller canonCtrl = canonObj.AddComponent<Canon_Controller>();
+            canonCtrl.canonInfo = canon;
+            canonCtrl.canonInfo.shootPoint = CanonsSpots[i];         
+        }
     }
 
     void LoadCanonsSpots()
     {
-        foreach(Transform child in CanonsSpotsParent)
+        CanonsSpots = new List<Transform>();
+        foreach (Transform child in CanonsSpotsParent)
         {
             CanonsSpots.Add(child);
+            foreach (Transform c2 in child)
+            {
+                Destroy(c2.gameObject);
+            }
         }
     }
 }
