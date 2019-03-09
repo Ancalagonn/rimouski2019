@@ -9,10 +9,13 @@ public class Player_Movemement : MonoBehaviour
     public AnimationCurve boatSpeedCurve;
     public AnimationCurve boatRotationCurve;
 
+
     private float lastTimeForwardPressed = 0;
     private float lastTimeRotationPressed = 0;
     private float speed = 0;
-    private float rotationMomentum = 0;
+    public float rotationMomentum = 0;
+
+    private Player_Abordage pa;
 
     private void Awake()
     {
@@ -23,40 +26,52 @@ public class Player_Movemement : MonoBehaviour
             rb.isKinematic = true;
         }
     }
-
-
+    
+    // Start is called before the first frame update
+    void Start()
+    {
+        //On obtient le script d'abordage
+        pa = this.gameObject.GetComponent<Player_Abordage>();
+    }
     // Update is called once per frame
     void Update()
     {
-        float z = Input.GetAxisRaw("Vertical") * Time.deltaTime * PlayerInstance.playerStats.moveSpeed.value;
-        float x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * PlayerInstance.playerStats.rotationSpeed.value;
 
-        float timeSinceLastForward = Time.time - lastTimeForwardPressed;
-        float timeSinceLastRotation = Time.time - lastTimeRotationPressed;
+        //On vérifie si le bateau est en cours d'abordage
+        if(!pa.isBoarding)
+        {
+            float z = Input.GetAxisRaw("Vertical") * Time.deltaTime * PlayerInstance.playerStats.moveSpeed.value;
+            float x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * PlayerInstance.playerStats.rotationSpeed.value;
 
-        if (timeSinceLastForward >= 1)
-            timeSinceLastForward = 1;
+            float timeSinceLastForward = Time.time - lastTimeForwardPressed;
+            float timeSinceLastRotation = Time.time - lastTimeRotationPressed;
+
+            if (timeSinceLastForward >= 1)
+                timeSinceLastForward = 1;
+
+            //Pressed
+            if (z > 0)
+            {
+                lastTimeForwardPressed += Time.deltaTime * 0.8f;
+                //Speed curve
+                speed = z * boatSpeedCurve.Evaluate(timeSinceLastForward);
+            }
+            else //Not pressed
+            {
+                lastTimeForwardPressed = Time.time;
+
+                //80% less speed each seconds
+                speed -= (Time.deltaTime * speed * 0.80f);
+            }
+
+
+        float sensibility = 0.15f;
 
         //Pressed
-        if (z > 0)
-        {
-            lastTimeForwardPressed += Time.deltaTime * 0.8f;
-            //Speed curve
-            speed = z * boatSpeedCurve.Evaluate(timeSinceLastForward);
-        }
-        else //Not pressed
-        {
-            lastTimeForwardPressed = Time.time;
-
-            //80% less speed each seconds
-            speed -= (Time.deltaTime * speed * 0.80f);
-        }
-
-        //Pressed
-        if (x != 0)
+        if (Mathf.Abs(x) >= sensibility)
         {
             
-            if(x > 0)
+            if(x > sensibility)
             {
                 //Rotation side changed
                 if (rotationMomentum < 0)
@@ -66,7 +81,7 @@ public class Player_Movemement : MonoBehaviour
                 }
             }
 
-            if (x < 0)
+            if (x < -sensibility)
             {
                 //Rotation side changed
                 if (rotationMomentum > 0)
@@ -91,6 +106,8 @@ public class Player_Movemement : MonoBehaviour
 
         transform.Rotate(-transform.forward, rotationMomentum);
 
-        rb.position += (Vector2)transform.up * speed;
+            rb.position += (Vector2)transform.up * speed;
+        }
+        
     }
 }

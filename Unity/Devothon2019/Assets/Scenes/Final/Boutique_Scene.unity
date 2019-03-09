@@ -1068,6 +1068,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b65d5bea34a9b9e47ae83d74b62d098d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  addCanonPrefab: {fileID: 7355575511619388643, guid: 6342daeea5efda448902ce3b48b322d8,
+    type: 3}
   boatLocation: {fileID: 2098529610}
   boatPrefab: {fileID: 6546894130462959210, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
     type: 3}

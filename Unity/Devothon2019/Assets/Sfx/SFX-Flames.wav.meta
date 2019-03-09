@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+guid: a1ccf64532763fe4691e1a47dbf278fa
+=======
+<<<<<<< HEAD
+guid: 3d71a8720d23e75458479bbe4a7a2889
+=======
+guid: 2459186ef7923444993cec0e84a07d95
+>>>>>>> e4c6e9732d4203eadf680afd88838e3a5a9ba709
+>>>>>>> b29634fc8c67335d36d948b46c935f613cb3ad9b
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  preloadAudioData: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
