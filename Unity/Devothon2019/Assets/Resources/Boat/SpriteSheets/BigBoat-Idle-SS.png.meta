@@ -1,0 +1,1779 @@
+fileFormatVersion: 2
+guid: f4e6ee92d3b1f324baa538e2f403a965
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BigBoat-Idle-SS_0
+    21300002: BigBoat-Idle-SS_1
+    21300004: BigBoat-Idle-SS_2
+    21300006: BigBoat-Idle-SS_3
+    21300008: BigBoat-Idle-SS_4
+    21300010: BigBoat-Idle-SS_5
+    21300012: BigBoat-Idle-SS_6
+    21300014: BigBoat-Idle-SS_7
+    21300016: BigBoat-Idle-SS_8
+    21300018: BigBoat-Idle-SS_9
+    21300020: BigBoat-Idle-SS_10
+    21300022: BigBoat-Idle-SS_11
+    21300024: BigBoat-Idle-SS_12
+    21300026: BigBoat-Idle-SS_13
+    21300028: BigBoat-Idle-SS_14
+    21300030: BigBoat-Idle-SS_15
+    21300032: BigBoat-Idle-SS_16
+    21300034: BigBoat-Idle-SS_17
+    21300036: BigBoat-Idle-SS_18
+    21300038: BigBoat-Idle-SS_19
+    21300040: BigBoat-Idle-SS_20
+    21300042: BigBoat-Idle-SS_21
+    21300044: BigBoat-Idle-SS_22
+    21300046: BigBoat-Idle-SS_23
+    21300048: BigBoat-Idle-SS_24
+    21300050: BigBoat-Idle-SS_25
+    21300052: BigBoat-Idle-SS_26
+    21300054: BigBoat-Idle-SS_27
+    21300056: BigBoat-Idle-SS_28
+    21300058: BigBoat-Idle-SS_29
+    21300060: BigBoat-Idle-SS_30
+    21300062: BigBoat-Idle-SS_31
+    21300064: BigBoat-Idle-SS_32
+    21300066: BigBoat-Idle-SS_33
+    21300068: BigBoat-Idle-SS_34
+    21300070: BigBoat-Idle-SS_35
+    21300072: BigBoat-Idle-SS_36
+    21300074: BigBoat-Idle-SS_37
+    21300076: BigBoat-Idle-SS_38
+    21300078: BigBoat-Idle-SS_39
+    21300080: BigBoat-Idle-SS_40
+    21300082: BigBoat-Idle-SS_41
+    21300084: BigBoat-Idle-SS_42
+    21300086: BigBoat-Idle-SS_43
+    21300088: BigBoat-Idle-SS_44
+    21300090: BigBoat-Idle-SS_45
+    21300092: BigBoat-Idle-SS_46
+    21300094: BigBoat-Idle-SS_47
+    21300096: BigBoat-Idle-SS_48
+    21300098: BigBoat-Idle-SS_49
+    21300100: BigBoat-Idle-SS_50
+    21300102: BigBoat-Idle-SS_51
+    21300104: BigBoat-Idle-SS_52
+    21300106: BigBoat-Idle-SS_53
+    21300108: BigBoat-Idle-SS_54
+    21300110: BigBoat-Idle-SS_55
+    21300112: BigBoat-Idle-SS_56
+    21300114: BigBoat-Idle-SS_57
+    21300116: BigBoat-Idle-SS_58
+    21300118: BigBoat-Idle-SS_59
+    21300120: BigBoat-Idle-SS_60
+    21300122: BigBoat-Idle-SS_61
+    21300124: BigBoat-Idle-SS_62
+    21300126: BigBoat-Idle-SS_63
+    21300128: BigBoat-Idle-SS_64
+    21300130: BigBoat-Idle-SS_65
+    21300132: BigBoat-Idle-SS_66
+    21300134: BigBoat-Idle-SS_67
+    21300136: BigBoat-Idle-SS_68
+    21300138: BigBoat-Idle-SS_69
+    21300140: BigBoat-Idle-SS_70
+    21300142: BigBoat-Idle-SS_71
+    21300144: BigBoat-Idle-SS_72
+    21300146: BigBoat-Idle-SS_73
+    21300148: BigBoat-Idle-SS_74
+    21300150: BigBoat-Idle-SS_75
+    21300152: BigBoat-Idle-SS_76
+    21300154: BigBoat-Idle-SS_77
+    21300156: BigBoat-Idle-SS_78
+    21300158: BigBoat-Idle-SS_79
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9212
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1708ae5ca46774c4f8f5fc008249cb7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_1
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 9212
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3d664b560eec641b9bfe81cd7cda78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_2
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 9212
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5069c188d0e4a649a6050db8b20c33b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_3
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 9212
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0f1514c35d79a4abee2e9b0a2ee8d3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_4
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 9212
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dbeeb9baf3d97b46b0fded57e32ee7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_5
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 9212
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce5fbb50907fd86439395e957632fd7f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_6
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 9212
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e20b8697cee366d47ad37b89753eab61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_7
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 9212
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29dff1b8da046e447b8cc3c2f65a773a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_8
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 9212
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ce9a6679e88d9458a7577bfa2bbe9f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_9
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 9212
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b6c65f3a4552d4c9b3f14f9104b2c6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7896
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5669879022ff8640a18c72ae0e97788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_11
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 7896
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bd22188990a72c44b83961cdce3e037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_12
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 7896
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cba20379f7114a4e8c4e83fc0b7601b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_13
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 7896
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d4c47a2004b6641a39b00fbe40843e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_14
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 7896
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061dce92f9ee4fa4e93eae06b5df35d1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_15
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 7896
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04da69514fa2bb8478b88d3049949fe1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_16
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 7896
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7387d80c0b20f7d4bb633d3d50f71eb2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_17
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 7896
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219e58bce618f114f9fc446c5f137bae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_18
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 7896
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d1ed50f93273bc43b7ed026baab747b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_19
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 7896
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd86273e3597d83409fa8acf9902ac0a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6580
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b63f51512452d0459c9e9c24428b37c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_21
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 6580
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f61163b7b84acd4ab1d60e994ff6abc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_22
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 6580
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38c0d1772b59b54f9f2f4c9e94ad0dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_23
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 6580
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678a76ec583fa34469b32dd5a512b19f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_24
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 6580
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b1376a900df6d447b3f24702b95c02a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_25
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 6580
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a38fe64ec3b704aab09b5417aaf11b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_26
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 6580
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d5797c2c2d4f14c8715145d5019322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_27
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 6580
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d465beeefb16744ca8bc29d688faf1f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_28
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 6580
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e57805a584fa943a2242c1d7a174b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_29
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 6580
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6aa803511740c49a5abfeba6a0ff53
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5264
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5ab2f4746718b84e9e19f915250d991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_31
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 5264
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04c2d653e4f7c243bf2a34fed25554a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_32
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 5264
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6836a91860c2ac94d9431a9232702c6f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_33
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 5264
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755d8f6acf239e64ba8cf66e56f45174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_34
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 5264
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d25f621c80a4c6428acfdda9aa9d7c8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_35
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 5264
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bccbd7b1654bc347a99f71ab6dfe3f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_36
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 5264
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2784fc735e21b84cabdc14063d09dd9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_37
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 5264
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd510c05cf6a6f45bd701eb2f01f159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_38
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 5264
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85cccd954b6d2e340be6874a0bb06542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_39
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 5264
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98559b83af1446a4b929aeb5a2a10e96
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3948
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c716f4fd7ccee6b40907e806df992a25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_41
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 3948
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed8156125b601dd45a95828cfef8008b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_42
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 3948
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8c22f610809f4041be9b951fd3307f4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_43
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 3948
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b53a5f5459684f4c8182bac045748e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_44
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 3948
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1246c4192dc84454889a4634c0f5029e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_45
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 3948
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7573f8ed9f80987428df22623614f722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_46
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 3948
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c7eb19c4030a745b8d5c9bbaa73450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_47
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 3948
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f8ecd35a83ab9c49b5202051fdb0a41
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_48
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 3948
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b9d45baa5ac5c948a35906d54c3f21b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_49
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 3948
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8ad291218fd0b74e9dc9d3e91e68020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2632
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8832552c968bc4cbf27ac00b38cd08
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_51
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 2632
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6677b779a34a7cb4c8bc645f6511a626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_52
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 2632
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f42bf6372738b841bab82aff8ecdd45
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_53
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 2632
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e77b359ea86174fa6d031c566a8298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_54
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 2632
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5638f572cfe14584e82f1c1c92e96a6b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_55
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 2632
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 344c3b9527563d0488efa1c893cadf12
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_56
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 2632
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04cc0e311e7aea546ad5b22cbd6ef867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_57
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 2632
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f26efd4ac9cc9429ca3987386d8026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_58
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 2632
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a503a292def566a438cc052d8cc36b80
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_59
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 2632
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39c386b3a35973e45884b506b8a0e764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1316
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ec222bd105541f46bcf73ac4c01b568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_61
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1316
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ed18ac1032e274eac46f903beb3682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_62
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 1316
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de0b00f9864e6d47b3cd332d931cf5b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_63
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 1316
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc2b9e99261218469ee3030b5460faf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_64
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 1316
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdd8a3948727c434eaae07cd731fb36c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_65
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 1316
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ee25352e6ca00c41a39c20a51ffa9f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_66
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 1316
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c071fb85fce17442b4c7b6abf3becd2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_67
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 1316
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240b0c4babc969b42be01786ab1273bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_68
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 1316
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59b90f5730d31044b56f514dbfc1930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_69
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 1316
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca11dabed87f563478cf37954408c52f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05fffe3bcc3992c4781e3d8ad167c14f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_71
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 0
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a83f721b8d58343977a964a6406e70
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_72
+      rect:
+        serializedVersion: 2
+        x: 1080
+        y: 0
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ed095c27789ead42a1f11ee7872a766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_73
+      rect:
+        serializedVersion: 2
+        x: 1620
+        y: 0
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72ce3f7835b026a4994e39253d839097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_74
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 0
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d39304e3c2ad1841a2433174adfc942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_75
+      rect:
+        serializedVersion: 2
+        x: 2700
+        y: 0
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f8d8182c65504428b54f049423b117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_76
+      rect:
+        serializedVersion: 2
+        x: 3240
+        y: 0
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778d5f260b7139744ba469f5955c1e1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_77
+      rect:
+        serializedVersion: 2
+        x: 3780
+        y: 0
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ceaea3e917b5454db09f3ff553a7194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_78
+      rect:
+        serializedVersion: 2
+        x: 4320
+        y: 0
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c9bf4c85bb47a4e97ac8b2be981a80
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigBoat-Idle-SS_79
+      rect:
+        serializedVersion: 2
+        x: 4860
+        y: 0
+        width: 540
+        height: 1316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e1b2de56942ae64aab9d68862dc39fc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: c3a18e0c1d7ddcf45b3c7f7de45b1e9f
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
