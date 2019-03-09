@@ -224,15 +224,19 @@ MonoBehaviour:
       baseCooldown: 0
       canonball: {fileID: 0}
       shootPoint: {fileID: 0}
+      level: 0
       canonPosition: {fileID: 0}
     - canonType: 0
       damage: 0
       baseCooldown: 0
       canonball: {fileID: 0}
       shootPoint: {fileID: 0}
+      level: 0
       canonPosition: {fileID: 0}
     crewMembers: 0
     maxCanons: 0
+  CanonsSpotsParent: {fileID: 2254808577495005415}
+  CanonsSpots: []
 --- !u!61 &3681475013816534038
 BoxCollider2D:
   m_ObjectHideFlags: 0
