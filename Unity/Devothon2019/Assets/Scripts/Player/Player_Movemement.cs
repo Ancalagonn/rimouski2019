@@ -29,7 +29,7 @@ public class Player_Movemement : MonoBehaviour
     void Update()
     {
         float z = Input.GetAxisRaw("Vertical") * Time.deltaTime * PlayerInstance.playerStats.moveSpeed.value;
-        float x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * PlayerInstance.playerStats.rotationSpeed.value;
+        float x = Input.GetAxis("Horizontal") * Time.deltaTime * PlayerInstance.playerStats.rotationSpeed.value;
 
         float timeSinceLastForward = Time.time - lastTimeForwardPressed;
         float timeSinceLastRotation = Time.time - lastTimeRotationPressed;
@@ -52,11 +52,13 @@ public class Player_Movemement : MonoBehaviour
             speed -= (Time.deltaTime * speed * 0.80f);
         }
 
+        float sensibility = 0.15f;
+
         //Pressed
-        if (x != 0)
+        if (Mathf.Abs(x) >= sensibility)
         {
             
-            if(x > 0)
+            if(x > sensibility)
             {
                 //Rotation side changed
                 if (rotationMomentum < 0)
@@ -66,7 +68,7 @@ public class Player_Movemement : MonoBehaviour
                 }
             }
 
-            if (x < 0)
+            if (x < -sensibility)
             {
                 //Rotation side changed
                 if (rotationMomentum > 0)

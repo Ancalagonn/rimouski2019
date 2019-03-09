@@ -14,13 +14,13 @@ public class Enemy_Stat : MonoBehaviour
 
     private void Awake()
     {
-        
+        enemyStats = Static_Resources.GenerateBoatStats(enemySize, enemyType);
+        LoadCanons();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        enemyStats.maxHp = 50;
         enemyStats.currentHp = enemyStats.maxHp;
         enemyStats.mySelf = this.transform;
     }
@@ -62,7 +62,7 @@ public class Enemy_Stat : MonoBehaviour
                     canonObj = Instantiate(Static_Resources.defaultCanon);
                     break;
                 case CanonType.TripleShot:
-                    canonObj = Instantiate(Static_Resources.defaultCanon);
+                    canonObj = Instantiate(Static_Resources.tripleCanon);
                     break;
                 case CanonType.FlameThrower:
                     break;

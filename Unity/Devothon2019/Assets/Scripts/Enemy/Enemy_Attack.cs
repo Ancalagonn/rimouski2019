@@ -7,6 +7,11 @@ public class Enemy_Attack : MonoBehaviour
     private string CollidingTag = "Player";
     private Enemy_Stat enemyStat;
 
+    private void Awake()
+    {
+        enemyStat = GetComponent<Enemy_Stat>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +29,12 @@ public class Enemy_Attack : MonoBehaviour
     {
         foreach (Canon canon in enemyStat.enemyStats.canons)
         {
-            if (canon == null)
+            if (canon == null || canon.shootPoint == null)
                 continue;
 
             if (canon.canFire())
             {
+                Debug.Log(canon);
                 StartCoroutine(Fire(canon));
                 canon.ResetCooldown();
             }
@@ -61,7 +67,7 @@ public class Enemy_Attack : MonoBehaviour
                 canonballObj = Instantiate(canon.canonball, null);
                 canonball = canonballObj.GetComponent<Canonball>();
                 lifetime = Random.Range(0.75f, 1.10f);
-
+                    
                 canonball.InitCanonball(canon.shootPoint.up, canon.GetDamage(), CollidingTag, lifetime);
                 canonball.transform.position = canon.shootPoint.position;
                 break;
@@ -106,7 +112,7 @@ public class Enemy_Attack : MonoBehaviour
 
     void CanonsCooldown()
     {
-        foreach (Canon canon in PlayerInstance.playerStats.canons)
+        foreach (Canon canon in enemyStat.enemyStats.canons)
         {
             if (canon == null)
                 continue;

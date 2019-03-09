@@ -24,7 +24,7 @@ public class Canonball : MonoBehaviour
         direction = p_dir;
         damage = p_damage;
         collidingTag = p_collidingTag;
-        Destroy(gameObject, p_lifeTime);
+        
         maxLifetime = p_lifeTime;
 
         transform.position = direction * 0.5f;
@@ -39,6 +39,7 @@ public class Canonball : MonoBehaviour
             new Keyframe(p_lifeTime * 0.90f, initialSize * 0.95f) };
 
         sizeCurve = new AnimationCurve(keys);
+        Destroy(gameObject, p_lifeTime);
     }
 
     // Update is called once per frame

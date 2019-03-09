@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,6 +27,7 @@ public static class Static_Resources
     public static Boat_Stats GenerateBoatStats(EnemySize size, EnemyType type)
     {
         Boat_Stats stats = null;
+
         switch (size)
         {
             case EnemySize.Small:
@@ -36,6 +38,73 @@ public static class Static_Resources
                 break;
         }
 
-        return null;
+        stats.canons = GenerateCanons(size, type);
+
+        Debug.Log(stats.canons);
+
+        return stats;
+    }
+
+    private static List<Canon> GenerateCanons(EnemySize size, EnemyType type)
+    {
+        if (defaultCanonball == null)
+            LoadResources();
+
+        List<Canon> canons = new List<Canon>();
+
+        CanonType canonType = CanonType.Normal;
+
+        int maxCanon = (size == EnemySize.Big) ? 6 : 4;
+
+        for (int i = 0; i < maxCanon; i++)
+        {
+            float damage = 25;
+            float baseCooldown = 3;
+            GameObject canonball = defaultCanonball;
+
+            switch (type)
+            {
+                case EnemyType.Normal:
+                    canonType = CanonType.Normal;
+                    damage = 10;
+                    baseCooldown = 3;
+                    canonball = defaultCanonball;
+                    break;
+                case EnemyType.Fire:
+                    canonType = CanonType.FlameThrower;
+                    break;
+                case EnemyType.Triple:
+                    canonType = CanonType.TripleShot;
+                    damage = 7;
+                    baseCooldown = 3.5f;
+                    canonball = defaultCanonball;
+
+                    //Reduce power
+                    switch (size)
+                    {
+                        case EnemySize.Small:
+                            if (i == 0 || i == 2)
+                            {
+                                canons.Add(null);
+                                continue;
+                            }
+                            break;
+
+                        case EnemySize.Big:
+                            if (i == 1 || i == 4)
+                            {
+                                canons.Add(null);
+                                continue;
+                            }
+                            break;
+                    }
+
+                    break;
+            }
+
+            canons.Add(new Canon(canonType, damage, baseCooldown, defaultCanonball, 1, 1.15f));
+        }   
+
+        return canons;
     }
 }

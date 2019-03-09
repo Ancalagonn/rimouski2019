@@ -67,7 +67,7 @@ public class Player_Stat : MonoBehaviour
                     canonObj = Instantiate(Static_Resources.defaultCanon);
                     break;
                 case CanonType.TripleShot:
-                    canonObj = Instantiate(Static_Resources.defaultCanon);
+                    canonObj = Instantiate(Static_Resources.tripleCanon);
                     break;
                 case CanonType.FlameThrower:
                     break;
