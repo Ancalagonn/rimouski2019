@@ -73,7 +73,7 @@ public class Player_Abordage : MonoBehaviour
         Debug.Log(nbEnnemy);
 
         //Si un bateau est présent dans le radius
-        if(boardedShip.Length != 0)
+        if(boardedShip.Length > 1 & boardedShip[1].CompareTag("Enemy"))
         {
             //On aborder le bateau et on commence sa desctruction
             BoardShip();
