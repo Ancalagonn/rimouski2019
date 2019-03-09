@@ -65,7 +65,7 @@ public class Player_Abordage : MonoBehaviour
         //On définit le mask des ennemies
         ContactFilter2D cf = new ContactFilter2D();
         cf.layerMask = LayerMask.NameToLayer("Ennemy");
-        //cf.useLayerMask = true;
+        cf.useLayerMask = true;
        
 
         //On obtient le nombre d'ennemies et leur collider dans une liste
