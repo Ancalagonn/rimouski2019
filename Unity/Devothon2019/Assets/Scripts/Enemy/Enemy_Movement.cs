@@ -12,6 +12,9 @@ public class Enemy_Movement : MonoBehaviour
     private Enemy_Stat enemyStat;
     private Rigidbody2D rb;
 
+    [HideInInspector]
+    public float distance;
+
     private void Awake()
     {
         enemyStat = GetComponent<Enemy_Stat>();
@@ -54,59 +57,42 @@ public class Enemy_Movement : MonoBehaviour
         Vector3 direction = closestSide - transform.position;
         direction.Normalize();
 
-        //transform.rotation = Quaternion.RotateTowards(target.rotation, , enemyStat.enemyStats.rotationSpeed.value * Time.deltaTime);
+        distance = Vector3.Distance(closestSide, transform.position);
 
-        Vector3 targetRotation = new Vector3(target.transform.rotation.x, target.transform.rotation.y, target.transform.rotation.z + 90);
+       
 
-        Quaternion targetRot = Quaternion.Euler(targetRotation);
+        if(distance > 2f)
+        {
+            // get the angle
+            Vector3 norTar = (closestSide - transform.position).normalized;
+            float angle = Mathf.Atan2(norTar.y, norTar.x) * Mathf.Rad2Deg;
+            // rotate to angle
+            Quaternion rotation = new Quaternion();
+            rotation.eulerAngles = new Vector3(0, 0, angle - 90);
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, Time.deltaTime);
+        }
 
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, Time.deltaTime);
         rb.position += (Vector2)direction * enemyStat.enemyStats.moveSpeed.value * Time.deltaTime;
     }
 
     private Vector3 ClosestTargetSide()
     {
-        float offset = 2f;
+        float offset = 8.5f;
 
-        bool ypos = Mathf.Abs(transform.position.y - target.position.y) < 3f;
-        bool xpos = Mathf.Abs(transform.position.y - target.position.y) < 3f;
-
-        Vector3 leftSide = target.position + (-target.right * offset * 4);
-        Vector3 rightSide = target.position + (target.right * offset * 4);
-        Vector3 botSide = target.position + (-target.up * offset * 4);
-        Vector3 topSide = target.position + (target.up * offset * 4);
+        Vector3 leftSide = target.position + (-target.right * offset);
+        Vector3 rightSide = target.position + (target.right * offset);
 
         float leftDist = Vector3.Distance(transform.position, leftSide);
-        float rightDist = Vector3.Distance(transform.position, leftSide);
+        float rightDist = Vector3.Distance(transform.position, rightSide);
 
-        float topDist = Vector3.Distance(transform.position, topSide);
-        float botDist = Vector3.Distance(transform.position, botSide);
+        Vector3 HorizontalAxis = (leftDist < rightDist) ? leftSide : rightSide;
 
-        Vector3 X;
-        Vector3 Y;
-
-        if (leftDist < rightDist)
-        {
-            X = leftSide;
-        }
-        else
-        {
-            X = rightSide;
-        }
-
-        if (topDist < botDist)
-        {
-            Y = topSide;
-        }
-        else
-        {
-            Y = botSide;
-        }
-
-        Vector3 closest = Vector3.Distance(X, target.position) < Vector3.Distance(Y, target.position) ? X : Y;
-
-
+        Vector3 closest = HorizontalAxis;
 
         if(Vector3.Distance(closest, transform.position) <= 0.3f)
             return Vector3.zero;
