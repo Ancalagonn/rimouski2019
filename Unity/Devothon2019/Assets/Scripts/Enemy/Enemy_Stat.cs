@@ -12,6 +12,8 @@ public class Enemy_Stat : MonoBehaviour
     public Transform CanonsSpotsParent;
     public List<Transform> CanonsSpots;
 
+    
+
     private void Awake()
     {
         
