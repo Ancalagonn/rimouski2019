@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Player_Movemement : MonoBehaviour
 {
-    private Boat_Stats playerStats;
     private Rigidbody2D rb;
 
     public AnimationCurve boatSpeedCurve;
@@ -14,7 +13,6 @@ public class Player_Movemement : MonoBehaviour
 
     private void Awake()
     {
-        playerStats = GetComponent<Player_Stat>().playerStats;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -27,8 +25,8 @@ public class Player_Movemement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float z = Input.GetAxisRaw("Vertical") * Time.deltaTime * playerStats.moveSpeed.value;
-        float x = Input.GetAxis("Horizontal") * Time.deltaTime * playerStats.rotationSpeed.value;
+        float z = Input.GetAxisRaw("Vertical") * Time.deltaTime * PlayerInstance.playerStats.moveSpeed.value;
+        float x = Input.GetAxis("Horizontal") * Time.deltaTime * PlayerInstance.playerStats.rotationSpeed.value;
 
         float timeSinceLastPressed = Time.time - lastTimePressed;
 

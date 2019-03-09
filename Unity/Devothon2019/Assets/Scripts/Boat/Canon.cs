@@ -22,4 +22,9 @@ public class Canon
     {
         currentCooldownTime = baseCooldown;
     }
+
+    public override string ToString()
+    {
+        return canonType.ToString() + " Lv : " + level + " Dmg : " + damage;
+    }
 }
