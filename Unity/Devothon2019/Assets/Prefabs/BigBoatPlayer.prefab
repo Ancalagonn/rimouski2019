@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 2032144271}
   m_Layer: 0
   m_Name: BigBoatPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -285,7 +285,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 215cdf4e47f312243b8a35c6d3c1feee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireKey: 102
+  boardingKey: 102
+  BoardingRadius: 5
+  isBoarding: 0
 --- !u!95 &6546894130462959209
 Animator:
   serializedVersion: 3
@@ -378,6 +380,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  rotationMomentum: 0
 --- !u!114 &5306952629727830278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -409,6 +412,7 @@ MonoBehaviour:
     crewMembers: 0
     maxCanons: 0
     mySelf: {fileID: 0}
+  playerMovement: {fileID: 0}
   CanonsSpotsParent: {fileID: 4387260195412752462}
   CanonsSpots: []
 --- !u!50 &1045071259

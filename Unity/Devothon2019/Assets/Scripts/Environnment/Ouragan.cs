@@ -16,6 +16,11 @@ public class Ouragan : MonoBehaviour
     //Temps avant la prochaine phase de dégats
     float invulnerabilityFrame = 0.4f;
 
+    //Variable pour savoir si le bateau peu être toucher
+    bool EnemyDamaged = true;
+    //Temps avant la prochaine phase de dégats
+    float invulnerabilityEnnemy = 0.4f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +60,22 @@ public class Ouragan : MonoBehaviour
                 invulnerabilityFrame = 0.4f;
             }
         }
+
+        //Si il ne peut pas être damager
+        if (!EnemyDamaged)
+        {
+            //On reduit le temps de l'invulnérabilité
+            invulnerabilityEnnemy -= Time.deltaTime;
+
+            //Si le temps est fini, l'ouragan peut faire des dégats à nouveaux
+            if (invulnerabilityEnnemy < 0)
+            {
+                EnemyDamaged = true;
+                invulnerabilityEnnemy = 0.4f;
+            }
+        }
+
+        this.transform.Rotate(new Vector3(0, 0, 5));
     }
 
     //Methode de deplacement
@@ -86,23 +107,33 @@ public class Ouragan : MonoBehaviour
     //Methode lorsqu'un bateau entre dans le trigger de l'ouragan
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(CanbeDamaged)
+        if(CanbeDamaged & collision.CompareTag("Player"))
         {
             //collision.gameObject.SendMessage("TakeDamage", 5);
             PlayerInstance.playerStats.TakeDamage(5);
             CanbeDamaged = false;
         }
+        else if(collision.CompareTag("Enemy") & EnemyDamaged)
+        {
+            collision.gameObject.GetComponent<Enemy_Stat>().TakeDamage(5);
+            EnemyDamaged = false;
+        }
             
     }
 
-    //Methode lorsqu'un bateau entre dans le trigger de l'ouragan
+    //Methode lorsqu'un bateau est dans le trigger de l'ouragan
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (CanbeDamaged)
+        if (CanbeDamaged & collision.CompareTag("Player"))
         {
             //collision.gameObject.SendMessage("TakeDamage", 5);
             PlayerInstance.playerStats.TakeDamage(5);
             CanbeDamaged = false;
+        }
+        else if (collision.CompareTag("Enemy") & EnemyDamaged)
+        {
+            collision.gameObject.GetComponent<Enemy_Stat>().TakeDamage(5);
+            EnemyDamaged = false;
         }
     }
 }
