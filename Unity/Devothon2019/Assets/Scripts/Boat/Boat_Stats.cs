@@ -17,7 +17,7 @@ public class Boat_Stats
     public List<Canon> canons;
 
     public int crewMembers = 4;
-    public int maxCanons;
+    public int maxCanons = 6;
 
     public float GetHp()
     {
@@ -34,9 +34,21 @@ public class Boat_Stats
         return currentHp <= 0;
     }
 
-    public Boat_Stats()
+    public Boat_Stats(Stats p_moveSpeed, Stats p_rotationSpeed, Stats p_shotCooldown, Stats p_repairSpeed)
     {
+        moveSpeed = p_moveSpeed;
+        rotationSpeed = p_rotationSpeed;
+        shotCooldown = p_shotCooldown;
+        repairSpeed = p_repairSpeed;
 
+        //canons = new List<Canon>(maxCanons) { new Canon(), new Canon(), new Canon(), new Canon(), new Canon(), new Canon() };
+
+        canons = new List<Canon>(maxCanons);
+
+        for (int i = 0; i < maxCanons; i++)
+        {
+            canons.Add(new Canon());
+        }
     }       
 }
 
@@ -45,6 +57,12 @@ public class Stats
 {
     public float value = 0;
     public int crewAssigned = 1;
+
+    public Stats(float p_value, int p_crewAssigned)
+    {
+        value = p_value;
+        crewAssigned = p_crewAssigned;
+    }
 
     public Stats()
     {
