@@ -17,7 +17,7 @@ public class Boat_Stats
     public List<Canon> canons;
 
     public int crewMembers = 4;
-    public int maxCanons;
+    public int maxCanons = 6;
 
     public float GetHp()
     {
@@ -36,7 +36,7 @@ public class Boat_Stats
 
     public Boat_Stats()
     {
-
+        canons = new List<Canon>(maxCanons);
     }       
 }
 
