@@ -59,11 +59,21 @@ public class Player_Movemement : MonoBehaviour
                 speed = z * boatSpeedCurve.Evaluate(timeSinceLastForward);
             }
             else //Not pressed
-            {
-                lastTimeForwardPressed = Time.time;
+            {              
 
                 //80% less speed each seconds
                 speed -= (Time.deltaTime * speed * 0.80f);
+
+                //Enough time elapsed since last time pressed to reset the velocity
+                if(speed <= 0.045f)
+                {
+                    lastTimeForwardPressed = Time.time;
+                }
+                else
+                {
+                    lastTimeForwardPressed -= Time.deltaTime * 2f;
+                }
+                
             }
 
 

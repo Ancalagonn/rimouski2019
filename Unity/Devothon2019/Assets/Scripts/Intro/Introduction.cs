@@ -24,6 +24,7 @@ public class Introduction : MonoBehaviour
     private IEnumerator ChangeScene() {
         yield return new WaitForSeconds(1f);
         yield return new WaitUntil(() => !Narrator.isTalking);
-        Debug.Log("Changement de scène");
+        
+        ManageScene.instance.LoadSceneBlack("Montreal_Intro");
     }
 }

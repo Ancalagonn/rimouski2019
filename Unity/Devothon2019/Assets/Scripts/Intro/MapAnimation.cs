@@ -9,6 +9,9 @@ public class MapAnimation : MonoBehaviour
 
     public RawImage mySelf;
 
+    public bool loadScene = false;
+    public string sceneName = "";
+
     public List<Texture> images = new List<Texture>();
 
     // Start is called before the first frame update
@@ -22,6 +25,12 @@ public class MapAnimation : MonoBehaviour
         {
             mySelf.texture = image;
             yield return new WaitForSeconds(timeout);
+        }
+
+        yield return new WaitForSeconds(1.5f);
+        
+        if (loadScene) {
+            ManageScene.instance.LoadSceneBlack(sceneName);
         }
 
         yield return null;
