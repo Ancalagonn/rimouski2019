@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d51125c5cd14e84429ef0863c15540d8, type: 3}
-  m_Name: ClickBtn
+  m_Name: MusiqueIntro
   m_EditorClassIdentifier: 
-  name: ClickBtn
-  clip: {fileID: 8300000, guid: 3c97832a3ab67ee4487bde1b030ec155, type: 3}
-  volume: 0.1
-  isMusic: 0
+  name: MusiqueIntro
+  clip: {fileID: 8300000, guid: ba8d55e63e3a0e14db6c6591b2f9ddc4, type: 3}
+  volume: 1
+  isMusic: 1
   loop: 0
   source: {fileID: 0}

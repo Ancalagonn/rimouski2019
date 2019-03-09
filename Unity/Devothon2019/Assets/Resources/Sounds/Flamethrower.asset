@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: FlameThrower
   clip: {fileID: 8300000, guid: a1ccf64532763fe4691e1a47dbf278fa, type: 3}
-  volume: 0.5
+  volume: 0.35
   isMusic: 0
   loop: 1
   source: {fileID: 0}
