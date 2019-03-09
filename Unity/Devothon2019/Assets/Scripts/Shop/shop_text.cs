@@ -18,9 +18,9 @@ public class shop_text : MonoBehaviour
     public Dropdown ddl_typeCanon;
 
     private void Start() {
-        upgradeCoque.text = "Améliorer la coque (" + price.UpgradeCoque + "$)";
-        repairCoque.text = "Réparer la coque (" + price.RepairCoque + "$)";
-        upgradeCanon.text = "Améliorer le canon (" + price.UpgradeCanon + "$)";
+        upgradeCoque.text = "Améliorer la coque (" + price.UPGRADE_COQUE + "$)";
+        repairCoque.text = "Réparer la coque (" + price.REPAIR_COQUE + "$)";
+        upgradeCanon.text = "Améliorer le canon (" + price.UPGRADE_CANON + "$)";
     }
 
     private void Update() {
@@ -30,13 +30,13 @@ public class shop_text : MonoBehaviour
         switch(newType)
         {
             case CanonType.FlameThrower:
-                cost = price.Canon_Flame;
+                cost = price.CANON_FLAME;
                 break;
             case CanonType.Normal:
-                cost = price.Canon_Normal;
+                cost = price.CANON_NORMAL;
                 break;
             case CanonType.TripleShot:
-                cost = price.Canon_Triple;
+                cost = price.CANON_TRIPLE;
                 break;
             default:
                 cost = 40;
@@ -45,7 +45,7 @@ public class shop_text : MonoBehaviour
 
         changeType.text = "Changer type (" + cost + "$)";
 
-        addCrewMember.text = "Ajouter un membre à l'équipage\n("+PlayerInstance.playerStats.crewMembers+" présentement) ("+price.AddCrew+"$)";
+        addCrewMember.text = "Ajouter un membre à l'équipage\n("+PlayerInstance.playerStats.crewMembers+" présentement) ("+price.ADD_CREW+"$)";
         money.text = "Banque : " + PlayerInstance.playerCash + "$";
     }
 

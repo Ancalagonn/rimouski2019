@@ -80,10 +80,14 @@ TextureImporter:
     physicsShape: []
     bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
     spriteID: f8a65906eb2f8164ca413bd588c31bc9
 =======
     spriteID: c9b1a878fce9bf44d88c389a9d9258b7
 >>>>>>> 58b9ee7a14df9a05fb798565250794a44117c788
+=======
+    spriteID: f8ea50766cd97274bb9b20d253bf0f87
+>>>>>>> c89f56c5101288067364791f9d3e1cf7a22d5700
     vertices: []
     indices: 
     edges: []

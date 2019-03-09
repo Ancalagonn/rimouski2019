@@ -12,7 +12,7 @@ public class shop_upgradeBoat : MonoBehaviour
 
     public void UpgradeCoque()
     {
-        if(shop_moneyControl.Transaction(-price.UpgradeCoque))
+        if(shop_moneyControl.Transaction(-price.UPGRADE_COQUE))
         {
             PlayerInstance.playerStats.maxHp += 10;
         }
@@ -20,7 +20,7 @@ public class shop_upgradeBoat : MonoBehaviour
 
     public void ReparerCoque()
     {
-        if(shop_moneyControl.Transaction(-price.RepairCoque))
+        if(shop_moneyControl.Transaction(-price.REPAIR_COQUE))
         {
             PlayerInstance.playerStats.currentHp = PlayerInstance.playerStats.maxHp;
         }
@@ -28,7 +28,7 @@ public class shop_upgradeBoat : MonoBehaviour
 
     public void AjouterCrew()
     {
-        if(shop_moneyControl.Transaction(-price.AddCrew))
+        if(shop_moneyControl.Transaction(-price.ADD_CREW))
         PlayerInstance.playerStats.crewMembers++;
     }
 }
