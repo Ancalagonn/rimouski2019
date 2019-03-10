@@ -52,7 +52,10 @@ public class Enemy_Movement : MonoBehaviour
         //Destination reached
         if (closestSide == Vector3.zero)
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, Time.deltaTime);
+            if (Approximately(transform.rotation, target.rotation))           
+                transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, Time.deltaTime * 2f);
+
+            return;
         }
         else
         {
@@ -62,7 +65,7 @@ public class Enemy_Movement : MonoBehaviour
             // rotate to angle
             Quaternion rotation = new Quaternion();
             rotation.eulerAngles = new Vector3(0, 0, angle - 90);
-            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * 2f);
         }
             
 
@@ -72,6 +75,12 @@ public class Enemy_Movement : MonoBehaviour
         distance = Vector3.Distance(closestSide, transform.position);
 
         rb.position += (Vector2)direction * enemyStat.enemyStats.moveSpeed.value * Time.deltaTime;
+    }
+
+    private bool Approximately(Quaternion val, Quaternion about)
+    {
+        float angle = Quaternion.Angle(val, about);
+        return Mathf.Abs(angle) > 1f;
     }
 
     private Vector3 ClosestTargetSide()
@@ -88,7 +97,7 @@ public class Enemy_Movement : MonoBehaviour
 
         Vector3 closest = HorizontalAxis;
 
-        if(Vector3.Distance(closest, transform.position) <= 0.3f)
+        if(Vector3.Distance(closest, transform.position) <= 0.6f)
             return Vector3.zero;
 
 
