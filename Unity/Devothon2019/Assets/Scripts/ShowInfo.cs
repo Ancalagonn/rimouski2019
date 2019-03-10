@@ -7,6 +7,7 @@ public class ShowInfo : MonoBehaviour
 {
     public Text cashText;
     public Transform hpImageParent;
+    public Text matelotText;
 
     private List<Image> hpDisplay = new List<Image>();
 
@@ -22,6 +23,7 @@ public class ShowInfo : MonoBehaviour
     void Update()
     {
         cashText.text = PlayerInstance.playerCash + "$";
+        matelotText.text = PlayerInstance.playerStats.crewMembers + " matelots";
         //hpText.text = PlayerInstance.playerStats.PercentHpLeft() + "%";
         CalculateHp();
 
