@@ -31,7 +31,7 @@ public class Boat_Stats
 
     public void Repair()
     {
-        Debug.Log("Repair");
+        //Debug.Log("Repair");
         currentHp += repairSpeed.crewAssigned * 1;
         if(currentHp > maxHp)
         {
