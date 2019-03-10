@@ -34,10 +34,6 @@ public class Boat_Stats
         currentHp -= p_dmg;
         SetBoatOnFire();
 
-        if (currentHp <= 0) {
-            currentHp = -500;
-            ManageScene.instance.LoadSceneBlack("End_Scene");
-        }
     }
 
     public bool isDead()
