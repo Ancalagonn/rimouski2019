@@ -63,7 +63,7 @@ public class Player_Abordage : MonoBehaviour
                 Enemy_Stat stats = item.GetComponent<Enemy_Stat>();
 
                 if (boardingShip != null)
-                    continue;
+                    return;
 
                 if(stats.isDying)
                 {
@@ -87,8 +87,10 @@ public class Player_Abordage : MonoBehaviour
 
     void BoardShip()
     {
-        this.boardingShip.StopAllCoroutines();
         isBoarding = false;
+        if(boardingShip != null)
+            this.boardingShip.StopAllCoroutines();
+        
 
         //On attribue l'argent en fonction du type de bateau ennemie
         if (boardingShip.enemySize == EnemySize.Small) {
