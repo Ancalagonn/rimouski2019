@@ -68,29 +68,9 @@ public class Player_Stat : MonoBehaviour
             return;
         }
 
-        if (PlayerInstance.playerStats.crewMembers > 4)
+        if (Random.Range(0, 1000) < 1)
         {
-            if (Random.Range(0, 1000) < 1)
-            {
-                SoundManager.Play("PerteMatelot", Vector3.zero);
-                PlayerInstance.playerStats.crewMembers--;
-                switch (Random.Range(1, 4))
-                {
-                    case 1:
-                        PlayerInstance.playerStats.moveSpeed.RemoveCrewMember();
-                        break;
-                    case 2:
-                        PlayerInstance.playerStats.rotationSpeed.RemoveCrewMember();
-                        break;
-                    case 3:
-                        PlayerInstance.playerStats.shotCooldown.RemoveCrewMember();
-                        break;
-                    case 4:
-                        PlayerInstance.playerStats.repairSpeed.RemoveCrewMember();
-                        break;
-
-                }
-            }
+            playerStats.RemoveRandomMember();
         }
     }
 
