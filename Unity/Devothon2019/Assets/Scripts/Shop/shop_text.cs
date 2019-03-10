@@ -54,7 +54,7 @@ public class shop_text : MonoBehaviour
         addCrewMember.text = "Ajouter un membre à l'équipage\n("+PlayerInstance.playerStats.crewMembers+" présentement) ("+price.ADD_CREW+"$)";
         money.text = "Banque : " + PlayerInstance.playerCash + "$";
         levelCoque.text = "Niveau : " + ((PlayerInstance.playerStats.maxHp / 10) - 49);
-        hp.text = "HP : " + PlayerInstance.playerStats.currentHp + "/" + PlayerInstance.playerStats.maxHp;
+        hp.text = "HP : " + (int)PlayerInstance.playerStats.currentHp + "/" + PlayerInstance.playerStats.maxHp;
         repairCoque.text = "Réparer la coque (" + repairPrice + "$)";
     }
 
