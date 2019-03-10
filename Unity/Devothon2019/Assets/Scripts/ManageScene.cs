@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ManageScene : MonoBehaviour {
 
@@ -17,22 +18,30 @@ public class ManageScene : MonoBehaviour {
 
     private void Awake()
     {
-
+        cg = gameObject.transform.GetChild(0).GetChild(0).GetComponent<CanvasGroup>();
+        cg.GetComponent<Image>().enabled = true;
     }
 
     // Use this for initialization
     void Start () {
         instance = this;
+
+        
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if (sceneLoading)
         {
-            if (cg != null && cg.alpha > 0)
-                cg.alpha -= speed * Time.deltaTime;
+            if (cg != null && cg.alpha < 1)
+                cg.alpha += speed * Time.deltaTime;
             else 
                 SceneManager.LoadScene(scene);
+        }
+        else
+        {
+            if (cg != null && cg.alpha > 0)
+                cg.alpha -= speed * Time.deltaTime;
         }
 	}
 
