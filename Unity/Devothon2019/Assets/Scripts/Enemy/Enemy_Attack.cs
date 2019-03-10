@@ -80,7 +80,7 @@ public class Enemy_Attack : MonoBehaviour
                 soundName = "FireCanon";
                 break;
 
-            case CanonType.TripleShot:
+            case CanonType.TirTriple:
 
                 for (int i = 0; i < 3; i++)
                 {
@@ -111,7 +111,7 @@ public class Enemy_Attack : MonoBehaviour
                 soundName = "FireCanon";
                 break;
 
-            case CanonType.FlameThrower:
+            case CanonType.LanceFlammes:
                 canonballObj = Instantiate(canon.canonball, null);
                 Flames flames = canonballObj.GetComponent<Flames>();
                 lifetime = canon.baseCooldown * 0.75f;

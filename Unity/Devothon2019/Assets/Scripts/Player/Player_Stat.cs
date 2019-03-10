@@ -113,7 +113,7 @@ public class Player_Stat : MonoBehaviour
 
             switch (canon.canonType)
             {
-                case CanonType.TripleShot:
+                case CanonType.TirTriple:
                 case CanonType.Normal:
                     if (canon.canonType == CanonType.Normal)
                         canonObj = Instantiate(Static_Resources.defaultCanon);
@@ -134,7 +134,7 @@ public class Player_Stat : MonoBehaviour
                     canonCtrl.canonInfo.shootPoint = CanonsSpots[i];
 
                     break;
-                case CanonType.FlameThrower:
+                case CanonType.LanceFlammes:
                     canonObj = Instantiate(Static_Resources.flameThrower);
                     canonObj.name = "CanonFlame" + i;
                     canonObj.transform.SetParent(CanonsSpots[i]);

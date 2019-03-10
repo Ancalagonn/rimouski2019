@@ -34,13 +34,13 @@ public class shop_UpgradeCanon : MonoBehaviour
 
         switch(newType)
         {
-            case CanonType.FlameThrower:
+            case CanonType.LanceFlammes:
                 cost = price.CANON_FLAME;
                 break;
             case CanonType.Normal:
                 cost = price.CANON_NORMAL;
                 break;
-            case CanonType.TripleShot:
+            case CanonType.TirTriple:
                 cost = price.CANON_TRIPLE;
                 break;
         }
