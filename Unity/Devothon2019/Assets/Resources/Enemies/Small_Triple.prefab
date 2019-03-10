@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1875189720194771643}
   - component: {fileID: 5509332796843586645}
   - component: {fileID: 2013539541611044860}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Small_Triple
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -291,7 +291,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda9f326cd677e44c9e90dab39de4a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeAggro: 200
   distance: 0
   lastTarget:
     targetPoint: {fileID: 0}
@@ -327,7 +326,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1728490151534848926}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CanonSlotsParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -359,7 +358,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 404888188164557471}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CanonSlot0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -389,7 +388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3692812259889072532}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CanonSlot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}

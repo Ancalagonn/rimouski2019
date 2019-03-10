@@ -86,7 +86,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5511115052749058203}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CanonSlotsParent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 7017807773978940053}
   - component: {fileID: 5807517388490410372}
   - component: {fileID: 1832380231}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Big_Normal
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -404,7 +404,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fda9f326cd677e44c9e90dab39de4a40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rangeAggro: 200
   distance: 0
   lastTarget:
     targetPoint: {fileID: 0}
@@ -440,7 +439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7888709329039399055}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CanonSlot4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +469,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7888709329088630828}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CanonSlot1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -500,7 +499,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7888709329112114780}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CanonSlot0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -530,7 +529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7888709329709130793}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CanonSlot5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,7 +559,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7888709329995874772}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CanonSlot3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -590,7 +589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7888709330387038730}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CanonSlot2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
