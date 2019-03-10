@@ -48,7 +48,7 @@ public class shop_UpgradeCanon : MonoBehaviour
 
         if (shop_moneyControl.Transaction(-cost))
         {
-            PlayerInstance.playerStats.canons[shop_loadShop.btn_select].canonType = (CanonType)m_dllType.value;
+            PlayerInstance.playerStats.canons[shop_loadShop.btn_select] = new Canon((CanonType)m_dllType.value);
         }
     }
 }

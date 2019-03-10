@@ -26,6 +26,15 @@ public class Canon
         canonballLifetime = p_canonballLifetime;
     }
 
+    public Canon(CanonType type)
+    {
+        canonType = type;
+        damage = 10;
+        baseCooldown = 2;
+        level = 1;
+        canonballLifetime = 1;
+    }
+
     public Canon()
     {
         canonType = CanonType.Normal;
