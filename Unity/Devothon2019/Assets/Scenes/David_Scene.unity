@@ -361,6 +361,11 @@ PrefabInstance:
       propertyPath: BoardingRadius
       value: 15
       objectReference: {fileID: 0}
+    - target: {fileID: 6874902452652545133, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e, type: 3}
 --- !u!1 &1163977728 stripped
