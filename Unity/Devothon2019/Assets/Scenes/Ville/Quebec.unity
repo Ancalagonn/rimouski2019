@@ -150,6 +150,7 @@ MonoBehaviour:
       type: 3}
     shootPoint: {fileID: 584636466}
     level: 1
+  timer: 0
 --- !u!4 &60216620
 Transform:
   m_ObjectHideFlags: 0
@@ -252,7 +253,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 311
+    m_Bits: 1335
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -306,6 +307,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BigBoatPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6546894130462959210, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6546894130462959223, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
         type: 3}
@@ -361,6 +367,50 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 39222352, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e, type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5842750830019197581, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1096349622247733856, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6319089747347026031, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6404473900479511983, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 405540910082558241, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552258181257343860, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2151290944192783723, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3072621625117849340, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e, type: 3}
@@ -495,6 +545,10 @@ PrefabInstance:
     - target: {fileID: 1163977729, guid: a4680985baf76b14eb80de18dd7e1345, type: 3}
       propertyPath: m_LocalScale.z
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1163977730, guid: a4680985baf76b14eb80de18dd7e1345, type: 3}
+      propertyPath: StormViolence
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4680985baf76b14eb80de18dd7e1345, type: 3}
@@ -983,6 +1037,7 @@ MonoBehaviour:
       type: 3}
     shootPoint: {fileID: 95820274}
     level: 1
+  timer: 0
 --- !u!4 &654898852
 Transform:
   m_ObjectHideFlags: 0
@@ -1369,6 +1424,7 @@ MonoBehaviour:
       type: 3}
     shootPoint: {fileID: 2085069290}
     level: 1
+  timer: 0
 --- !u!4 &1107931021
 Transform:
   m_ObjectHideFlags: 0
@@ -2570,6 +2626,7 @@ MonoBehaviour:
       type: 3}
     shootPoint: {fileID: 2041048217}
     level: 1
+  timer: 0
 --- !u!4 &2639082025959622473
 Transform:
   m_ObjectHideFlags: 0
