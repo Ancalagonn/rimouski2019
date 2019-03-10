@@ -12,7 +12,7 @@ public class Introduction : MonoBehaviour
         SoundManager.Play("MusiqueIntro", Vector3.zero);
         Narrator.SayTextStatic(true, "Notre histoire se déroule au lendemain de la capitulation de Ville-Marie.");
         Narrator.SayTextStatic(true, "Quatre aventuriers français sont déterminés à libérer la Nouvelle-France de l'envahisseur Anglais, qui tente éperdumment de les assimiler.");
-        Narrator.SayTextStatic(true, "Notre capitaine François et ses trois acolytes Pierre, Jacques et Charles, longeront alors la rive du fabuleux Fleuve St-Laurent afin de libérer les grandes villes de la colonie.");
+        Narrator.SayTextStatic(true, "Notre capitaine François et ses trois acolytes Pierre, Jacques et Charles, longeront alors la rive du fabuleux St-Laurent afin de libérer les grandes villes de la colonie.");
         Narrator.SayTextStatic(true, "Leur aventure ne se terminera pas avant une traversée complète de l'Atlantique afin d'anéantir totalement l'Angleterre.");
         StartCoroutine(ChangeScene());
     }
