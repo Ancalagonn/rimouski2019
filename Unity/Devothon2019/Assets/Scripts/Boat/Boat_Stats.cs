@@ -83,16 +83,15 @@ public class Boat_Stats
 
         canons = new List<Canon>(maxCanons);
 
+
         for (int i = 0; i < maxCanons; i++)
         {
 
-            Canon c = new Canon();
-           /* c.canonType = CanonType.FlameThrower;
-            c.canonball = Static_Resources.flameEffect;*/
-
-            canons.Add(c);
+            canons.Add(null);
 
         }
+
+
 
         canons[maxCanons/4] = new Canon();
         canons[maxCanons/4 + maxCanons/2] = new Canon();
