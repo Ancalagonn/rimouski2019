@@ -27,6 +27,9 @@ public class ExitPad : MonoBehaviour
     }
 
     public void ExitScene() {
+        foreach (GameObject g in SceneManager.GetActiveScene().GetRootGameObjects()) {
+            g.SetActive(false);
+        }
         SceneManager.UnloadSceneAsync("BoatScene");
     }
 }
