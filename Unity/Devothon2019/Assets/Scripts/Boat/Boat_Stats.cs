@@ -107,6 +107,33 @@ public class Boat_Stats
 
     }
 
+    public void RemoveRandomMember()
+    {
+        if (crewMembers > 4)
+        {
+
+            SoundManager.Play("PerteMatelot", Vector3.zero);
+           
+            switch (Random.Range(1, 4))
+            {
+                case 1:
+                    PlayerInstance.playerStats.moveSpeed.RemoveCrewMember();
+                    break;
+                case 2:
+                    PlayerInstance.playerStats.rotationSpeed.RemoveCrewMember();
+                    break;
+                case 3:
+                    PlayerInstance.playerStats.shotCooldown.RemoveCrewMember();
+                    break;
+                case 4:
+                    PlayerInstance.playerStats.repairSpeed.RemoveCrewMember();
+                    break;
+
+            }
+            
+        }
+    }
+
 
     public Boat_Stats(float p_maxHp, Stats p_moveSpeed, Stats p_rotationSpeed, Stats p_shotCooldown, Stats p_repairSpeed)
     {
@@ -159,7 +186,10 @@ public class Stats
     public void RemoveCrewMember()
     {
         if (crewAssigned > 1)
+        {
             crewAssigned--;
+            PlayerInstance.playerStats.crewMembers--;
+        }
     }
 }
 
