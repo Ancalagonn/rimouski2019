@@ -70,7 +70,6 @@ public class Player_Stat : MonoBehaviour
 
         if (PlayerInstance.playerStats.crewMembers > 4)
         {
-            //Debug.Log(PlayerInstance.playerStats.crewMembers);
             if (Random.Range(0, 100) < 5)
             {
                 PlayerInstance.playerStats.crewMembers--;

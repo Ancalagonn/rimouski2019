@@ -94,7 +94,6 @@ public class Boat_Stats
             if (flames.Length > 0)
             {
                 GameObject.Destroy(flames[0].gameObject);
-                Debug.Log("Destroy one flame");
             }
         }
         else if (currentHp == maxHp)

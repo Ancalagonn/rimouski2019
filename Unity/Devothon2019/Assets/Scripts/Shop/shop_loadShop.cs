@@ -15,6 +15,8 @@ public class shop_loadShop : MonoBehaviour
     public GameObject btnPrefab;
     public Dropdown ddl_canonType;
 
+    public Text levelCanon;
+
     public GameObject m_panelCanon;
 
     private GameObject boat;
@@ -71,6 +73,7 @@ public class shop_loadShop : MonoBehaviour
         {
             Canon selectedCanon = PlayerInstance.playerStats.canons[btn_select];
             instance.ddl_canonType.value = (int)selectedCanon.canonType;
+            instance.levelCanon.text = "Niveau : " + PlayerInstance.playerStats.canons[btn_select].level;
         }
         else
         {
@@ -86,6 +89,9 @@ public class shop_loadShop : MonoBehaviour
                 btn.transform.Rotate(Vector3.forward, 90);
                 btn.GetComponent<shop_btnClick>().id = btn_select;
                 btn.GetComponent<Image>().color = Color.red;
+
+                instance.levelCanon.text = "Niveau : 1";
+
                 Destroy(caller);
             } else {
                 instance.m_panelCanon.SetActive(false);

@@ -46,9 +46,6 @@ public static class Static_Resources
         }
 
         stats.canons = GenerateCanons(size, type);
-
-        Debug.Log(stats.canons);
-
         return stats;
     }
 
