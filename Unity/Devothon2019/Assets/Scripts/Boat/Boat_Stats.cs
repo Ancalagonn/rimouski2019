@@ -29,6 +29,16 @@ public class Boat_Stats
         return currentHp;
     }
 
+    public void Repair()
+    {
+        Debug.Log("Repair");
+        currentHp += repairSpeed.crewAssigned * 1;
+        if(currentHp > maxHp)
+        {
+            currentHp = maxHp;
+        }
+    }
+
     public void TakeDamage(float p_dmg)
     {
         currentHp -= p_dmg;
