@@ -114,7 +114,9 @@ public class Player_Abordage : MonoBehaviour
         }
 
         this.gameObject.GetComponent<Player_Movemement>().enabled = true;
-        Destroy(boardingShip.gameObject);
+        if (boardingShip != null) {
+            Destroy(boardingShip.gameObject);
+        }
         boardingShip = null;
 
         foreach (GameObject g in SceneManager.GetActiveScene().GetRootGameObjects()) {

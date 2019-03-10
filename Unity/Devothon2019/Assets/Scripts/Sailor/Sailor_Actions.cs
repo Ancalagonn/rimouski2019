@@ -7,8 +7,8 @@ public class Sailor_Actions : MonoBehaviour
     private GameObject particuleShoot;
     private Transform bulletInitPos;
 
-    private int minLoot = 15;
-    private int maxLoot = 30;
+    private int minLoot = 25;
+    private int maxLoot = 40;
 
     private float cooldown = 0;
     private float lootRange = 7;
@@ -53,6 +53,7 @@ public class Sailor_Actions : MonoBehaviour
             if (ray.collider.tag == "Enemy" || ray.collider.tag == "Player") {
                 var otherSailer = ray.transform.gameObject.GetComponent<Sailor_Actions>();
                 if (otherSailer != null) {
+                    SoundManager.Play("PerteMatelot");
                     otherSailer.takeDamage(this.Stats.weaponDamage);
                 }
             }
@@ -71,6 +72,8 @@ public class Sailor_Actions : MonoBehaviour
 
     public void takeDamage(int p_damage) {
         this.Stats.HP -= p_damage;
+
+        
 
         if (this.Stats.HP <= 0) {
             // If this is the player dying, we exit the scene
