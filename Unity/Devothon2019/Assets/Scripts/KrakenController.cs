@@ -23,7 +23,6 @@ public class KrakenController : MonoBehaviour
     public void TakeDamage(float p_damage)
     {
         hp -= (int)p_damage;
-        //Debug.Log(gameObject.name + " : " + enemyStats.currentHp);
     }
 
     // Update is called once per frames

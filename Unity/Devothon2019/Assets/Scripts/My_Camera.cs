@@ -26,7 +26,6 @@ public class My_Camera : MonoBehaviour
     {
         if(target == null)
         {
-            Debug.Log("Cannot find player");
             return;
         }
 

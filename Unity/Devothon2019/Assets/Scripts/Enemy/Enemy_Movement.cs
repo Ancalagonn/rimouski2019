@@ -40,7 +40,6 @@ public class Enemy_Movement : MonoBehaviour
     {
         if(target == null)
         {
-            Debug.Log("cannot find player");
             return;
         }
 

@@ -23,15 +23,7 @@ public class GameOver : MonoBehaviour
     }
 
     public void RetournerAuMenu() {
+        Debug.Log("Fif en criss");
         ManageScene.instance.LoadSceneBlack("Main_Scene");
-    }
-
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
