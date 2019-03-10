@@ -29,7 +29,7 @@ public class Player_Stat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        playerStats.currentHp = playerStats.maxHp;
+        
     }
 
     // Update is called once per frame
