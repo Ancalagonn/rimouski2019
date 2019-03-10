@@ -44,10 +44,15 @@ public class Player_Movemement : MonoBehaviour
         //On vérifie si le bateau est en cours d'abordage
         if(!pa.isBoarding)
         {
-            float z = Input.GetAxisRaw("Vertical");
-            float x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * PlayerInstance.playerStats.rotationSpeed.value;
+            float rotationSpeed = PlayerInstance.playerStats.rotationSpeed.value + ((PlayerInstance.playerStats.rotationSpeed.value * 0.05f) * PlayerInstance.playerStats.rotationSpeed.crewAssigned);
 
-            speed = (boatSpeedCurve.Evaluate(lastTimeForwardPressed) * Time.deltaTime * PlayerInstance.playerStats.moveSpeed.value) * 1.5f;
+            float boatSpeed = PlayerInstance.playerStats.moveSpeed.value + ((PlayerInstance.playerStats.moveSpeed.value * 0.05f) * PlayerInstance.playerStats.moveSpeed.crewAssigned);
+
+            float z = Input.GetAxisRaw("Vertical");
+            float x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * rotationSpeed;
+
+            speed = (boatSpeedCurve.Evaluate(lastTimeForwardPressed) * Time.deltaTime * boatSpeed) * 1.5f;
+
 
             if (z > 0)
                 lastTimeForwardPressed += Time.deltaTime * 0.30f;
