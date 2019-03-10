@@ -504,6 +504,9 @@ MonoBehaviour:
   boardingKey: 102
   BoardingRadius: 5
   isBoarding: 0
+  layerMaskBoarding:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!95 &6546894130462959209
 Animator:
   serializedVersion: 3

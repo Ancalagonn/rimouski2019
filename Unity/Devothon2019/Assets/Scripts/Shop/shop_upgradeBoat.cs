@@ -20,7 +20,7 @@ public class shop_upgradeBoat : MonoBehaviour
 
     public void ReparerCoque()
     {
-        if(shop_moneyControl.Transaction(-price.REPAIR_COQUE))
+        if(shop_moneyControl.Transaction(-shop_text.repairPrice))
         {
             PlayerInstance.playerStats.currentHp = PlayerInstance.playerStats.maxHp;
         }

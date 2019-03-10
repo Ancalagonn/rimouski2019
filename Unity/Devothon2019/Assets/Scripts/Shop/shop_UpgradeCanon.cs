@@ -18,6 +18,7 @@ public class shop_UpgradeCanon : MonoBehaviour
         if(shop_moneyControl.Transaction(-price.UPGRADE_CANON))
         {
             PlayerInstance.playerStats.canons[shop_loadShop.btn_select].level++;
+            shop_loadShop.instance.levelCanon.text = "Niveau : " + PlayerInstance.playerStats.canons[shop_loadShop.btn_select].level;
         }
     }
 
