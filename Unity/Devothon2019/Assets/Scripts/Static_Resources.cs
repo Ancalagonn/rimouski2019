@@ -38,7 +38,7 @@ public static class Static_Resources
         switch (size)
         {
             case EnemySize.Small:
-                stats = new Boat_Stats(100, new Stats(5, 1), new Stats(50, 1), new Stats(5, 1), new Stats(0,0));
+                stats = new Boat_Stats(65, new Stats(5, 1), new Stats(50, 1), new Stats(5, 1), new Stats(0,0));
                 break;
             case EnemySize.Big:
                 stats = new Boat_Stats(200, new Stats(3, 1), new Stats(50, 1), new Stats(5, 1), new Stats(0, 0));

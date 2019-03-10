@@ -41,11 +41,11 @@ public class Player_Stat : MonoBehaviour
     /// <param name="p_damage"></param>
     public void TakeDamage(float p_damage)
     {
-        PlayerInstance.playerStats.TakeDamage(p_damage);
 
+        PlayerInstance.playerStats.TakeDamage(p_damage);
         if (PlayerInstance.playerStats.crewMembers > 4)
         {
-            Debug.Log(PlayerInstance.playerStats.crewMembers);
+            //Debug.Log(PlayerInstance.playerStats.crewMembers);
             if (Random.Range(0, 100) < 5)
             {
                 PlayerInstance.playerStats.crewMembers--;
