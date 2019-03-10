@@ -31,24 +31,46 @@ public class ShowInfo : MonoBehaviour
 
     void CalculateHp()
     {
-        int percent = (int)(PlayerInstance.playerStats.PercentHpLeft() / 10) - 1;
+        int percent = (int)((PlayerInstance.playerStats.PercentHpLeft()) / 5) - 2;
 
         if(percent < 0 && !PlayerInstance.playerStats.isDead())
         {
             percent = 0;
         }
 
+        bool disableOther = false;
+
         for (int i = 0; i < hpDisplay.Count; i++)
         {
+            int index = (int)Mathf.Floor(percent / 2);         
+
+            if(disableOther)
+            {
+                hpDisplay[i].enabled = false;
+                continue;
+            }
+
             //Show good plank
-            if(i <= percent)
+            if(i <= index)
             {
                 hpDisplay[i].sprite = Static_Resources.plank;
+                hpDisplay[i].enabled = true;
             }
             else //Show bad plank
             {
-                hpDisplay[i].sprite = Static_Resources.plankCracked;
+                if (percent % 2 == 0)
+                {
+                    hpDisplay[i].enabled = false;
+                    disableOther = true;
+                }
+                else
+                {
+                    hpDisplay[i].sprite = Static_Resources.plankCracked;
+                    hpDisplay[i].enabled = true;
+                    disableOther = true;
+                }
             }
+
         }
 
     }

@@ -41,8 +41,13 @@ public class Enemy_Stat : MonoBehaviour
             //White flags
             PlayerInstance.playerCash += (enemySize == EnemySize.Small) ? Static_Resources.SmallBoatValue : Static_Resources.BigBoatValue;
 
-            Destroy(gameObject, 15f);
+            StartCoroutine(DestroyAfterTime());
         }
+    }
+
+    private IEnumerator DestroyAfterTime() {
+        yield return new WaitForSeconds(15);
+        Destroy(this.gameObject);
     }
 
     public void TakeDamage(float p_damage)
