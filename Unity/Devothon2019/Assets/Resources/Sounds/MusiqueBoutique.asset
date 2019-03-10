@@ -15,6 +15,6 @@ MonoBehaviour:
   name: MusiqueBoutique
   clip: {fileID: 8300000, guid: 640e00e1f9391284c834b9828703768e, type: 3}
   volume: 0.2
-  isMusic: 0
-  loop: 0
+  isMusic: 1
+  loop: 1
   source: {fileID: 0}

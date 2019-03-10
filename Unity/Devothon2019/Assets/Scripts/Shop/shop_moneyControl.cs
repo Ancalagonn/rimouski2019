@@ -19,7 +19,6 @@ public class shop_moneyControl : MonoBehaviour
     }
 
 
-
     public static bool Transaction(int p_money)
     {
         

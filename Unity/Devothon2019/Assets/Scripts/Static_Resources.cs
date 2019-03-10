@@ -79,13 +79,13 @@ public static class Static_Resources
                     canonball = defaultCanonball;
                     break;
                 case EnemyType.Fire:
-                    canonType = CanonType.FlameThrower;
+                    canonType = CanonType.LanceFlammes;
                     damage = 10;
                     baseCooldown = 5;
                     canonball = flameEffect;
                     break;
                 case EnemyType.Triple:
-                    canonType = CanonType.TripleShot;
+                    canonType = CanonType.TirTriple;
                     damage = 7;
                     baseCooldown = 3.5f * 1.8f;
                     canonball = defaultCanonball;
