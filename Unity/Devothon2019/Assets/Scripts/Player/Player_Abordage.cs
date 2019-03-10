@@ -23,6 +23,7 @@ public class Player_Abordage : MonoBehaviour
         //Si le joueur appui sur F
         if (Input.GetKeyDown(boardingKey))
         {
+            Debug.Log("KeyDown");
             //On tente d'aborder
             GetBoardableShip();
         }
@@ -46,7 +47,7 @@ public class Player_Abordage : MonoBehaviour
     void GetBoardableShip()
     {   
         //On obtient le nombre d'ennemies et leur collider dans une liste    
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, BoardingRadius, 1 << layerMaskBoarding);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, BoardingRadius);
 
         foreach (var item in colliders)
         {
