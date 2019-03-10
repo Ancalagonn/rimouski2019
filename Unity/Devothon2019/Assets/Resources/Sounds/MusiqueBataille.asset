@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d51125c5cd14e84429ef0863c15540d8, type: 3}
   m_Name: MusiqueBataille
   m_EditorClassIdentifier: 
-  name: 
-  clip: {fileID: 0}
-  volume: 0
-  isMusic: 0
-  loop: 0
+  name: MusiqueBataille
+  clip: {fileID: 8300000, guid: c69fd47366394b34192eceeb09ba04d1, type: 3}
+  volume: 0.5
+  isMusic: 1
+  loop: 1
   source: {fileID: 0}
