@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy_Movement : MonoBehaviour
 {
     private Player_Stat target;
-    public float rangeAggro = 25;
+    private float rangeAggro = 25;
 
     private bool isAggro = false;
 
@@ -19,6 +19,7 @@ public class Enemy_Movement : MonoBehaviour
 
     private void Awake()
     {
+
         enemyStat = GetComponent<Enemy_Stat>();
         target = FindObjectOfType<Player_Stat>();
         
@@ -30,6 +31,8 @@ public class Enemy_Movement : MonoBehaviour
         }
         rb.isKinematic = false;
         rb.gravityScale = 0;
+
+        rangeAggro = (enemyStat.enemySize == EnemySize.Small) ? Random.Range(20, 30) : Random.Range(15, 25);
     }
 
     // Update is called once per frame

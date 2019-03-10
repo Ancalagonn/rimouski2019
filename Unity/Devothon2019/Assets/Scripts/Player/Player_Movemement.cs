@@ -109,4 +109,25 @@ public class Player_Movemement : MonoBehaviour
         }
         
     }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.CompareTag("Enemy"))
+        {
+            Enemy_Stat stat = col.gameObject.GetComponent<Enemy_Stat>();
+
+            switch (stat.enemySize)
+            {
+                case EnemySize.Small:
+                    stat.TakeDamage(15);
+                    PlayerInstance.playerStats.TakeDamage(5);
+                    break;
+                case EnemySize.Big:
+                    stat.TakeDamage(5);
+                    PlayerInstance.playerStats.TakeDamage(10);
+                    break;
+            }
+
+        }
+    }
 }
