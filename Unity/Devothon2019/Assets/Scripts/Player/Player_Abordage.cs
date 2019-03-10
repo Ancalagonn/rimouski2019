@@ -63,7 +63,7 @@ public class Player_Abordage : MonoBehaviour
                 Enemy_Stat stats = item.GetComponent<Enemy_Stat>();
 
                 if (boardingShip != null)
-                    continue;
+                    return;
 
                 if(stats.isDying)
                 {
@@ -86,13 +86,17 @@ public class Player_Abordage : MonoBehaviour
 
     void BoardShip()
     {
-        this.boardingShip.StopAllCoroutines();
         isBoarding = false;
+        if(boardingShip != null)
+            this.boardingShip.StopAllCoroutines();
+        
 
         //On attribue l'argent en fonction du type de bateau ennemie
         if (boardingShip.enemySize == EnemySize.Small) {
             PlayerInstance.playerCash += Static_Resources.SmallBoatValue;
             
+            SoundManager.Play("Abordage", Vector3.zero);
+
             this.gameObject.GetComponent<Player_Movemement>().enabled = true;
             Destroy(boardingShip.gameObject);
             boardingShip = null;
@@ -129,7 +133,7 @@ public class Player_Abordage : MonoBehaviour
         {
             g.SetActive(state);
         }
-        
+
         this.gameObject.GetComponent<Player_Movemement>().enabled = true;
     }
 }
