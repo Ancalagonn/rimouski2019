@@ -45,13 +45,15 @@ public class Sailor_Actions : MonoBehaviour
         this.cooldown = this.Stats.weaponCooldown;
 
         var anim = Instantiate(this.particuleShoot, this.bulletInitPos.position, this.bulletInitPos.rotation);
-        Destroy(anim, 0.25f);
+        Destroy(anim, 0.10f);
 
         var ray = Physics2D.Raycast(this.bulletInitPos.position, this.bulletInitPos.transform.up * 2);
-        if (ray.collider && ray.collider.tag == "Enemy" || ray.collider.tag == "Player") {
-            var otherSailer = ray.transform.gameObject.GetComponent<Sailor_Actions>();
-            if (otherSailer != null) {
-                otherSailer.takeDamage(this.Stats.weaponDamage);
+        if (ray.collider) {
+            if (ray.collider.tag == "Enemy" || ray.collider.tag == "Player") {
+                var otherSailer = ray.transform.gameObject.GetComponent<Sailor_Actions>();
+                if (otherSailer != null) {
+                    otherSailer.takeDamage(this.Stats.weaponDamage);
+                }
             }
         }
     }
