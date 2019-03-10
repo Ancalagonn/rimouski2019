@@ -7,8 +7,8 @@ public class Sailor_Actions : MonoBehaviour
     private GameObject particuleShoot;
     private Transform bulletInitPos;
 
-    private int minLoot = 15;
-    private int maxLoot = 30;
+    private int minLoot = 25;
+    private int maxLoot = 40;
 
     private float cooldown = 0;
     private float lootRange = 7;
