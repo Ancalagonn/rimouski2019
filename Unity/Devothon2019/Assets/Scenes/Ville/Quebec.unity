@@ -150,6 +150,7 @@ MonoBehaviour:
       type: 3}
     shootPoint: {fileID: 584636466}
     level: 1
+  timer: 0
 --- !u!4 &60216620
 Transform:
   m_ObjectHideFlags: 0
@@ -913,6 +914,7 @@ MonoBehaviour:
       type: 3}
     shootPoint: {fileID: 95820274}
     level: 1
+  timer: 0
 --- !u!4 &654898852
 Transform:
   m_ObjectHideFlags: 0
@@ -1270,6 +1272,26 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5482246109532458336, guid: 58eddf0b257766f4a91b8f524b79c836,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482246109532458336, guid: 58eddf0b257766f4a91b8f524b79c836,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482246109532458336, guid: 58eddf0b257766f4a91b8f524b79c836,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5482246109532458336, guid: 58eddf0b257766f4a91b8f524b79c836,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58eddf0b257766f4a91b8f524b79c836, type: 3}
 --- !u!224 &681182267 stripped
@@ -1524,6 +1546,7 @@ MonoBehaviour:
       type: 3}
     shootPoint: {fileID: 2085069290}
     level: 1
+  timer: 0
 --- !u!4 &1107931021
 Transform:
   m_ObjectHideFlags: 0
@@ -2719,6 +2742,7 @@ MonoBehaviour:
       type: 3}
     shootPoint: {fileID: 2041048217}
     level: 1
+  timer: 0
 --- !u!4 &2639082025959622473
 Transform:
   m_ObjectHideFlags: 0
