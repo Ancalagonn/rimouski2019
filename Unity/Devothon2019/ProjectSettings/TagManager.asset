@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - shop_btnCanon
+  - Loot
   layers:
   - Default
   - TransparentFX
