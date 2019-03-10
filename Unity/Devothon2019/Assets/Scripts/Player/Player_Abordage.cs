@@ -95,6 +95,8 @@ public class Player_Abordage : MonoBehaviour
         if (boardingShip.enemySize == EnemySize.Small) {
             PlayerInstance.playerCash += Static_Resources.SmallBoatValue;
             
+            SoundManager.Play("Abordage", Vector3.zero);
+
             this.gameObject.GetComponent<Player_Movemement>().enabled = true;
             Destroy(boardingShip.gameObject);
             boardingShip = null;
@@ -117,11 +119,6 @@ public class Player_Abordage : MonoBehaviour
             return;
         }
 
-        if (p_scene.name == "BoatScene" && p_scene.isLoaded) {
-            SceneManager.UnloadSceneAsync(p_scene);
-        }
-
-        this.gameObject.GetComponent<Player_Movemement>().enabled = true;
         if (boardingShip != null) {
             Destroy(boardingShip.gameObject);
         }
@@ -136,5 +133,7 @@ public class Player_Abordage : MonoBehaviour
         {
             g.SetActive(state);
         }
+
+        this.gameObject.GetComponent<Player_Movemement>().enabled = true;
     }
 }
