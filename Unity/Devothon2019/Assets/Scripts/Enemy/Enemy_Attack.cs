@@ -7,11 +7,13 @@ public class Enemy_Attack : MonoBehaviour
     private string CollidingTag = "Player";
     private Enemy_Stat enemyStat;
     private Enemy_Movement enemyMovement;
+    private Transform target;
 
     private void Awake()
     {
         enemyStat = GetComponent<Enemy_Stat>();
         enemyMovement = GetComponent<Enemy_Movement>();
+        target = FindObjectOfType<Player_Stat>().transform;
     }
 
     // Start is called before the first frame update
@@ -25,7 +27,7 @@ public class Enemy_Attack : MonoBehaviour
     {
         CanonsCooldown();
 
-        if(enemyMovement.distance <= 2.5f)
+        if(Vector2.Distance(target.position, transform.position) < 10f)
             FireCanons();
     }
 

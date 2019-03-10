@@ -29,6 +29,7 @@ public class FinishLevel : MonoBehaviour
 
         if (fini && !ending) {
             ending = true;
+            Progression.CURRENT_LEVEL++;
             ManageScene.instance.LoadSceneBlack("Boutique_Scene");
         }
     }
