@@ -13,6 +13,8 @@ public class Player_Stat : MonoBehaviour
     public List<Transform> CanonsSpots;
     float repairTime = 1;
 
+    public List<TargetPoint> targetPoints = new List<TargetPoint>();
+
     private void Awake()
     {
         Static_Resources.LoadResources();
@@ -27,6 +29,7 @@ public class Player_Stat : MonoBehaviour
     void Start()
     {
         playerStats.currentHp = playerStats.maxHp;
+        GenerateTargetPoint();
     }
 
     // Update is called once per frame
@@ -176,6 +179,72 @@ public class Player_Stat : MonoBehaviour
             foreach (Transform c2 in child)
                 Destroy(c2.gameObject);
         
+    }
+
+    public Transform GetClosestTarget(Transform p_enemy)
+    {
+        TargetPoint closest = null;
+
+        float minDist = float.MaxValue;
+
+        foreach (var item in targetPoints)
+        {
+            float d = Vector3.Distance(item.targetPoint.position, p_enemy.position);
+            if(d < minDist && item.enemy == null)
+            {
+                minDist = d;
+                closest = item;
+            }
+        }
+
+        if(closest != null)
+        {
+            closest.enemy = p_enemy;
+        }
+
+        return closest.targetPoint;
+    }
+
+    public void DeleteTargetReference(Transform target)
+    {
+        foreach (var item in targetPoints)
+        {
+            if(item.targetPoint == target)
+            {
+                item.enemy = null;
+            }
+        }
+    }
+
+    private void GenerateTargetPoint()
+    {
+        targetPoints = new List<TargetPoint>();
+
+        float offset = 12f;
+
+        GameObject point = new GameObject();
+        point.transform.SetParent(transform);
+        point.transform.localPosition = new Vector2(-offset, 0);
+        point.name = "Left Point";
+        targetPoints.Add(new TargetPoint(point.transform, null));
+
+        point = new GameObject();
+        point.transform.SetParent(transform);
+        point.transform.localPosition = new Vector2(offset, 0);
+        point.name = "Right Point";
+        targetPoints.Add(new TargetPoint(point.transform, null));
+
+        point = new GameObject();
+        point.transform.SetParent(transform);
+        point.transform.localPosition = new Vector2(0, offset);
+        point.name = "Top Point";
+        targetPoints.Add(new TargetPoint(point.transform, null));
+
+        point = new GameObject();
+        point.transform.SetParent(transform);
+        point.transform.localPosition = new Vector2(0, -offset);
+        point.name = "Bot Point";
+        targetPoints.Add(new TargetPoint(point.transform, null));
     }
     
 }

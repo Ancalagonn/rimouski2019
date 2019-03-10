@@ -350,7 +350,7 @@ PrefabInstance:
     - target: {fileID: 6874902452652545133, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5dcd0a7f921ffa84e9f26ce2a3db616e, type: 3}
@@ -365,6 +365,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SmallBoatEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 826868237016264038, guid: bac4f9f833b61cc4fa9a2e068e22cdad,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2703332839096262541, guid: bac4f9f833b61cc4fa9a2e068e22cdad,
         type: 3}
@@ -434,6 +439,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BigBoatEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7888709328428395155, guid: 08fc0fd7412f2bf49bdcccf970833cf9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7888709328428395152, guid: 08fc0fd7412f2bf49bdcccf970833cf9,
         type: 3}

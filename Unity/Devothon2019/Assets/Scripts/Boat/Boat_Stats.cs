@@ -60,9 +60,7 @@ public class Boat_Stats
 
     private void SetBoatOnFire()
     {
-        int currentHpStade = (int)(PercentHpLeft() / 20f);
-
-       
+        int currentHpStade = (int)(PercentHpLeft() / 20f);     
 
         if (lastHpStade > currentHpStade)
         {
@@ -84,29 +82,24 @@ public class Boat_Stats
 
             lastHpStade = currentHpStade;
         }
-        else if (lastHpStade < currentHpStade)
-        {
-            FireEffect[] flames = mySelf.GetComponentsInChildren<FireEffect>();
-            GameObject flame = null;
-
-            if (flames.Length > 0)
-            {
-               flame = flames[0].gameObject;
-            }
-
-            if (flame != null)
-            {
-                Debug.Log("Destroy one flame");
-                GameObject.Destroy(flame);
-            }
-                
-        }
 
     }
 
     private void CheckForFire()
     {
-        if (currentHp == maxHp)
+        int currentHpStade = (int)(PercentHpLeft() / 20f);
+
+        if (lastHpStade < currentHpStade)
+        {
+            lastHpStade = currentHpStade;
+            FireEffect[] flames = mySelf.GetComponentsInChildren<FireEffect>();
+            if (flames.Length > 0)
+            {
+                GameObject.Destroy(flames[0].gameObject);
+                Debug.Log("Destroy one flame");
+            }
+        }
+        else if (currentHp == maxHp)
         {
             FireEffect[] flames = mySelf.GetComponentsInChildren<FireEffect>();
             foreach (var item in flames)

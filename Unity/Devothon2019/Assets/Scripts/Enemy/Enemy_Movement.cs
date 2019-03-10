@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy_Movement : MonoBehaviour
 {
-    private Transform target;
+    private Player_Stat target;
     public float rangeAggro = 25;
 
     private bool isAggro = false;
@@ -15,17 +15,21 @@ public class Enemy_Movement : MonoBehaviour
     [HideInInspector]
     public float distance;
 
+    private Transform lastTarget = null;
+
     private void Awake()
     {
         enemyStat = GetComponent<Enemy_Stat>();
-        target = FindObjectOfType<Player_Movemement>().transform;
+        target = FindObjectOfType<Player_Stat>();
         
         rb = GetComponent<Rigidbody2D>();
         if(rb == null)
         {
             rb = gameObject.AddComponent<Rigidbody2D>();
-            rb.isKinematic = true;
+            
         }
+        rb.isKinematic = false;
+        rb.gravityScale = 0;
     }
 
     // Update is called once per frame
@@ -37,7 +41,7 @@ public class Enemy_Movement : MonoBehaviour
             return;
         }
 
-        if(!isAggro && Vector2.Distance(target.position, transform.position) < rangeAggro)
+        if(!isAggro && Vector2.Distance(target.transform.position, transform.position) < rangeAggro)
         {
             isAggro = true;
         }
@@ -52,8 +56,8 @@ public class Enemy_Movement : MonoBehaviour
         //Destination reached
         if (closestSide == Vector3.zero)
         {
-            if (Approximately(transform.rotation, target.rotation))           
-                transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, Time.deltaTime * 2f);
+            if (Approximately(transform.rotation, target.transform.rotation))           
+                transform.rotation = Quaternion.Lerp(transform.rotation, target.transform.rotation, Time.deltaTime * 2f);
 
             return;
         }
@@ -83,7 +87,7 @@ public class Enemy_Movement : MonoBehaviour
         return Mathf.Abs(angle) > 1f;
     }
 
-    private Vector3 ClosestTargetSide()
+    /*private Vector3 ClosestTargetSide()
     {
         float offset = 6f;
 
@@ -102,6 +106,20 @@ public class Enemy_Movement : MonoBehaviour
 
 
         return closest;
+
+    }*/
+
+    private Vector3 ClosestTargetSide()
+    {
+        Transform closestPoint = target.GetClosestTarget(transform);
+
+        if(lastTarget != closestPoint)
+        {
+            target.DeleteTargetReference(lastTarget);
+            lastTarget = closestPoint;
+        }
+
+        return closestPoint.position;
 
     }
 }
