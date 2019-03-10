@@ -58,12 +58,21 @@ public class Player_Movemement : MonoBehaviour
             if (z > 0)
                 lastTimeForwardPressed += Time.deltaTime * 0.30f;
             else
+            {
                 lastTimeForwardPressed -= Time.deltaTime * 0.40f;
+                if (z < 0)
+                {
+                    if (lastTimeForwardPressed < 0.01f)
+                    {
+                        speed = -(boatSpeedCurve.Evaluate(0.1f) * Time.deltaTime * boatSpeed) * 1.5f;
+                    }
+                }
+            }
 
             if (lastTimeForwardPressed >= 1)
                 lastTimeForwardPressed = 1;
-            else if (lastTimeForwardPressed <= 0)
-                lastTimeForwardPressed = 0;
+            else if (lastTimeForwardPressed <= 0f)
+                lastTimeForwardPressed = 0f;
 
 
             float sensibility = 0.15f;
