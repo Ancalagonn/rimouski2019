@@ -11,6 +11,7 @@ public class Player_Stat : MonoBehaviour
     public Transform CanonsSpotsParent;
     [HideInInspector]
     public List<Transform> CanonsSpots;
+    float repairTime = 1;
 
     private void Awake()
     {
@@ -33,7 +34,15 @@ public class Player_Stat : MonoBehaviour
     {
         //for debug purpose
         playerStats = PlayerInstance.playerStats;
-        Repair();
+        if(repairTime < 0)
+        {
+            Repair();
+            repairTime = 1;
+        }
+        else
+        {
+            repairTime -= Time.deltaTime;
+        }
     }
 
     private void Repair()

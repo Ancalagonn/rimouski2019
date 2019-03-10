@@ -30,7 +30,9 @@ public class Boat_Stats
 
     public void Repair()
     {
-        currentHp += repairSpeed.crewAssigned * 1;
+
+        currentHp += repairSpeed.crewAssigned;
+
         if(currentHp > maxHp)
         {
             currentHp = maxHp;
