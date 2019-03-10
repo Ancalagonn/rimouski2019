@@ -58,7 +58,7 @@ public class Enemy_Movement : MonoBehaviour
         {
             Quaternion targetRot = target.transform.rotation * Quaternion.Inverse(lastTarget.rotation);
 
-            if (Approximately(transform.rotation, target.transform.rotation))           
+            if (Approximately(transform.rotation, targetRot))           
                 transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, Time.deltaTime * 2f);
 
             return;
@@ -107,5 +107,10 @@ public class Enemy_Movement : MonoBehaviour
 
         return closestPoint.targetPoint.position;
 
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, rangeAggro);
     }
 }

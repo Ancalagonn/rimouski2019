@@ -227,7 +227,7 @@ public class Player_Stat : MonoBehaviour
     {
         targetPoints = new List<TargetPoint>();
 
-        float offset = 25f;
+        float offset = 25.5f;
 
         GameObject point = new GameObject();
         point.transform.SetParent(transform);
@@ -251,7 +251,7 @@ public class Player_Stat : MonoBehaviour
         point.transform.SetParent(transform);
         point.transform.localPosition = new Vector2(0, -offset);
         point.name = "Bot Point";
-        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, 90))));
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, -90))));
 
 
         float diagonal = 0.7071f * offset;
@@ -272,7 +272,7 @@ public class Player_Stat : MonoBehaviour
         point.transform.SetParent(transform);
         point.transform.localPosition = new Vector2(-diagonal, -diagonal);
         point.name = "Left Bot Point";
-        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, 45))));
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, -45))));
 
         point = new GameObject();
         point.transform.SetParent(transform);

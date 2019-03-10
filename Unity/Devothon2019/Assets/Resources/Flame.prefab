@@ -80,7 +80,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.009904861, y: 2.2684197}
+  m_Offset: {x: 0.009904861, y: 2.6372313}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -91,7 +91,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3764191, y: 4.9821157}
+  m_Size: {x: 1.3764191, y: 5.719739}
   m_EdgeRadius: 0
 --- !u!1001 &1788121229
 PrefabInstance:
@@ -165,6 +165,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4316843131152040831, guid: ca499f07bd3e55d49993bedf666a6258,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4316843131152040830, guid: ca499f07bd3e55d49993bedf666a6258,
         type: 3}
       propertyPath: prewarm
@@ -172,21 +177,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4316843131152040830, guid: ca499f07bd3e55d49993bedf666a6258,
         type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 3
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 4316843131152040830, guid: ca499f07bd3e55d49993bedf666a6258,
         type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 1.75
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 4316843131152040831, guid: ca499f07bd3e55d49993bedf666a6258,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5410300100970608509, guid: ca499f07bd3e55d49993bedf666a6258, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca499f07bd3e55d49993bedf666a6258, type: 3}
 --- !u!4 &4316843130725045232 stripped
 Transform:
