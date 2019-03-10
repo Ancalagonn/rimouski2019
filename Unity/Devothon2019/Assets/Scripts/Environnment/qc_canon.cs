@@ -17,12 +17,9 @@ public class qc_canon : MonoBehaviour
         CanonInfos.currentCooldownTime -= Time.deltaTime;
         if(CanonInfos.canFire())
         {
-            Debug.DrawRay(CanonInfos.shootPoint.position, CanonInfos.shootPoint.up * 50);
-
             RaycastHit2D hit = Physics2D.Raycast(transform.GetChild(0).GetChild(0).position, transform.GetChild(0).GetChild(0).up, 2000, 1 << LayerMask.NameToLayer("Ennemy"));
             if (hit.collider != null)
             {
-                Debug.Log("shoot");
                 GameObject canonball = Instantiate(Static_Resources.defaultCanonball, CanonInfos.shootPoint.position, CanonInfos.shootPoint.rotation);
 
                 Canonball c = canonball.GetComponent<Canonball>();

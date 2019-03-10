@@ -110,8 +110,6 @@ public class Ouragan : MonoBehaviour
     {
         if(CanbeDamaged & collision.CompareTag("Player"))
         {
-            Debug.Log("calis");
-            //collision.gameObject.SendMessage("TakeDamage", 5);
             PlayerInstance.playerStats.TakeDamage(5);
             CanbeDamaged = false;
         }

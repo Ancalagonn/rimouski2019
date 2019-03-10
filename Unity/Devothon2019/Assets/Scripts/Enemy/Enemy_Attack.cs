@@ -40,7 +40,6 @@ public class Enemy_Attack : MonoBehaviour
 
             if (canon.canFire())
             {
-                Debug.Log(canon);
                 StartCoroutine(Fire(canon));
                 canon.ResetCooldown(-Random.Range(0.15f, 0.35f));
             }
