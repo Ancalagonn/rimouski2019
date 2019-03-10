@@ -26,7 +26,7 @@ public class Player_Attack : MonoBehaviour
     {
         foreach (Canon canon in PlayerInstance.playerStats.canons)
         {
-            if (canon == null)
+            if (canon == null || canon.shootPoint == null)
                 continue;
 
             if (canon.canFire())
@@ -47,11 +47,11 @@ public class Player_Attack : MonoBehaviour
     /// </summary>
     /// <param name="canon"></param>
     /// <returns></returns>
+    /// 
     IEnumerator Fire(Canon canon)
     {
         yield return new WaitForSeconds(Random.Range(0.0f, 0.5f));
-
-        if(canon.canonball == null)
+        if (canon.canonball == null)
         {
             canon.canonball = Static_Resources.defaultCanonball;
         }
@@ -80,7 +80,7 @@ public class Player_Attack : MonoBehaviour
                 {
                     canonballObj = Instantiate(canon.canonball, null);
                     canonball = canonballObj.GetComponent<Canonball>();
-                    
+
                     GameObject temp = new GameObject();
                     temp.transform.SetParent(canon.shootPoint);
                     temp.transform.rotation = canon.shootPoint.rotation;
@@ -123,9 +123,8 @@ public class Player_Attack : MonoBehaviour
         }
 
         SoundManager.Play(soundName, canon.shootPoint.position);
-
-        yield return null;
     }
+
 
     void CanonsCooldown()
     {

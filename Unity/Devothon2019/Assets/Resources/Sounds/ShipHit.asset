@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d51125c5cd14e84429ef0863c15540d8, type: 3}
-  m_Name: Sploush
+  m_Name: ShipHit
   m_EditorClassIdentifier: 
-  name: Sploush
-  clip: {fileID: 8300000, guid: 37fd19937c583ea47a5738a8b8b08275, type: 3}
-  volume: 0.4
+  name: ShipHit
+  clip: {fileID: 8300000, guid: 4f79794d51d595d4db26a6dfd3915e4d, type: 3}
+  volume: 0.25
   isMusic: 0
   loop: 0
   source: {fileID: 0}

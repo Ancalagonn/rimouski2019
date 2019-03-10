@@ -8,7 +8,7 @@ public class Canonball : MonoBehaviour
     private Vector3 direction;
     private float damage;
 
-    private string collidingTag;
+    private string collidingTag = "";
 
     private bool hasCollided = false;
 
@@ -18,6 +18,13 @@ public class Canonball : MonoBehaviour
     AnimationCurve sizeCurve;
 
     bool hasDropBelowWater = false;
+    Collider2D collider;
+
+    private void Awake()
+    {
+        collider = GetComponent<Collider2D>();
+        collider.enabled = false;
+    }
 
     public void InitCanonball(Vector3 p_dir, float p_damage, string p_collidingTag, float p_lifeTime)
     {
@@ -36,24 +43,31 @@ public class Canonball : MonoBehaviour
             new Keyframe(p_lifeTime * 0.25f, initialSize * 1.35f),
             new Keyframe(p_lifeTime * 0.50f, initialSize * 1.5f),
             new Keyframe(p_lifeTime * 0.75f, initialSize * 1.35f),
-            new Keyframe(p_lifeTime * 0.90f, initialSize * 0.95f) };
+            new Keyframe(p_lifeTime * 0.90f, initialSize * 0.95f),
+            new Keyframe(p_lifeTime * 0.95f, initialSize * 0.25f) };
 
         sizeCurve = new AnimationCurve(keys);
         Destroy(gameObject, p_lifeTime);
     }
 
     // Update is called once per frame
-    void Update()
+    void Update() 
     {
+        if (sizeCurve == null)
+            return;
+
+        collider.enabled = true;
+
         transform.position += direction * speed * Time.deltaTime;
         currentLifetime += Time.deltaTime;
 
-        if(currentLifetime >= maxLifetime * 0.90f && !hasDropBelowWater && !hasCollided)
+        if(currentLifetime >= maxLifetime * 0.95f && !hasDropBelowWater && !hasCollided)
         {
             hasDropBelowWater = true;
-            //Instantiate Sploush in water
             SoundManager.Play("Sploush", transform.position);
-
+            
+            var waterSpashParticules = Instantiate(Static_Resources.WaterSplashParticule, this.transform.position, Quaternion.identity);
+            Destroy(waterSpashParticules, 1);
         }
 
         transform.localScale = Vector3.one * sizeCurve.Evaluate(currentLifetime);
@@ -61,30 +75,29 @@ public class Canonball : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (hasCollided)
+        if (hasCollided || collidingTag.Length == 0)
             return;
 
         if(col.CompareTag(collidingTag))
         {
             hasCollided = true;
             col.SendMessage("TakeDamage", this.damage);
+            SoundManager.Play("ShipHit", transform.position);
             Destroy(gameObject);
         }
     }
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (hasCollided)
+        if (hasCollided || collidingTag.Length == 0)
             return;
 
         if (col.CompareTag(collidingTag))
         {
             hasCollided = true;
             col.SendMessage("TakeDamage", this.damage);
+            SoundManager.Play("ShipHit", transform.position);
             Destroy(gameObject);
         }
     }
-
-
-
 }
