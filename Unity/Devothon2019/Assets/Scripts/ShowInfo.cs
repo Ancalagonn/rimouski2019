@@ -31,9 +31,9 @@ public class ShowInfo : MonoBehaviour
     {
         int percent = (int)(PlayerInstance.playerStats.PercentHpLeft() / 10) - 1;
 
-        if(percent <= 0 && !PlayerInstance.playerStats.isDead())
+        if(percent < 0 && !PlayerInstance.playerStats.isDead())
         {
-            percent = 1;
+            percent = 0;
         }
 
         for (int i = 0; i < hpDisplay.Count; i++)
