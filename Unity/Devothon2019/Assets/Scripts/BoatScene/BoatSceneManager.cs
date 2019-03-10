@@ -15,9 +15,13 @@ public class BoatSceneManager : MonoBehaviour
 
     private int enemySpawnId1 = -1;
     private int enemySpawnId2 = -1;
+
+    private void Awake() {
+        SoundManager.Play("MusiqueBataille", Vector3.zero);
+    }
     
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         if (LootSpawnPoints == null || EnemySpawnPoints == null) {
             Debug.Log("No loot spawnpoints or no enemy spawn points in boatscene");
