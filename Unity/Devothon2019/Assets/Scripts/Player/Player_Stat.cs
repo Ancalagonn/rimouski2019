@@ -23,13 +23,13 @@ public class Player_Stat : MonoBehaviour
         LoadCanons();
         playerStats.mySelf = this.transform;
         playerMovement = this.GetComponent<Player_Movemement>();
+        GenerateTargetPoint();
     }
 
     // Start is called before the first frame update
     void Start()
     {
         playerStats.currentHp = playerStats.maxHp;
-        GenerateTargetPoint();
     }
 
     // Update is called once per frame
@@ -181,7 +181,7 @@ public class Player_Stat : MonoBehaviour
         
     }
 
-    public Transform GetClosestTarget(Transform p_enemy)
+    public TargetPoint GetClosestTarget(Transform p_enemy)
     {
         TargetPoint closest = null;
 
@@ -189,20 +189,27 @@ public class Player_Stat : MonoBehaviour
 
         foreach (var item in targetPoints)
         {
-            float d = Vector3.Distance(item.targetPoint.position, p_enemy.position);
-            if(d < minDist && item.enemy == null)
+            float thisDistance = Vector3.Distance(item.targetPoint.position, p_enemy.position);
+
+            if (item.enemy == p_enemy)
             {
-                minDist = d;
+                return item;
+            }
+
+            if (thisDistance < minDist && item.enemy == null)
+            {
+                minDist = thisDistance;
                 closest = item;
             }
+
         }
 
         if(closest != null)
         {
-            closest.enemy = p_enemy;
+            closest.AssignEnemy(p_enemy);
         }
 
-        return closest.targetPoint;
+        return closest;
     }
 
     public void DeleteTargetReference(Transform target)
@@ -220,31 +227,58 @@ public class Player_Stat : MonoBehaviour
     {
         targetPoints = new List<TargetPoint>();
 
-        float offset = 12f;
+        float offset = 25f;
 
         GameObject point = new GameObject();
         point.transform.SetParent(transform);
         point.transform.localPosition = new Vector2(-offset, 0);
         point.name = "Left Point";
-        targetPoints.Add(new TargetPoint(point.transform, null));
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, 0))));
 
         point = new GameObject();
         point.transform.SetParent(transform);
         point.transform.localPosition = new Vector2(offset, 0);
         point.name = "Right Point";
-        targetPoints.Add(new TargetPoint(point.transform, null));
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, 0))));
 
         point = new GameObject();
         point.transform.SetParent(transform);
         point.transform.localPosition = new Vector2(0, offset);
         point.name = "Top Point";
-        targetPoints.Add(new TargetPoint(point.transform, null));
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, 90))));
 
         point = new GameObject();
         point.transform.SetParent(transform);
         point.transform.localPosition = new Vector2(0, -offset);
         point.name = "Bot Point";
-        targetPoints.Add(new TargetPoint(point.transform, null));
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, 90))));
+
+
+        float diagonal = 0.7071f * offset;
+
+        point = new GameObject();
+        point.transform.SetParent(transform);
+        point.transform.localPosition = new Vector2(-diagonal, diagonal);
+        point.name = "Left Up Point";
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, 45))));
+
+        point = new GameObject();
+        point.transform.SetParent(transform);
+        point.transform.localPosition = new Vector2(diagonal, diagonal);
+        point.name = "Right Up Point";
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, -45))));
+
+        point = new GameObject();
+        point.transform.SetParent(transform);
+        point.transform.localPosition = new Vector2(-diagonal, -diagonal);
+        point.name = "Left Bot Point";
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, 45))));
+
+        point = new GameObject();
+        point.transform.SetParent(transform);
+        point.transform.localPosition = new Vector2(diagonal, -diagonal);
+        point.name = "Rigt Bot Point";
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, 45))));
     }
     
 }

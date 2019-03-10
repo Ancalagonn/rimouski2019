@@ -15,7 +15,7 @@ public class Enemy_Movement : MonoBehaviour
     [HideInInspector]
     public float distance;
 
-    private Transform lastTarget = null;
+    public TargetPoint lastTarget = null;
 
     private void Awake()
     {
@@ -56,8 +56,10 @@ public class Enemy_Movement : MonoBehaviour
         //Destination reached
         if (closestSide == Vector3.zero)
         {
+            Quaternion targetRot = target.transform.rotation * Quaternion.Inverse(lastTarget.rotation);
+
             if (Approximately(transform.rotation, target.transform.rotation))           
-                transform.rotation = Quaternion.Lerp(transform.rotation, target.transform.rotation, Time.deltaTime * 2f);
+                transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, Time.deltaTime * 2f);
 
             return;
         }
@@ -87,39 +89,23 @@ public class Enemy_Movement : MonoBehaviour
         return Mathf.Abs(angle) > 1f;
     }
 
-    /*private Vector3 ClosestTargetSide()
-    {
-        float offset = 6f;
-
-        Vector3 leftSide = target.position + (-target.right * offset);
-        Vector3 rightSide = target.position + (target.right * offset);
-
-        float leftDist = Vector3.Distance(transform.position, leftSide);
-        float rightDist = Vector3.Distance(transform.position, rightSide);
-
-        Vector3 HorizontalAxis = (leftDist < rightDist) ? leftSide : rightSide;
-
-        Vector3 closest = HorizontalAxis;
-
-        if(Vector3.Distance(closest, transform.position) <= 0.3f)
-            return Vector3.zero;
-
-
-        return closest;
-
-    }*/
-
     private Vector3 ClosestTargetSide()
     {
-        Transform closestPoint = target.GetClosestTarget(transform);
+        TargetPoint closestPoint = target.GetClosestTarget(transform);
+
+        if (closestPoint == null)
+            closestPoint = lastTarget;
 
         if(lastTarget != closestPoint)
         {
-            target.DeleteTargetReference(lastTarget);
+            target.DeleteTargetReference(lastTarget.targetPoint);
             lastTarget = closestPoint;
         }
 
-        return closestPoint.position;
+        if (Vector3.Distance(closestPoint.targetPoint.position, transform.position) <= 0.3f)
+            return Vector3.zero;
+
+        return closestPoint.targetPoint.position;
 
     }
 }

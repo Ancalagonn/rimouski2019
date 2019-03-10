@@ -7,11 +7,12 @@ public class TargetPoint
 {
     public Transform targetPoint;
     public Transform enemy;
+    public Quaternion rotation;
 
-    public TargetPoint(Transform p_target, Transform p_enemy)
+    public TargetPoint(Transform p_target, Quaternion p_rotation)
     {
         targetPoint = p_target;
-        enemy = p_enemy;
+        rotation = p_rotation;
     }
 
     public void AssignEnemy(Transform p_enemy)
