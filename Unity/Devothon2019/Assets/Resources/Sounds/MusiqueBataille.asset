@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d51125c5cd14e84429ef0863c15540d8, type: 3}
-  m_Name: TransitionMap
+  m_Name: MusiqueBataille
   m_EditorClassIdentifier: 
-  name: TransitionMap
-  clip: {fileID: 8300000, guid: e11d56aff2f692c4eb614d4b06a50115, type: 3}
-  volume: 0.279
+  name: 
+  clip: {fileID: 0}
+  volume: 0
   isMusic: 0
   loop: 0
   source: {fileID: 0}
