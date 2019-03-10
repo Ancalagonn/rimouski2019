@@ -7,14 +7,14 @@ public class Sailor_Actions : MonoBehaviour
     private GameObject particuleShoot;
     private Transform bulletInitPos;
 
-    private int minLoot = 20;
-    private int maxLoot = 100;
+    private int minLoot = 15;
+    private int maxLoot = 30;
 
     private float cooldown = 0;
     private float lootRange = 7;
 
     public Sailor_Stats Stats { get; set; }
-
+    private ExitPad exitPadScript;
 
     private void Awake() {
         this.Stats = new Sailor_Stats();
@@ -23,6 +23,11 @@ public class Sailor_Actions : MonoBehaviour
         this.particuleShoot = Resources.Load<GameObject>("FireEffect");
         if (this.particuleShoot == null) {
             Debug.Log("Couldn't load 'FireEffect' game object from ressources");
+        }
+
+        this.exitPadScript = FindObjectOfType<ExitPad>();
+        if (this.exitPadScript == null) {
+            Debug.Log("No exit pad script found (sailor controller)");
         }
     }
 
@@ -43,8 +48,7 @@ public class Sailor_Actions : MonoBehaviour
         Destroy(anim, 0.25f);
 
         var ray = Physics2D.Raycast(this.bulletInitPos.position, this.bulletInitPos.transform.up * 2);
-        Debug.Log(ray.collider);
-        if (ray.collider && ray.collider.tag == "Enemy") {
+        if (ray.collider && ray.collider.tag == "Enemy" || ray.collider.tag == "Player") {
             var otherSailer = ray.transform.gameObject.GetComponent<Sailor_Actions>();
             if (otherSailer != null) {
                 otherSailer.takeDamage(this.Stats.weaponDamage);
@@ -57,7 +61,7 @@ public class Sailor_Actions : MonoBehaviour
                 return;
         }
         int lootAmount = Random.Range(this.minLoot, this.maxLoot);
-        Debug.Log("You just looted " + lootAmount + " coins");
+        PlayerInstance.playerCash += lootAmount;
 
         Destroy(p_loot);
     }
@@ -66,6 +70,10 @@ public class Sailor_Actions : MonoBehaviour
         this.Stats.HP -= p_damage;
 
         if (this.Stats.HP <= 0) {
+            // If this is the player dying, we exit the scene
+            if (this.tag == "Player") {
+                this.exitPadScript.ExitScene();
+            }
             Destroy(this.gameObject);
         }
     }

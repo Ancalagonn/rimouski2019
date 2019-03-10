@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Player_Abordage : MonoBehaviour
 {
     //F sert a faire l'aordage d'un ennemi proche
@@ -75,13 +75,18 @@ public class Player_Abordage : MonoBehaviour
         boardingTime = 5;
 
         //On attribue l'argent en fonction du type de bateau ennemie
-        if (boardingShip.enemySize == EnemySize.Small)
+        if (boardingShip.enemySize == EnemySize.Small) {
             PlayerInstance.playerCash += Static_Resources.SmallBoatValue;
-        else if (boardingShip.enemySize == EnemySize.Big)
-            PlayerInstance.playerCash += Static_Resources.BigBoatValue;
+        }
+        else if (boardingShip.enemySize == EnemySize.Big) {
+            SceneManager.LoadScene("BoatScene", LoadSceneMode.Additive);
+            SceneManager.sceneUnloaded += sceneUnloaded;
+        }
+    }
 
+    private void sceneUnloaded(Scene p_scene) {
+        Debug.Log(p_scene.name);
         this.gameObject.GetComponent<Player_Movemement>().enabled = true;
-
         Destroy(boardingShip.gameObject);
         boardingShip = null;
     }
