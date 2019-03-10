@@ -41,12 +41,11 @@ public class Enemy_Stat : MonoBehaviour
             //White flags
             PlayerInstance.playerCash += (enemySize == EnemySize.Small) ? Static_Resources.SmallBoatValue : Static_Resources.BigBoatValue;
 
-            if(enemySize == EnemySize.Big)
-            {
-                GameObject flag = Instantiate(Static_Resources.whiteflag, Vector3.zero, Quaternion.identity);
-                flag.transform.SetParent(transform);
-                flag.transform.position = transform.position;
-            }
+
+            GameObject flag = Instantiate(Static_Resources.whiteflag, Vector3.zero, Quaternion.identity);
+            flag.transform.SetParent(transform);
+            flag.transform.position = transform.position;
+            
 
             StartCoroutine(DestroyAfterTime());
         }
