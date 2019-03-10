@@ -85,7 +85,7 @@ public class Enemy_Movement : MonoBehaviour
 
     private Vector3 ClosestTargetSide()
     {
-        float offset = 8.5f;
+        float offset = 6f;
 
         Vector3 leftSide = target.position + (-target.right * offset);
         Vector3 rightSide = target.position + (target.right * offset);
@@ -97,7 +97,7 @@ public class Enemy_Movement : MonoBehaviour
 
         Vector3 closest = HorizontalAxis;
 
-        if(Vector3.Distance(closest, transform.position) <= 0.6f)
+        if(Vector3.Distance(closest, transform.position) <= 0.3f)
             return Vector3.zero;
 
 

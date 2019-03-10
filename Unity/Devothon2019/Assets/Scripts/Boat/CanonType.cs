@@ -1,1 +1,1 @@
-﻿public enum CanonType { Normal, TripleShot, FlameThrower }
+﻿public enum CanonType { Normal, TirTriple, LanceFlammes }

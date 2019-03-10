@@ -11,6 +11,7 @@ public class Player_Stat : MonoBehaviour
     public Transform CanonsSpotsParent;
     [HideInInspector]
     public List<Transform> CanonsSpots;
+    float repairTime = 1;
 
     private void Awake()
     {
@@ -33,7 +34,15 @@ public class Player_Stat : MonoBehaviour
     {
         //for debug purpose
         playerStats = PlayerInstance.playerStats;
-        Repair();
+        if(repairTime < 0)
+        {
+            Repair();
+            repairTime = 1;
+        }
+        else
+        {
+            repairTime -= Time.deltaTime;
+        }
     }
 
     private void Repair()
@@ -47,8 +56,15 @@ public class Player_Stat : MonoBehaviour
     /// <param name="p_damage"></param>
     public void TakeDamage(float p_damage)
     {
-
         PlayerInstance.playerStats.TakeDamage(p_damage);
+
+        if (PlayerInstance.playerStats.currentHp <= 0)
+        {
+            PlayerInstance.playerStats.currentHp = -500;
+            ManageScene.instance.LoadSceneBlack("End_Scene");
+            return;
+        }
+
         if (PlayerInstance.playerStats.crewMembers > 4)
         {
             //Debug.Log(PlayerInstance.playerStats.crewMembers);
@@ -94,7 +110,7 @@ public class Player_Stat : MonoBehaviour
 
             switch (canon.canonType)
             {
-                case CanonType.TripleShot:
+                case CanonType.TirTriple:
                 case CanonType.Normal:
                     if (canon.canonType == CanonType.Normal)
                         canonObj = Instantiate(Static_Resources.defaultCanon);
@@ -115,7 +131,7 @@ public class Player_Stat : MonoBehaviour
                     canonCtrl.canonInfo.shootPoint = CanonsSpots[i];
 
                     break;
-                case CanonType.FlameThrower:
+                case CanonType.LanceFlammes:
                     canonObj = Instantiate(Static_Resources.flameThrower);
                     canonObj.name = "CanonFlame" + i;
                     canonObj.transform.SetParent(CanonsSpots[i]);
