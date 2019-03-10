@@ -63,6 +63,13 @@ public class Player_Abordage : MonoBehaviour
                     isBoarding = true;
                     boardingShip = stats;
 
+                    if (boardingShip.enemySize == EnemySize.Big) {
+                        this.boardingTime = 0;
+                    }
+                    else {
+                        this.boardingTime = 5;
+                    }
+
                     this.gameObject.GetComponent<Player_Movemement>().enabled = false;
                 }
             }
@@ -72,8 +79,8 @@ public class Player_Abordage : MonoBehaviour
 
     void BoardShip()
     {
+        this.boardingShip.StopAllCoroutines();
         isBoarding = false;
-        boardingTime = 5;
 
         //On attribue l'argent en fonction du type de bateau ennemie
         if (boardingShip.enemySize == EnemySize.Small) {
@@ -81,14 +88,30 @@ public class Player_Abordage : MonoBehaviour
         }
         else if (boardingShip.enemySize == EnemySize.Big) {
             SceneManager.LoadScene("BoatScene", LoadSceneMode.Additive);
+            Scene boatScene = SceneManager.GetSceneByName("BoatScene");
             SceneManager.sceneUnloaded += sceneUnloaded;
+
+            foreach (GameObject g in SceneManager.GetActiveScene().GetRootGameObjects()) {
+                g.SetActive(false);
+            }
         }
     }
 
+    private void OnDestroy() {
+        SceneManager.sceneUnloaded -= sceneUnloaded;
+    }
+
     private void sceneUnloaded(Scene p_scene) {
-        Debug.Log(p_scene.name);
+        if (this == null) {
+            return;
+        }
+
         this.gameObject.GetComponent<Player_Movemement>().enabled = true;
         Destroy(boardingShip.gameObject);
         boardingShip = null;
+
+        foreach (GameObject g in SceneManager.GetActiveScene().GetRootGameObjects()) {
+            g.SetActive(true);
+        }
     }
 }
