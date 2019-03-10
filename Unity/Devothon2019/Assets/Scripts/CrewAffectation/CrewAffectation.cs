@@ -113,6 +113,7 @@ public class CrewAffectation : MonoBehaviour
     //Methode appeler au clique des boutons + ou -
     public void CrewAddOrRemove(GameObject boutton)
     {
+        SoundManager.Play("ClickBtn", Vector3.zero);
         //Si le total est supérieur à 0
         if(total != 0)
         {

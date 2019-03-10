@@ -25,11 +25,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39222352}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.89, z: 0}
+  m_LocalPosition: {x: 0, y: -7.91, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6546894130462959223}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!96 &39222354
 TrailRenderer:
@@ -336,7 +336,7 @@ Transform:
   - {fileID: 6328447825695877953}
   - {fileID: 8643452781205451550}
   m_Father: {fileID: 6546894130462959223}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6319089747347026031
 GameObject:
@@ -435,8 +435,8 @@ Transform:
   m_LocalPosition: {x: -4.803, y: -1.001, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children:
-  - {fileID: 4387260195412752462}
   - {fileID: 39222353}
+  - {fileID: 4387260195412752462}
   - {fileID: 5340536054372547636}
   m_Father: {fileID: 0}
   m_RootOrder: 0

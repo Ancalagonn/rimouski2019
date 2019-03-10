@@ -70,8 +70,9 @@ public class Player_Stat : MonoBehaviour
 
         if (PlayerInstance.playerStats.crewMembers > 4)
         {
-            if (Random.Range(0, 100) < 5)
+            if (Random.Range(0, 1000) < 1)
             {
+                SoundManager.Play("PerteMatelot", Vector3.zero);
                 PlayerInstance.playerStats.crewMembers--;
                 switch (Random.Range(1, 4))
                 {

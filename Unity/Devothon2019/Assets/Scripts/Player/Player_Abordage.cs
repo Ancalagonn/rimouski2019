@@ -23,7 +23,6 @@ public class Player_Abordage : MonoBehaviour
         //Si le joueur appui sur F
         if (Input.GetKeyDown(boardingKey))
         {
-            Debug.Log("KeyDown");
             //On tente d'aborder
             GetBoardableShip();
         }
