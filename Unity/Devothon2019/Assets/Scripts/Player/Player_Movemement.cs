@@ -129,5 +129,9 @@ public class Player_Movemement : MonoBehaviour
             }
 
         }
+        else if (col.gameObject.CompareTag("Rock"))
+        {
+            PlayerInstance.playerStats.TakeDamage(15);
+        }
     }
 }
