@@ -82,6 +82,7 @@ public class Canonball : MonoBehaviour
         {
             hasCollided = true;
             col.SendMessage("TakeDamage", this.damage);
+            SoundManager.Play("ShipHit", transform.position);
             Destroy(gameObject);
         }
     }
@@ -95,6 +96,7 @@ public class Canonball : MonoBehaviour
         {
             hasCollided = true;
             col.SendMessage("TakeDamage", this.damage);
+            SoundManager.Play("ShipHit", transform.position);
             Destroy(gameObject);
         }
     }
