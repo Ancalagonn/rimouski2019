@@ -84,6 +84,10 @@ public class Player_Abordage : MonoBehaviour
         //On attribue l'argent en fonction du type de bateau ennemie
         if (boardingShip.enemySize == EnemySize.Small) {
             PlayerInstance.playerCash += Static_Resources.SmallBoatValue;
+            
+            this.gameObject.GetComponent<Player_Movemement>().enabled = true;
+            Destroy(boardingShip.gameObject);
+            boardingShip = null;
         }
         else if (boardingShip.enemySize == EnemySize.Big) {
             SceneManager.LoadScene("BoatScene", LoadSceneMode.Additive);
