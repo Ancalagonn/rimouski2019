@@ -17,9 +17,13 @@ public class shop_text : MonoBehaviour
 
     public Dropdown ddl_typeCanon;
 
+    public static int repairPrice = 0;
+
     private void Start() {
+        repairPrice = (int)(PlayerInstance.playerStats.maxHp - PlayerInstance.playerStats.currentHp);
+
         upgradeCoque.text = "Améliorer la coque (" + price.UPGRADE_COQUE + "$)";
-        repairCoque.text = "Réparer la coque (" + price.REPAIR_COQUE + "$)";
+        repairCoque.text = "Réparer la coque (" + repairPrice + "$)";
         upgradeCanon.text = "Améliorer le canon (" + price.UPGRADE_CANON + "$)";
     }
 
