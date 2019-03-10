@@ -8,7 +8,7 @@ public class Canonball : MonoBehaviour
     private Vector3 direction;
     private float damage;
 
-    private string collidingTag;
+    private string collidingTag = "";
 
     private bool hasCollided = false;
 
@@ -18,6 +18,13 @@ public class Canonball : MonoBehaviour
     AnimationCurve sizeCurve;
 
     bool hasDropBelowWater = false;
+    Collider2D collider;
+
+    private void Awake()
+    {
+        collider = GetComponent<Collider2D>();
+        collider.enabled = false;
+    }
 
     public void InitCanonball(Vector3 p_dir, float p_damage, string p_collidingTag, float p_lifeTime)
     {
@@ -46,6 +53,11 @@ public class Canonball : MonoBehaviour
     // Update is called once per frame
     void Update() 
     {
+        if (sizeCurve == null)
+            return;
+
+        collider.enabled = true;
+
         transform.position += direction * speed * Time.deltaTime;
         currentLifetime += Time.deltaTime;
 
@@ -63,7 +75,7 @@ public class Canonball : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (hasCollided)
+        if (hasCollided || collidingTag.Length == 0)
             return;
 
         if(col.CompareTag(collidingTag))
@@ -76,7 +88,7 @@ public class Canonball : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (hasCollided)
+        if (hasCollided || collidingTag.Length == 0)
             return;
 
         if (col.CompareTag(collidingTag))
