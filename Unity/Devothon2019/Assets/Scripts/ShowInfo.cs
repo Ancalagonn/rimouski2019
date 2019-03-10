@@ -38,13 +38,14 @@ public class ShowInfo : MonoBehaviour
 
         for (int i = 0; i < hpDisplay.Count; i++)
         {
+            //Show good plank
             if(i <= percent)
             {
-                hpDisplay[i].color = Color.blue;
+                hpDisplay[i].sprite = Static_Resources.plank;
             }
-            else
+            else //Show bad plank
             {
-                hpDisplay[i].color = Color.red;
+                hpDisplay[i].sprite = Static_Resources.plankCracked;
             }
         }
 

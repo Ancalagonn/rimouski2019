@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public static class Static_Resources
 {
@@ -11,6 +12,9 @@ public static class Static_Resources
     public static GameObject tripleCanon;
     public static GameObject flameThrower;
     public static GameObject flameEffect;
+
+    public static Sprite plank;
+    public static Sprite plankCracked;
 
     public static int SmallBoatValue = 100;
     public static int BigBoatValue = 200;
@@ -29,6 +33,9 @@ public static class Static_Resources
         tripleCanon = Resources.Load<GameObject>("TripleCanon");
         flameThrower = Resources.Load<GameObject>("Flamethrower");
         WaterSplashParticule = Resources.Load<GameObject>("WaterSplash");
+
+        plank = Resources.Load<Sprite>("Plank");
+        plankCracked = Resources.Load<Sprite>("PlankCracked");
     }
 
     public static Boat_Stats GenerateBoatStats(EnemySize size, EnemyType type)
