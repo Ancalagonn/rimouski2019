@@ -43,6 +43,7 @@ public class Sailor_Actions : MonoBehaviour
             return;
         }
         this.cooldown = this.Stats.weaponCooldown;
+        SoundManager.Play("TirFusil", Vector3.zero);
 
         var anim = Instantiate(this.particuleShoot, this.bulletInitPos.position, this.bulletInitPos.rotation);
         Destroy(anim, 0.10f);
