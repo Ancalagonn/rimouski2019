@@ -73,8 +73,9 @@ public class Player_Abordage : MonoBehaviour
                     if (boardingShip.enemySize == EnemySize.Big) {
                         this.boardingTime = 0;
                     }
-                    else {
+                    else if (boardingShip.enemySize == EnemySize.Small) {
                         this.boardingTime = 5;
+                        SoundManager.Play("Abordage", Vector3.zero);
                     }
 
                     this.gameObject.GetComponent<Player_Movemement>().enabled = false;
@@ -93,7 +94,6 @@ public class Player_Abordage : MonoBehaviour
         if (boardingShip.enemySize == EnemySize.Small) {
             PlayerInstance.playerCash += Static_Resources.SmallBoatValue;
             
-            SoundManager.Play("Abordage", Vector3.zero);
 
             this.gameObject.GetComponent<Player_Movemement>().enabled = true;
             Destroy(boardingShip.gameObject);
