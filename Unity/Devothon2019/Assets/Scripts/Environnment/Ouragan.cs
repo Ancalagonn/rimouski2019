@@ -86,18 +86,19 @@ public class Ouragan : MonoBehaviour
         
         //On bouge l'ouragan sur l'axe des x
         Pos.x += Direction.x * 0.1f;
-        //En fonction de la direction de y, on soustrait ou aditionne le déplacement vertical
-        if(Direction.y > 0)
-        {
-            //Positif, on ajoute la valeur de x a la 2 plus les offset de depart vertical
-            Pos.y = Mathf.Pow((Pos.x - offsetX) * 0.1f, 2) + StartPos.y + offsetY;
-        }
-        else
-        {
-            //Negatif, on retire la valeur de x a la 2 plus les offset de depart vertical
-            Pos.y = -Mathf.Pow((Pos.x - offsetX) * 0.1f, 2) + StartPos.y + offsetY;
-        }
-        
+        ////En fonction de la direction de y, on soustrait ou aditionne le déplacement vertical
+        //if(Direction.y > 0)
+        //{
+        //    //Positif, on ajoute la valeur de x a la 2 plus les offset de depart vertical
+        //    Pos.y = (Mathf.Pow((Pos.x + offsetX) * 0.1f, 2) + StartPos.y + offsetY) * Direction.y;
+        //}
+        //else
+        //{
+        //    //Negatif, on retire la valeur de x a la 2 plus les offset de depart vertical
+        //    Pos.y = (-Mathf.Pow((Pos.x + offsetX) * 0.1f, 2) + StartPos.y + offsetY) * -Direction.y;
+        //}
+        Pos.y += 0.1f * Direction.y;
+
         //On affecte la nouvelle pos à l'ouragan
         this.transform.position = Pos;
 
@@ -109,6 +110,7 @@ public class Ouragan : MonoBehaviour
     {
         if(CanbeDamaged & collision.CompareTag("Player"))
         {
+            Debug.Log("calis");
             //collision.gameObject.SendMessage("TakeDamage", 5);
             PlayerInstance.playerStats.TakeDamage(5);
             CanbeDamaged = false;
@@ -126,7 +128,7 @@ public class Ouragan : MonoBehaviour
     {
         if (CanbeDamaged & collision.CompareTag("Player"))
         {
-            collision.gameObject.SendMessage("TakeDamage", 5);
+            collision.gameObject.SendMessage("TakeDamage", 50);
             //PlayerInstance.playerStats.TakeDamage(5);
             CanbeDamaged = false;
         }

@@ -43,10 +43,15 @@ public class Player_Movemement : MonoBehaviour
         //On vérifie si le bateau est en cours d'abordage
         if(!pa.isBoarding)
         {
-            float z = Input.GetAxisRaw("Vertical");
-            float x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * PlayerInstance.playerStats.rotationSpeed.value;
+            float rotationSpeed = PlayerInstance.playerStats.rotationSpeed.value + ((PlayerInstance.playerStats.rotationSpeed.value * 0.05f) * PlayerInstance.playerStats.rotationSpeed.crewAssigned);
 
-            speed = (boatSpeedCurve.Evaluate(lastTimeForwardPressed) * Time.deltaTime * PlayerInstance.playerStats.moveSpeed.value) * 1.5f;
+            float boatSpeed = PlayerInstance.playerStats.moveSpeed.value + ((PlayerInstance.playerStats.moveSpeed.value * 0.05f) * PlayerInstance.playerStats.moveSpeed.crewAssigned);
+
+            float z = Input.GetAxisRaw("Vertical");
+            float x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * rotationSpeed;
+
+            speed = (boatSpeedCurve.Evaluate(lastTimeForwardPressed) * Time.deltaTime * boatSpeed) * 1.5f;
+
 
             if (z > 0)
                 lastTimeForwardPressed += Time.deltaTime * 0.30f;
@@ -103,5 +108,26 @@ public class Player_Movemement : MonoBehaviour
             rb.position += (Vector2)transform.up * speed;
         }
         
+    }
+
+    private void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject.CompareTag("Enemy"))
+        {
+            Enemy_Stat stat = col.gameObject.GetComponent<Enemy_Stat>();
+
+            switch (stat.enemySize)
+            {
+                case EnemySize.Small:
+                    stat.TakeDamage(15);
+                    PlayerInstance.playerStats.TakeDamage(5);
+                    break;
+                case EnemySize.Big:
+                    stat.TakeDamage(5);
+                    PlayerInstance.playerStats.TakeDamage(10);
+                    break;
+            }
+
+        }
     }
 }

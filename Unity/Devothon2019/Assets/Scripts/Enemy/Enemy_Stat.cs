@@ -12,7 +12,8 @@ public class Enemy_Stat : MonoBehaviour
     public Transform CanonsSpotsParent;
     public List<Transform> CanonsSpots;
 
-    
+    [HideInInspector]
+    public bool isDying = false;
 
     private void Awake()
     {
@@ -30,8 +31,18 @@ public class Enemy_Stat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemyStats.isDead())
-            Destroy(gameObject);
+        if (!isDying && enemyStats.isDead())
+        {
+            isDying = true;
+
+            GetComponent<Enemy_Attack>().enabled = false;
+            GetComponent<Enemy_Movement>().enabled = false;
+
+            //White flags
+            PlayerInstance.playerCash += (enemySize == EnemySize.Small) ? Static_Resources.SmallBoatValue : Static_Resources.BigBoatValue;
+
+            Destroy(gameObject, 15f);
+        }
     }
 
     public void TakeDamage(float p_damage)
@@ -59,7 +70,7 @@ public class Enemy_Stat : MonoBehaviour
 
             switch (canon.canonType)
             {
-                case CanonType.TripleShot:
+                case CanonType.TirTriple:
                 case CanonType.Normal:
                     if (canon.canonType == CanonType.Normal)
                         canonObj = Instantiate(Static_Resources.defaultCanon);
@@ -77,7 +88,7 @@ public class Enemy_Stat : MonoBehaviour
                     canonCtrl.canonInfo.shootPoint = CanonsSpots[i];
 
                     break;
-                case CanonType.FlameThrower:
+                case CanonType.LanceFlammes:
                     canonObj = Instantiate(Static_Resources.flameThrower);
                     canonObj.name = "CanonFlame" + i;
                     canonObj.transform.SetParent(CanonsSpots[i]);

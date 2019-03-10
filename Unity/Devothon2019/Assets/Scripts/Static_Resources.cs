@@ -38,10 +38,10 @@ public static class Static_Resources
         switch (size)
         {
             case EnemySize.Small:
-                stats = new Boat_Stats(100, new Stats(5, 1), new Stats(50, 1), new Stats(5, 1), new Stats(0,0));
+                stats = new Boat_Stats(45, new Stats(5, 1), new Stats(50, 1), new Stats(5, 1), new Stats(0,0));
                 break;
             case EnemySize.Big:
-                stats = new Boat_Stats(200, new Stats(3, 1), new Stats(50, 1), new Stats(5, 1), new Stats(0, 0));
+                stats = new Boat_Stats(160, new Stats(3, 1), new Stats(50, 1), new Stats(5, 1), new Stats(0, 0));
                 break;
         }
 
@@ -61,10 +61,11 @@ public static class Static_Resources
 
         CanonType canonType = CanonType.Normal;
 
-        int maxCanon = (size == EnemySize.Big) ? 6 : 4;
+        int maxCanon = (size == EnemySize.Small) ? 2 : 6;
 
         for (int i = 0; i < maxCanon; i++)
         {
+
             float damage = 25;
             float baseCooldown = 3;
             GameObject canonball = defaultCanonball;
@@ -73,33 +74,25 @@ public static class Static_Resources
             {
                 case EnemyType.Normal:
                     canonType = CanonType.Normal;
-                    damage = 10;
+                    damage = 15;
                     baseCooldown = 3;
                     canonball = defaultCanonball;
                     break;
                 case EnemyType.Fire:
-                    canonType = CanonType.FlameThrower;
+                    canonType = CanonType.LanceFlammes;
                     damage = 10;
                     baseCooldown = 5;
                     canonball = flameEffect;
                     break;
                 case EnemyType.Triple:
-                    canonType = CanonType.TripleShot;
+                    canonType = CanonType.TirTriple;
                     damage = 7;
-                    baseCooldown = 3.5f * 1.8f;
+                    baseCooldown = 3.5f;
                     canonball = defaultCanonball;
 
                     //Reduce power
                     switch (size)
                     {
-                        case EnemySize.Small:
-                            if (i == 0 || i == 2)
-                            {
-                                canons.Add(null);
-                                continue;
-                            }
-                            break;
-
                         case EnemySize.Big:
                             if (i == 1 || i == 4)
                             {
@@ -113,7 +106,7 @@ public static class Static_Resources
             }
 
             canons.Add(new Canon(canonType, damage, baseCooldown, canonball, 1, 1.15f));
-        }   
+        }
 
         return canons;
     }

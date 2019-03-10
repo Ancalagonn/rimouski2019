@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Enemy_Movement : MonoBehaviour
 {
-    private Transform target;
-    public float rangeAggro = 25;
+    private Player_Stat target;
+    private float rangeAggro = 25;
 
     private bool isAggro = false;
 
@@ -15,17 +15,24 @@ public class Enemy_Movement : MonoBehaviour
     [HideInInspector]
     public float distance;
 
+    public TargetPoint lastTarget = null;
+
     private void Awake()
     {
+
         enemyStat = GetComponent<Enemy_Stat>();
-        target = FindObjectOfType<Player_Movemement>().transform;
+        target = FindObjectOfType<Player_Stat>();
         
         rb = GetComponent<Rigidbody2D>();
         if(rb == null)
         {
             rb = gameObject.AddComponent<Rigidbody2D>();
-            rb.isKinematic = true;
+            
         }
+        rb.isKinematic = false;
+        rb.gravityScale = 0;
+
+        rangeAggro = (enemyStat.enemySize == EnemySize.Small) ? Random.Range(20, 30) : Random.Range(15, 25);
     }
 
     // Update is called once per frame
@@ -37,7 +44,7 @@ public class Enemy_Movement : MonoBehaviour
             return;
         }
 
-        if(!isAggro && Vector2.Distance(target.position, transform.position) < rangeAggro)
+        if(!isAggro && Vector2.Distance(target.transform.position, transform.position) < rangeAggro)
         {
             isAggro = true;
         }
@@ -52,7 +59,12 @@ public class Enemy_Movement : MonoBehaviour
         //Destination reached
         if (closestSide == Vector3.zero)
         {
-            transform.rotation = Quaternion.Lerp(transform.rotation, target.rotation, Time.deltaTime);
+            Quaternion targetRot = target.transform.rotation * Quaternion.Inverse(lastTarget.rotation);
+
+            if (Approximately(transform.rotation, targetRot))           
+                transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, Time.deltaTime * 2f);
+
+            return;
         }
         else
         {
@@ -62,7 +74,7 @@ public class Enemy_Movement : MonoBehaviour
             // rotate to angle
             Quaternion rotation = new Quaternion();
             rotation.eulerAngles = new Vector3(0, 0, angle - 90);
-            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime);
+            transform.rotation = Quaternion.Lerp(transform.rotation, rotation, Time.deltaTime * 2f);
         }
             
 
@@ -74,25 +86,34 @@ public class Enemy_Movement : MonoBehaviour
         rb.position += (Vector2)direction * enemyStat.enemyStats.moveSpeed.value * Time.deltaTime;
     }
 
+    private bool Approximately(Quaternion val, Quaternion about)
+    {
+        float angle = Quaternion.Angle(val, about);
+        return Mathf.Abs(angle) > 1f;
+    }
+
     private Vector3 ClosestTargetSide()
     {
-        float offset = 8.5f;
+        TargetPoint closestPoint = target.GetClosestTarget(transform);
 
-        Vector3 leftSide = target.position + (-target.right * offset);
-        Vector3 rightSide = target.position + (target.right * offset);
+        if (closestPoint == null)
+            closestPoint = lastTarget;
 
-        float leftDist = Vector3.Distance(transform.position, leftSide);
-        float rightDist = Vector3.Distance(transform.position, rightSide);
+        if(lastTarget != closestPoint)
+        {
+            target.DeleteTargetReference(lastTarget.targetPoint);
+            lastTarget = closestPoint;
+        }
 
-        Vector3 HorizontalAxis = (leftDist < rightDist) ? leftSide : rightSide;
-
-        Vector3 closest = HorizontalAxis;
-
-        if(Vector3.Distance(closest, transform.position) <= 0.3f)
+        if (Vector3.Distance(closestPoint.targetPoint.position, transform.position) <= 0.3f)
             return Vector3.zero;
 
+        return closestPoint.targetPoint.position;
 
-        return closest;
+    }
 
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.DrawWireSphere(transform.position, rangeAggro);
     }
 }

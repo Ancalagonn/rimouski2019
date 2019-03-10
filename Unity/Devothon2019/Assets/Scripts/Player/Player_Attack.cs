@@ -50,7 +50,7 @@ public class Player_Attack : MonoBehaviour
     /// 
     IEnumerator Fire(Canon canon)
     {
-        yield return new WaitForSeconds(Random.Range(0.0f, 0.5f));
+        yield return new WaitForSeconds(Random.Range(0.0f, 0.15f));
         if (canon.canonball == null)
         {
             canon.canonball = Static_Resources.defaultCanonball;
@@ -74,7 +74,7 @@ public class Player_Attack : MonoBehaviour
                 soundName = "FireCanon";
                 break;
 
-            case CanonType.TripleShot:
+            case CanonType.TirTriple:
 
                 for (int i = 0; i < 3; i++)
                 {
@@ -104,7 +104,7 @@ public class Player_Attack : MonoBehaviour
                 soundName = "FireCanon";
 
                 break;
-            case CanonType.FlameThrower:
+            case CanonType.LanceFlammes:
                 canonballObj = Instantiate(canon.canonball, null);
                 Flames flames = canonballObj.GetComponent<Flames>();
                 lifetime = canon.baseCooldown * 0.75f;

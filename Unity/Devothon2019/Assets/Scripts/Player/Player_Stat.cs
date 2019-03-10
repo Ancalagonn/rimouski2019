@@ -11,6 +11,9 @@ public class Player_Stat : MonoBehaviour
     public Transform CanonsSpotsParent;
     [HideInInspector]
     public List<Transform> CanonsSpots;
+    float repairTime = 1;
+
+    public List<TargetPoint> targetPoints = new List<TargetPoint>();
 
     private void Awake()
     {
@@ -20,6 +23,7 @@ public class Player_Stat : MonoBehaviour
         LoadCanons();
         playerStats.mySelf = this.transform;
         playerMovement = this.GetComponent<Player_Movemement>();
+        GenerateTargetPoint();
     }
 
     // Start is called before the first frame update
@@ -33,6 +37,20 @@ public class Player_Stat : MonoBehaviour
     {
         //for debug purpose
         playerStats = PlayerInstance.playerStats;
+        if(repairTime < 0)
+        {
+            Repair();
+            repairTime = 1;
+        }
+        else
+        {
+            repairTime -= Time.deltaTime;
+        }
+    }
+
+    private void Repair()
+    {
+        PlayerInstance.playerStats.Repair();
     }
 
     /// <summary>
@@ -41,13 +59,18 @@ public class Player_Stat : MonoBehaviour
     /// <param name="p_damage"></param>
     public void TakeDamage(float p_damage)
     {
-        Debug.Log(PlayerInstance.playerStats.crewMembers);
         PlayerInstance.playerStats.TakeDamage(p_damage);
 
-        Debug.Log(PlayerInstance.playerStats.crewMembers);
+        if (PlayerInstance.playerStats.currentHp <= 0)
+        {
+            PlayerInstance.playerStats.currentHp = -500;
+            ManageScene.instance.LoadSceneBlack("End_Scene");
+            return;
+        }
+
         if (PlayerInstance.playerStats.crewMembers > 4)
         {
-            Debug.Log(PlayerInstance.playerStats.crewMembers);
+            //Debug.Log(PlayerInstance.playerStats.crewMembers);
             if (Random.Range(0, 100) < 5)
             {
                 PlayerInstance.playerStats.crewMembers--;
@@ -90,7 +113,7 @@ public class Player_Stat : MonoBehaviour
 
             switch (canon.canonType)
             {
-                case CanonType.TripleShot:
+                case CanonType.TirTriple:
                 case CanonType.Normal:
                     if (canon.canonType == CanonType.Normal)
                         canonObj = Instantiate(Static_Resources.defaultCanon);
@@ -111,7 +134,7 @@ public class Player_Stat : MonoBehaviour
                     canonCtrl.canonInfo.shootPoint = CanonsSpots[i];
 
                     break;
-                case CanonType.FlameThrower:
+                case CanonType.LanceFlammes:
                     canonObj = Instantiate(Static_Resources.flameThrower);
                     canonObj.name = "CanonFlame" + i;
                     canonObj.transform.SetParent(CanonsSpots[i]);
@@ -156,6 +179,106 @@ public class Player_Stat : MonoBehaviour
             foreach (Transform c2 in child)
                 Destroy(c2.gameObject);
         
+    }
+
+    public TargetPoint GetClosestTarget(Transform p_enemy)
+    {
+        TargetPoint closest = null;
+
+        float minDist = float.MaxValue;
+
+        foreach (var item in targetPoints)
+        {
+            float thisDistance = Vector3.Distance(item.targetPoint.position, p_enemy.position);
+
+            if (item.enemy == p_enemy)
+            {
+                return item;
+            }
+
+            if (thisDistance < minDist && item.enemy == null)
+            {
+                minDist = thisDistance;
+                closest = item;
+            }
+
+        }
+
+        if(closest != null)
+        {
+            closest.AssignEnemy(p_enemy);
+        }
+
+        return closest;
+    }
+
+    public void DeleteTargetReference(Transform target)
+    {
+        foreach (var item in targetPoints)
+        {
+            if(item.targetPoint == target)
+            {
+                item.enemy = null;
+            }
+        }
+    }
+
+    private void GenerateTargetPoint()
+    {
+        targetPoints = new List<TargetPoint>();
+
+        float offset = 25.5f;
+
+        GameObject point = new GameObject();
+        point.transform.SetParent(transform);
+        point.transform.localPosition = new Vector2(-offset, 0);
+        point.name = "Left Point";
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, 0))));
+
+        point = new GameObject();
+        point.transform.SetParent(transform);
+        point.transform.localPosition = new Vector2(offset, 0);
+        point.name = "Right Point";
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, 0))));
+
+        point = new GameObject();
+        point.transform.SetParent(transform);
+        point.transform.localPosition = new Vector2(0, offset);
+        point.name = "Top Point";
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, 90))));
+
+        point = new GameObject();
+        point.transform.SetParent(transform);
+        point.transform.localPosition = new Vector2(0, -offset);
+        point.name = "Bot Point";
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, -90))));
+
+
+        float diagonal = 0.7071f * offset;
+
+        point = new GameObject();
+        point.transform.SetParent(transform);
+        point.transform.localPosition = new Vector2(-diagonal, diagonal);
+        point.name = "Left Up Point";
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, 45))));
+
+        point = new GameObject();
+        point.transform.SetParent(transform);
+        point.transform.localPosition = new Vector2(diagonal, diagonal);
+        point.name = "Right Up Point";
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, -45))));
+
+        point = new GameObject();
+        point.transform.SetParent(transform);
+        point.transform.localPosition = new Vector2(-diagonal, -diagonal);
+        point.name = "Left Bot Point";
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, -45))));
+
+        point = new GameObject();
+        point.transform.SetParent(transform);
+        point.transform.localPosition = new Vector2(diagonal, -diagonal);
+        point.name = "Rigt Bot Point";
+        targetPoints.Add(new TargetPoint(point.transform, Quaternion.Euler(new Vector3(0, 0, 45))));
     }
     
 }
