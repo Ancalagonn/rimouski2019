@@ -47,14 +47,14 @@ public class Player_Movemement : MonoBehaviour
             float z = Input.GetAxisRaw("Vertical") * Time.deltaTime * PlayerInstance.playerStats.moveSpeed.value;
             float x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * PlayerInstance.playerStats.rotationSpeed.value;
 
-            float timeSinceLastForward = Time.time - lastTimeForwardPressed;
+            /*float timeSinceLastForward = Time.time - lastTimeForwardPressed;
             float timeSinceLastRotation = Time.time - lastTimeRotationPressed;
 
             if (timeSinceLastForward >= 1)
-                timeSinceLastForward = 1;
+                timeSinceLastForward = 1;*/
 
             //Pressed
-            if (z > 0)
+            /*if (z > 0)
             {
                 lastTimeForwardPressed += Time.deltaTime * 0.8f;
                 //Speed curve
@@ -67,16 +67,34 @@ public class Player_Movemement : MonoBehaviour
                 speed -= (Time.deltaTime * speed * 0.80f);
 
                 //Enough time elapsed since last time pressed to reset the velocity
-                if(speed <= 0.045f)
+                if(speed <= 0.065f)
                 {
+                    Debug.Log("Bonjour david");
                     lastTimeForwardPressed = Time.time;
                 }
                 else
                 {
-                    lastTimeForwardPressed -= Time.deltaTime * 2f;
+                    lastTimeForwardPressed += Time.deltaTime;
                 }
                 
+            }*/
+
+            speed = z * boatSpeedCurve.Evaluate(lastTimeForwardPressed);
+
+            if (z > 0)
+            {
+                
+                lastTimeForwardPressed += Time.deltaTime * 0.25f;
             }
+            else
+            {
+                lastTimeForwardPressed -= Time.deltaTime * 0.25f;
+            }
+
+            if (lastTimeForwardPressed >= 1)
+                lastTimeForwardPressed = 1;
+            else if (lastTimeForwardPressed <= 0)
+                lastTimeForwardPressed = 0;
 
 
         float sensibility = 0.15f;
