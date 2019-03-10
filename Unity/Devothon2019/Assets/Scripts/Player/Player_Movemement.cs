@@ -40,56 +40,18 @@ public class Player_Movemement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //On vérifie si le bateau est en cours d'abordage
         if(!pa.isBoarding)
         {
-            float z = Input.GetAxisRaw("Vertical") * Time.deltaTime * PlayerInstance.playerStats.moveSpeed.value;
+            float z = Input.GetAxisRaw("Vertical");
             float x = Input.GetAxisRaw("Horizontal") * Time.deltaTime * PlayerInstance.playerStats.rotationSpeed.value;
 
-            /*float timeSinceLastForward = Time.time - lastTimeForwardPressed;
-            float timeSinceLastRotation = Time.time - lastTimeRotationPressed;
-
-            if (timeSinceLastForward >= 1)
-                timeSinceLastForward = 1;*/
-
-            //Pressed
-            /*if (z > 0)
-            {
-                lastTimeForwardPressed += Time.deltaTime * 0.8f;
-                //Speed curve
-                speed = z * boatSpeedCurve.Evaluate(timeSinceLastForward);
-            }
-            else //Not pressed
-            {              
-
-                //80% less speed each seconds
-                speed -= (Time.deltaTime * speed * 0.80f);
-
-                //Enough time elapsed since last time pressed to reset the velocity
-                if(speed <= 0.065f)
-                {
-                    Debug.Log("Bonjour david");
-                    lastTimeForwardPressed = Time.time;
-                }
-                else
-                {
-                    lastTimeForwardPressed += Time.deltaTime;
-                }
-                
-            }*/
-
-            speed = z * boatSpeedCurve.Evaluate(lastTimeForwardPressed);
+            speed = (boatSpeedCurve.Evaluate(lastTimeForwardPressed) * Time.deltaTime * PlayerInstance.playerStats.moveSpeed.value) * 1.5f;
 
             if (z > 0)
-            {
-                
-                lastTimeForwardPressed += Time.deltaTime * 0.25f;
-            }
+                lastTimeForwardPressed += Time.deltaTime * 0.30f;
             else
-            {
-                lastTimeForwardPressed -= Time.deltaTime * 0.25f;
-            }
+                lastTimeForwardPressed -= Time.deltaTime * 0.40f;
 
             if (lastTimeForwardPressed >= 1)
                 lastTimeForwardPressed = 1;

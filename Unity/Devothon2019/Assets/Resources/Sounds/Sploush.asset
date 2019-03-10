@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sploush
   m_EditorClassIdentifier: 
   name: Sploush
-  clip: {fileID: 8300000, guid: a4cae36f60f2ae04b9fd943cfaf43933, type: 3}
+  clip: {fileID: 8300000, guid: 37fd19937c583ea47a5738a8b8b08275, type: 3}
   volume: 0.4
   isMusic: 0
   loop: 0
