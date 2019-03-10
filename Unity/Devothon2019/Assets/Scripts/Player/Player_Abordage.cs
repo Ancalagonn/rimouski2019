@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Player_Abordage : MonoBehaviour
 {
     //F sert a faire l'aordage d'un ennemi proche
@@ -23,7 +23,6 @@ public class Player_Abordage : MonoBehaviour
         //Si le joueur appui sur F
         if (Input.GetKeyDown(boardingKey))
         {
-            Debug.Log("KeyDown");
             //On tente d'aborder
             GetBoardableShip();
         }
@@ -63,6 +62,13 @@ public class Player_Abordage : MonoBehaviour
                     isBoarding = true;
                     boardingShip = stats;
 
+                    if (boardingShip.enemySize == EnemySize.Big) {
+                        this.boardingTime = 0;
+                    }
+                    else {
+                        this.boardingTime = 5;
+                    }
+
                     this.gameObject.GetComponent<Player_Movemement>().enabled = false;
                 }
             }
@@ -72,18 +78,39 @@ public class Player_Abordage : MonoBehaviour
 
     void BoardShip()
     {
+        this.boardingShip.StopAllCoroutines();
         isBoarding = false;
-        boardingTime = 5;
 
         //On attribue l'argent en fonction du type de bateau ennemie
-        if (boardingShip.enemySize == EnemySize.Small)
+        if (boardingShip.enemySize == EnemySize.Small) {
             PlayerInstance.playerCash += Static_Resources.SmallBoatValue;
-        else if (boardingShip.enemySize == EnemySize.Big)
-            PlayerInstance.playerCash += Static_Resources.BigBoatValue;
+        }
+        else if (boardingShip.enemySize == EnemySize.Big) {
+            SceneManager.LoadScene("BoatScene", LoadSceneMode.Additive);
+            Scene boatScene = SceneManager.GetSceneByName("BoatScene");
+            SceneManager.sceneUnloaded += sceneUnloaded;
+
+            foreach (GameObject g in SceneManager.GetActiveScene().GetRootGameObjects()) {
+                g.SetActive(false);
+            }
+        }
+    }
+
+    private void OnDestroy() {
+        SceneManager.sceneUnloaded -= sceneUnloaded;
+    }
+
+    private void sceneUnloaded(Scene p_scene) {
+        if (this == null) {
+            return;
+        }
 
         this.gameObject.GetComponent<Player_Movemement>().enabled = true;
-
         Destroy(boardingShip.gameObject);
         boardingShip = null;
+
+        foreach (GameObject g in SceneManager.GetActiveScene().GetRootGameObjects()) {
+            g.SetActive(true);
+        }
     }
 }

@@ -20,6 +20,7 @@ public class Sailor_Controller : MonoBehaviour
         if (this.actions == null) {
             Debug.Log("No Sailor_Actions script on sailor");
         }
+
         
         // Override default stats
         this.actions.Stats.HP = 150;

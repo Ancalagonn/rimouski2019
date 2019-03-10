@@ -31,6 +31,10 @@ public class Sailor_AI : MonoBehaviour
     }
 
     private void makeDecision() {
+        if (target == null) {
+            return;
+        }
+
         float distanceToTarget = Vector2.Distance(this.transform.position, target.transform.position);
         if (distanceToTarget > this.agroRange) {
             return;

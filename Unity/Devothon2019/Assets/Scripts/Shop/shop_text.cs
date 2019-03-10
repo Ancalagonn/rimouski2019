@@ -15,6 +15,7 @@ public class shop_text : MonoBehaviour
     public Text changeType;
     public Text upgradeCanon;
     public Text levelCoque;
+    public Text hp;
 
     public Dropdown ddl_typeCanon;
 
@@ -53,6 +54,7 @@ public class shop_text : MonoBehaviour
         addCrewMember.text = "Ajouter un membre à l'équipage\n("+PlayerInstance.playerStats.crewMembers+" présentement) ("+price.ADD_CREW+"$)";
         money.text = "Banque : " + PlayerInstance.playerCash + "$";
         levelCoque.text = "Niveau : " + ((PlayerInstance.playerStats.maxHp / 10) - 49);
+        hp.text = "HP : " + PlayerInstance.playerStats.currentHp + "/" + PlayerInstance.playerStats.maxHp;
     }
 
 }
