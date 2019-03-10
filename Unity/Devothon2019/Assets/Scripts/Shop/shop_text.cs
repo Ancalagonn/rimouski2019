@@ -25,7 +25,7 @@ public class shop_text : MonoBehaviour
         repairPrice = (int)(PlayerInstance.playerStats.maxHp - PlayerInstance.playerStats.currentHp);
 
         upgradeCoque.text = "Améliorer la coque (" + price.UPGRADE_COQUE + "$)";
-        repairCoque.text = "Réparer la coque (" + repairPrice + "$)";
+        
         upgradeCanon.text = "Améliorer le canon (" + price.UPGRADE_CANON + "$)";
     }
 
@@ -55,6 +55,7 @@ public class shop_text : MonoBehaviour
         money.text = "Banque : " + PlayerInstance.playerCash + "$";
         levelCoque.text = "Niveau : " + ((PlayerInstance.playerStats.maxHp / 10) - 49);
         hp.text = "HP : " + PlayerInstance.playerStats.currentHp + "/" + PlayerInstance.playerStats.maxHp;
+        repairCoque.text = "Réparer la coque (" + repairPrice + "$)";
     }
 
 }

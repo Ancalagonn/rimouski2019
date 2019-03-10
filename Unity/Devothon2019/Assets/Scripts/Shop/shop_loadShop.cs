@@ -26,6 +26,7 @@ public class shop_loadShop : MonoBehaviour
     public void Awake()
     {
         instance = this;
+        PlayerInstance.playerStats.currentHp = 400;
     }
 
     void Start()
