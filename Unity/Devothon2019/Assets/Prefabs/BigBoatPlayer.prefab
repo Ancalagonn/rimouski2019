@@ -338,6 +338,8 @@ GameObject:
   - component: {fileID: 5306952629727830278}
   - component: {fileID: 1045071259}
   - component: {fileID: 2032144271}
+  - component: {fileID: 4183690844337960368}
+  - component: {fileID: 5404720369461085732}
   m_Layer: 0
   m_Name: BigBoatPlayer
   m_TagString: Player
@@ -580,7 +582,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6546894130462959210}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -696,6 +698,58 @@ PolygonCollider2D:
       - {x: 0.9974707, y: -8.559484}
       - {x: 1.2361816, y: -8.491281}
       - {x: 1.4578418, y: -8.406027}
+--- !u!61 &4183690844337960368
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546894130462959210}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.045206547, y: -3.7414632}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.2000003, y: 17.46}
+    newSize: {x: 7.2000003, y: 17.46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 6.2272387, y: 9.552115}
+  m_EdgeRadius: 0
+--- !u!61 &5404720369461085732
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6546894130462959210}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.023069859, y: 2.7686539}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 7.2000003, y: 17.46}
+    newSize: {x: 7.2000003, y: 17.46}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.016055, y: 7.3082848}
+  m_EdgeRadius: 0
 --- !u!1 &6874902452652545133
 GameObject:
   m_ObjectHideFlags: 0
@@ -714,7 +768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2435476898857118468
 Transform:
   m_ObjectHideFlags: 0
