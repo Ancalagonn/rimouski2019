@@ -109,11 +109,6 @@ public class Player_Abordage : MonoBehaviour
             return;
         }
 
-        if (p_scene.name == "BoatScene" && p_scene.isLoaded) {
-            SceneManager.UnloadSceneAsync(p_scene);
-        }
-
-        this.gameObject.GetComponent<Player_Movemement>().enabled = true;
         if (boardingShip != null) {
             Destroy(boardingShip.gameObject);
         }
@@ -122,5 +117,7 @@ public class Player_Abordage : MonoBehaviour
         foreach (GameObject g in SceneManager.GetActiveScene().GetRootGameObjects()) {
             g.SetActive(true);
         }
+        
+        this.gameObject.GetComponent<Player_Movemement>().enabled = true;
     }
 }

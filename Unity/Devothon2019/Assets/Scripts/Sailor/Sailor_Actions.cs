@@ -73,8 +73,6 @@ public class Sailor_Actions : MonoBehaviour
     public void takeDamage(int p_damage) {
         this.Stats.HP -= p_damage;
 
-        
-
         if (this.Stats.HP <= 0) {
             // If this is the player dying, we exit the scene
             if (this.tag == "Player") {
