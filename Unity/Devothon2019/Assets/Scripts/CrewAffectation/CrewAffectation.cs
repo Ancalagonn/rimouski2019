@@ -197,7 +197,7 @@ public class CrewAffectation : MonoBehaviour
     public void QuitScene() {
         if (!quitting) {
             quitting = true;
-            ManageScene.instance.LoadSceneBlack("");
+            ManageScene.instance.LoadSceneBlack(Progression.LEVEL_NAMES[Progression.CURRENT_LEVEL]);
         }
     }
 }
