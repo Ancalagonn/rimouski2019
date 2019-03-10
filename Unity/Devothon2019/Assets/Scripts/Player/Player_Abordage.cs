@@ -40,6 +40,14 @@ public class Player_Abordage : MonoBehaviour
                 BoardShip();
             }
         }
+        else
+        {
+            if(!gameObject.activeSelf)
+            {
+                Debug.Log("Emergency Change state");
+                ChangeGameobjectState(true);
+            }
+        }
     }
 
     //Methode qui obtient le bateau qui se stue dans le radius du bateau pour l'aborder
@@ -94,9 +102,7 @@ public class Player_Abordage : MonoBehaviour
             Scene boatScene = SceneManager.GetSceneByName("BoatScene");
             SceneManager.sceneUnloaded += sceneUnloaded;
 
-            foreach (GameObject g in SceneManager.GetActiveScene().GetRootGameObjects()) {
-                g.SetActive(false);
-            }
+            ChangeGameobjectState(false);
         }
     }
 
@@ -114,8 +120,14 @@ public class Player_Abordage : MonoBehaviour
         }
         boardingShip = null;
 
-        foreach (GameObject g in SceneManager.GetActiveScene().GetRootGameObjects()) {
-            g.SetActive(true);
+        ChangeGameobjectState(true);
+    }
+
+    private void ChangeGameobjectState(bool state)
+    {
+        foreach (GameObject g in SceneManager.GetActiveScene().GetRootGameObjects())
+        {
+            g.SetActive(state);
         }
         
         this.gameObject.GetComponent<Player_Movemement>().enabled = true;
