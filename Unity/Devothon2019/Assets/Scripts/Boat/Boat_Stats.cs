@@ -16,7 +16,7 @@ public class Boat_Stats
 
     public List<Canon> canons;
 
-    public int crewMembers = 8;
+    public int crewMembers = 4;
     public int maxCanons = 6;
 
     int hpStade = 5;
@@ -27,6 +27,16 @@ public class Boat_Stats
     public float GetHp()
     {
         return currentHp;
+    }
+
+    public void Repair()
+    {
+        Debug.Log("Repair");
+        currentHp += repairSpeed.crewAssigned * 1;
+        if(currentHp > maxHp)
+        {
+            currentHp = maxHp;
+        }
     }
 
     public void TakeDamage(float p_dmg)

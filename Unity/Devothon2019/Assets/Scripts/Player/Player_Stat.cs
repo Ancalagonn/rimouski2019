@@ -33,6 +33,12 @@ public class Player_Stat : MonoBehaviour
     {
         //for debug purpose
         playerStats = PlayerInstance.playerStats;
+        Repair();
+    }
+
+    private void Repair()
+    {
+        PlayerInstance.playerStats.Repair();
     }
 
     /// <summary>
