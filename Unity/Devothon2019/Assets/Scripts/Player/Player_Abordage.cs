@@ -46,7 +46,7 @@ public class Player_Abordage : MonoBehaviour
     void GetBoardableShip()
     {   
         //On obtient le nombre d'ennemies et leur collider dans une liste    
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, BoardingRadius, 1 << layerMaskBoarding);
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, BoardingRadius);
 
         foreach (var item in colliders)
         {
