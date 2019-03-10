@@ -16,8 +16,8 @@ public static class Static_Resources
     public static Sprite plank;
     public static Sprite plankCracked;
 
-    public static int SmallBoatValue = 100;
-    public static int BigBoatValue = 200;
+    public static int SmallBoatValue = 50;
+    public static int BigBoatValue = 100;
 
     public static GameObject WaterSplashParticule;
 
