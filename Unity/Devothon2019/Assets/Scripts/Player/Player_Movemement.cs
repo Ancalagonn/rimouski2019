@@ -40,7 +40,6 @@ public class Player_Movemement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //On vérifie si le bateau est en cours d'abordage
         if(!pa.isBoarding)
         {

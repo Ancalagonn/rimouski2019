@@ -59,4 +59,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Final/Kraken.unity
     guid: 97bb4e9add7d3a5459031f07dd77834b
+  - enabled: 1
+    path: Assets/Scenes/Final/End_Scene.unity
+    guid: 7c6031d26f085244f972f7439d633465
   m_configObjects: {}
