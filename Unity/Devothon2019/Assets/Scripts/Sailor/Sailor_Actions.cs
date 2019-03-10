@@ -74,6 +74,7 @@ public class Sailor_Actions : MonoBehaviour
         if (this.Stats.HP <= 0) {
             // If this is the player dying, we exit the scene
             if (this.tag == "Player") {
+                PlayerInstance.playerStats.RemoveRandomMember();
                 this.exitPadScript.ExitScene();
             }
             Destroy(this.gameObject);
