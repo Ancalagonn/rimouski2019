@@ -5,7 +5,6 @@ using UnityEngine;
 public class Boat_Stats
 {
     public float maxHp;
-    [HideInInspector]
     public float currentHp;
 
     public Stats moveSpeed = new Stats();
@@ -19,7 +18,7 @@ public class Boat_Stats
     public int crewMembers = 4;
     public int maxCanons = 6;
 
-    int hpStade = 5;
+    int lastHpStade = 5;
 
     [HideInInspector]
     public Transform mySelf;
@@ -36,6 +35,8 @@ public class Boat_Stats
         {
             currentHp = maxHp;
         }
+
+        CheckForFire();
     }
 
     public void TakeDamage(float p_dmg)
@@ -57,11 +58,11 @@ public class Boat_Stats
 
     private void SetBoatOnFire()
     {
-        int currentHpStade = (int)(PercentHpLeft() / 20f);
+        int currentHpStade = (int)(PercentHpLeft() / 20f);     
 
-        if (hpStade != currentHpStade)
+        if (lastHpStade > currentHpStade)
         {
-            int hpStadeDiff = hpStade - currentHpStade;
+            int hpStadeDiff = lastHpStade - currentHpStade;
 
             for (int i = 0; i < hpStadeDiff; i++)
             {
@@ -77,10 +78,35 @@ public class Boat_Stats
                 fire.transform.localPosition = pos;
             }
 
-            hpStade = currentHpStade;
+            lastHpStade = currentHpStade;
         }
 
     }
+
+    private void CheckForFire()
+    {
+        int currentHpStade = (int)(PercentHpLeft() / 20f);
+
+        if (lastHpStade < currentHpStade)
+        {
+            lastHpStade = currentHpStade;
+            FireEffect[] flames = mySelf.GetComponentsInChildren<FireEffect>();
+            if (flames.Length > 0)
+            {
+                GameObject.Destroy(flames[0].gameObject);
+            }
+        }
+        else if (currentHp == maxHp)
+        {
+            FireEffect[] flames = mySelf.GetComponentsInChildren<FireEffect>();
+            foreach (var item in flames)
+            {
+                GameObject.Destroy(item.gameObject);
+            }
+        }
+
+    }
+
 
     public Boat_Stats(float p_maxHp, Stats p_moveSpeed, Stats p_rotationSpeed, Stats p_shotCooldown, Stats p_repairSpeed)
     {

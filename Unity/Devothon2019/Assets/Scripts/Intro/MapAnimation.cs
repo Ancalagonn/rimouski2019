@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MapAnimation : MonoBehaviour
 {
-    private float timeout = 0.75f;
+    private float timeout = 7f;
 
     public RawImage mySelf;
 
@@ -17,14 +17,17 @@ public class MapAnimation : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SoundManager.Play("TransitionMap", Vector3.zero);
         StartCoroutine(Animation());
     }
 
     private IEnumerator Animation() {
+
+        float step = (timeout - 1.5f) / images.Count;
         foreach (Texture image in images)
         {
             mySelf.texture = image;
-            yield return new WaitForSeconds(timeout);
+            yield return new WaitForSeconds(step);
         }
 
         yield return new WaitForSeconds(1.5f);

@@ -43,7 +43,6 @@ public static class SoundManager {
 
         if(s == null)
         {
-            Debug.Log("Sound with the name " + name + " not found");
             return;
         }
 
@@ -92,7 +91,6 @@ public static class SoundManager {
 
         if (s == null)
         {
-            Debug.Log("Sound with the name " + name + " not found");
             return;
         }
 

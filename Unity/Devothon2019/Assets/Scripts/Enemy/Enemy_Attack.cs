@@ -40,7 +40,6 @@ public class Enemy_Attack : MonoBehaviour
 
             if (canon.canFire())
             {
-                Debug.Log(canon);
                 StartCoroutine(Fire(canon));
                 canon.ResetCooldown(-Random.Range(0.15f, 0.35f));
             }
@@ -80,7 +79,7 @@ public class Enemy_Attack : MonoBehaviour
                 soundName = "FireCanon";
                 break;
 
-            case CanonType.TripleShot:
+            case CanonType.TirTriple:
 
                 for (int i = 0; i < 3; i++)
                 {
@@ -111,7 +110,7 @@ public class Enemy_Attack : MonoBehaviour
                 soundName = "FireCanon";
                 break;
 
-            case CanonType.FlameThrower:
+            case CanonType.LanceFlammes:
                 canonballObj = Instantiate(canon.canonball, null);
                 Flames flames = canonballObj.GetComponent<Flames>();
                 lifetime = canon.baseCooldown * 0.75f;

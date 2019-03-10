@@ -2321,7 +2321,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b2a57ddf06a0c504badb762c3d36caa7, type: 3}
-    m_FontSize: 35
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -2332,7 +2332,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Am\xE9liorer la coque"
+  m_Text: "Am\xE9liorer la coque (100$)"
 --- !u!222 &1474460442
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3093,7 +3093,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: b2a57ddf06a0c504badb762c3d36caa7, type: 3}
-    m_FontSize: 35
+    m_FontSize: 25
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -3104,7 +3104,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "R\xE9parer la coque"
+  m_Text: "R\xE9parer la coque (100$)"
 --- !u!222 &1871707515
 CanvasRenderer:
   m_ObjectHideFlags: 0
