@@ -25,6 +25,7 @@ public class shop_upgradeBoat : MonoBehaviour
         {
             PlayerInstance.playerStats.currentHp = PlayerInstance.playerStats.maxHp;
             shop_text.repairPrice = 0;
+            
         }
     }
 
