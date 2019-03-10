@@ -5,43 +5,24 @@ using UnityEngine;
 using UnityEngine.Audio;
 
 public static class SoundManager {
-
     public static List<Sound_SO> Sounds = new List<Sound_SO>();
     public static GameObject soundObjPrefabs;
 
-    
-
     public static void LoadSound()
     {
-        GameObject SoundObject = GameObject.Find("SoundObject");
+        if (Sounds.Count != 0)
+            return;
 
-        if (SoundObject == null)
+        Sound_SO[] sds = Resources.LoadAll<Sound_SO>("Sounds");
+        soundObjPrefabs = Resources.Load("SoundObject") as GameObject;
+
+        GameObject SoundObject = new GameObject();
+        SoundObject.name = "SoundObject";
+        SoundObject.transform.SetParent(null);
+
+        foreach (var s in sds)
         {
-            SoundObject = new GameObject();
-            SoundObject.name = "SoundObject";
-            SoundObject.transform.SetParent(null);
-        }
-
-        if (Sounds.Count == 0)
-        {
-            var sds = Resources.LoadAll<Sound_SO>("Sounds");
-            soundObjPrefabs = Resources.Load("SoundObject") as GameObject;
-
-            LoadAudioSource(SoundObject, sds);
-        }
-        else
-        {
-            LoadAudioSource(SoundObject, Sounds.ToArray());
-        }
-    }
-
-    private static void LoadAudioSource(GameObject parent, Sound_SO[] sounds)
-    {
-
-
-        foreach (var s in sounds)
-        {
-            AudioSource src = parent.AddComponent<AudioSource>();
+            AudioSource src = GameObject.Find("SoundObject").AddComponent<AudioSource>();
 
             src.clip = s.clip;
             src.volume = s.volume;
@@ -55,22 +36,17 @@ public static class SoundManager {
 
     public static void Play(string name, Vector3 SoundPos = new Vector3())
     {
-        GameObject SoundObject = GameObject.Find("SoundObject");
-        if(SoundObject == null)
-        {
-            LoadSound();
-        }
-
         Sound_SO s = Array.Find(Sounds.ToArray(), sound => sound.name == name);
 
-        if(s == null)
+        if (s == null)
         {
+            Debug.Log("Sound with the name " + name + " not found");
             return;
         }
 
-        if(s.isMusic)
+        if (s.isMusic)
         {
-            if(s.source != null)
+            if (s.source != null)
                 s.source.Play();
             else
             {
@@ -97,13 +73,15 @@ public static class SoundManager {
             AudioSource src = soundObj.AddComponent<AudioSource>();
             SoundObject obj = soundObj.GetComponent<SoundObject>();
 
-            obj.Init(s.clip.length + 0.3f);
+
 
             src.clip = s.clip;
             src.volume = s.volume;
             src.loop = s.loop;
-            
+            obj.Init(s.clip.length + 0.3f);
             src.Play();
+
+
         }
     }
 
@@ -113,10 +91,11 @@ public static class SoundManager {
 
         if (s == null)
         {
+            Debug.Log("Sound with the name " + name + " not found");
             return;
         }
 
-        if(s.source != null)
+        if (s.source != null)
             s.source.Stop();
     }
 
