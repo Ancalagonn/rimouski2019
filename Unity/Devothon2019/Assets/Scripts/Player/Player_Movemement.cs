@@ -19,18 +19,20 @@ public class Player_Movemement : MonoBehaviour
 
     private Player_Abordage pa;
 
+    bool canCollisionDamage = false;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        if(rb == null)
+        if (rb == null)
         {
-            rb = gameObject.AddComponent<Rigidbody2D>();    
+            rb = gameObject.AddComponent<Rigidbody2D>();
         }
 
         rb.gravityScale = 0;
         rb.isKinematic = false;
     }
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +43,7 @@ public class Player_Movemement : MonoBehaviour
     void Update()
     {
         //On vérifie si le bateau est en cours d'abordage
-        if(!pa.isBoarding)
+        if (!pa.isBoarding)
         {
             float rotationSpeed = PlayerInstance.playerStats.rotationSpeed.value + ((PlayerInstance.playerStats.rotationSpeed.value * 0.05f) * PlayerInstance.playerStats.rotationSpeed.crewAssigned);
 
@@ -64,55 +66,55 @@ public class Player_Movemement : MonoBehaviour
                 lastTimeForwardPressed = 0;
 
 
-        float sensibility = 0.15f;
+            float sensibility = 0.15f;
 
-        //Pressed
-        if (Mathf.Abs(x) >= sensibility)
-        {
-            
-            if(x > sensibility)
+            //Pressed
+            if (Mathf.Abs(x) >= sensibility)
             {
-                //Rotation side changed
-                if (rotationMomentum < 0)
+
+                if (x > sensibility)
                 {
-                    rotationMomentum = 0;
-                    lastTimeRotationPressed = 0;
+                    //Rotation side changed
+                    if (rotationMomentum < 0)
+                    {
+                        rotationMomentum = 0;
+                        lastTimeRotationPressed = 0;
+                    }
                 }
+
+                if (x < -sensibility)
+                {
+                    //Rotation side changed
+                    if (rotationMomentum > 0)
+                    {
+                        rotationMomentum = 0;
+                        lastTimeRotationPressed = 0;
+                    }
+                }
+
+                lastTimeRotationPressed += Time.deltaTime * 0.6f;
+                //Speed curve
+                rotationMomentum = x * boatRotationCurve.Evaluate(lastTimeRotationPressed);
+            }
+            else //Not pressed
+            {
+                lastTimeRotationPressed = Time.time;
+
+                //40% less rotation speed each seconds
+                rotationMomentum -= (Time.deltaTime * rotationMomentum * 0.98f);
             }
 
-            if (x < -sensibility)
-            {
-                //Rotation side changed
-                if (rotationMomentum > 0)
-                {
-                    rotationMomentum = 0;
-                    lastTimeRotationPressed = 0;
-                }
-            }
 
-            lastTimeRotationPressed += Time.deltaTime * 0.6f;
-            //Speed curve
-            rotationMomentum = x * boatRotationCurve.Evaluate(lastTimeRotationPressed);
-        }
-        else //Not pressed
-        {
-            lastTimeRotationPressed = Time.time;
-
-            //40% less rotation speed each seconds
-            rotationMomentum -= (Time.deltaTime * rotationMomentum * 0.98f);
-        }
-
-
-        transform.Rotate(-transform.forward, rotationMomentum);
+            transform.Rotate(-transform.forward, rotationMomentum);
 
             rb.position += (Vector2)transform.up * speed;
         }
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if(col.gameObject.CompareTag("Enemy"))
+        if (col.gameObject.CompareTag("Enemy"))
         {
             Enemy_Stat stat = col.gameObject.GetComponent<Enemy_Stat>();
 
@@ -120,14 +122,30 @@ public class Player_Movemement : MonoBehaviour
             {
                 case EnemySize.Small:
                     stat.TakeDamage(15);
-                    PlayerInstance.playerStats.TakeDamage(5);
+                    if (canCollisionDamage)
+                        StartCoroutine(TakeCollisionDamage(5));
                     break;
                 case EnemySize.Big:
                     stat.TakeDamage(5);
-                    PlayerInstance.playerStats.TakeDamage(10);
+                    if (canCollisionDamage)
+                        StartCoroutine(TakeCollisionDamage(10));
                     break;
             }
 
         }
+        else if (col.gameObject.CompareTag("Rock"))
+        {
+            lastTimeForwardPressed = 0;
+            if(canCollisionDamage)
+                StartCoroutine(TakeCollisionDamage(15));
+        }
+    }
+    
+    IEnumerator TakeCollisionDamage(float p_dmg)
+    {
+        canCollisionDamage = false;
+        PlayerInstance.playerStats.TakeDamage(p_dmg);
+        yield return new WaitForSeconds(1f);
+        canCollisionDamage = true;
     }
 }

@@ -12,6 +12,7 @@ public class FinishLevel : MonoBehaviour
     void Start()
     {
         enemy = FindObjectsOfType<Enemy_Stat>();
+        SoundManager.Play("MusiqueBataille", Vector3.zero);
     }
 
     // Update is called once per frame

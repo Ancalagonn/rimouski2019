@@ -14,12 +14,17 @@ public class shop_text : MonoBehaviour
     
     public Text changeType;
     public Text upgradeCanon;
+    public Text levelCoque;
 
     public Dropdown ddl_typeCanon;
 
+    public static int repairPrice = 0;
+
     private void Start() {
+        repairPrice = (int)(PlayerInstance.playerStats.maxHp - PlayerInstance.playerStats.currentHp);
+
         upgradeCoque.text = "Améliorer la coque (" + price.UPGRADE_COQUE + "$)";
-        repairCoque.text = "Réparer la coque (" + price.REPAIR_COQUE + "$)";
+        repairCoque.text = "Réparer la coque (" + repairPrice + "$)";
         upgradeCanon.text = "Améliorer le canon (" + price.UPGRADE_CANON + "$)";
     }
 
@@ -47,6 +52,7 @@ public class shop_text : MonoBehaviour
 
         addCrewMember.text = "Ajouter un membre à l'équipage\n("+PlayerInstance.playerStats.crewMembers+" présentement) ("+price.ADD_CREW+"$)";
         money.text = "Banque : " + PlayerInstance.playerCash + "$";
+        levelCoque.text = "Niveau : " + ((PlayerInstance.playerStats.maxHp / 10) - 49);
     }
 
 }

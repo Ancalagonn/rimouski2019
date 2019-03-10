@@ -7,7 +7,11 @@ TagManager:
   - Enemy
   - shop_btnCanon
   - Loot
+<<<<<<< HEAD
   - LootSpawn
+=======
+  - Rock
+>>>>>>> bac39bcdf686b7d83ec1aa0f6184081c054d28a4
   layers:
   - Default
   - TransparentFX
@@ -19,7 +23,7 @@ TagManager:
   - 
   - Ennemy
   - Minimap
-  - 
+  - Player
   - 
   - 
   - 
