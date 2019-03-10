@@ -15,6 +15,7 @@ public class shop_upgradeBoat : MonoBehaviour
         if(shop_moneyControl.Transaction(-price.UPGRADE_COQUE))
         {
             PlayerInstance.playerStats.maxHp += 10;
+            PlayerInstance.playerStats.currentHp += 10;
         }
     }
 
