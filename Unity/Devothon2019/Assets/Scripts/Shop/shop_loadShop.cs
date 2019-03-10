@@ -34,6 +34,8 @@ public class shop_loadShop : MonoBehaviour
         boat.transform.localScale *= 100;
         //boat.transform.Rotate(new Vector3(0, 180, 0));
         boat.GetComponent<Player_Movemement>().enabled = false;
+        boat.GetComponent<Player_Attack>().enabled = false;
+        boat.GetComponent<Player_Stat>().enabled = false;
         boat.GetComponent<Player_Abordage>().enabled = false;
         boat.GetComponent<Animator>().enabled = false;
 
