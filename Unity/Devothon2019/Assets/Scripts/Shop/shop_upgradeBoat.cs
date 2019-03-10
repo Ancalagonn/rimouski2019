@@ -29,6 +29,6 @@ public class shop_upgradeBoat : MonoBehaviour
     public void AjouterCrew()
     {
         if(shop_moneyControl.Transaction(-price.ADD_CREW))
-        PlayerInstance.playerStats.crewMembers++;
+            PlayerInstance.playerStats.crewMembers++;
     }
 }
