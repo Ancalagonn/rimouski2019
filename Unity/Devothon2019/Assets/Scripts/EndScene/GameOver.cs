@@ -18,7 +18,7 @@ public class GameOver : MonoBehaviour
         }
         else if(PlayerInstance.playerStats.currentHp > 499)
         {
-            GameObject.Find("Title").GetComponent<Text>().text = "Du beau texte de gagnant\n";
+            GameObject.Find("Title").GetComponent<Text>().text = "Vous avez sauvé la Nouvelle-France et libéré\nle fleuve Saint-Laurent du dangereux Kraken.\nVos efforts n'auront pas été en vain.\nMerci !";
         }
     }
 
