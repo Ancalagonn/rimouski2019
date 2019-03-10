@@ -33,10 +33,10 @@ public class ManageScene : MonoBehaviour {
 	void Update () {
         if (sceneLoading)
         {
-            if (cg != null && cg.alpha < 0.90f)
+            if (cg != null && cg.alpha < 0.95f)
             {
                 cg.alpha += speed * Time.fixedUnscaledDeltaTime;
-                Debug.Log(cg.alpha);
+                //Debug.Log(cg.alpha);
             }
             else
                 SceneManager.LoadScene(scene);
