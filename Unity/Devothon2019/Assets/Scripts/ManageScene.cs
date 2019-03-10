@@ -27,13 +27,12 @@ public class ManageScene : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (sceneLoading && cg.alpha > 0)
+        if (sceneLoading)
         {
-            cg.alpha -= speed * Time.deltaTime;
-        }
-        else if(sceneLoading)
-        {
-            SceneManager.LoadScene(scene);
+            if (cg != null && cg.alpha > 0)
+                cg.alpha -= speed * Time.deltaTime;
+            else 
+                SceneManager.LoadScene(scene);
         }
 	}
 

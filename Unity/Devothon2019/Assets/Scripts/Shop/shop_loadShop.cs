@@ -59,6 +59,10 @@ public class shop_loadShop : MonoBehaviour
         }
     }
 
+    public void QuitShop() {
+        ManageScene.instance.LoadSceneBlack("CrewAffectation_Scene");
+    }
+
     public static void LoadPanel(GameObject caller = null)
     {
         instance.m_panelCanon.SetActive(true);

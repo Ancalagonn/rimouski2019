@@ -192,4 +192,12 @@ public class CrewAffectation : MonoBehaviour
             GameObject.Find("Button_Confirmer").GetComponent<Button>().interactable = false;
         }
     }
+
+    bool quitting = false;
+    public void QuitScene() {
+        if (!quitting) {
+            quitting = true;
+            ManageScene.instance.LoadSceneBlack(Progression.LEVEL_NAMES[Progression.CURRENT_LEVEL]);
+        }
+    }
 }
