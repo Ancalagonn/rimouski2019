@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ouragan: {fileID: 5506179446905279238, guid: 5a62a6cae6cd58741ac91f8ee540b3b0, type: 3}
-  storm: {fileID: 0}
+  storm: {fileID: 1163977728, guid: a4680985baf76b14eb80de18dd7e1345, type: 3}
   hp: 1000
 --- !u!4 &429268623 stripped
 Transform:
