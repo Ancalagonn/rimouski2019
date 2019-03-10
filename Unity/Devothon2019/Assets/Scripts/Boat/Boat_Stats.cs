@@ -107,6 +107,11 @@ public class Boat_Stats
 
     }
 
+    public void KillCrewMember()
+    {
+        crewMembers--;
+    }
+
     public void RemoveRandomMember()
     {
         if (crewMembers > 4)
@@ -117,16 +122,21 @@ public class Boat_Stats
             switch (Random.Range(1, 4))
             {
                 case 1:
-                    PlayerInstance.playerStats.moveSpeed.RemoveCrewMember();
+                    if (PlayerInstance.playerStats.moveSpeed.RemoveCrewMember())
+                        KillCrewMember();
+
                     break;
                 case 2:
-                    PlayerInstance.playerStats.rotationSpeed.RemoveCrewMember();
+                    if(PlayerInstance.playerStats.rotationSpeed.RemoveCrewMember())
+                        KillCrewMember();
                     break;
                 case 3:
-                    PlayerInstance.playerStats.shotCooldown.RemoveCrewMember();
+                    if(PlayerInstance.playerStats.shotCooldown.RemoveCrewMember())
+                        KillCrewMember();
                     break;
                 case 4:
-                    PlayerInstance.playerStats.repairSpeed.RemoveCrewMember();
+                    if(PlayerInstance.playerStats.repairSpeed.RemoveCrewMember())
+                        KillCrewMember();
                     break;
 
             }
@@ -183,13 +193,14 @@ public class Stats
         crewAssigned++;
     }
 
-    public void RemoveCrewMember()
+    public bool RemoveCrewMember()
     {
         if (crewAssigned > 1)
         {
             crewAssigned--;
-            PlayerInstance.playerStats.crewMembers--;
+            return true;
         }
+        return false;
     }
 }
 
